@@ -27,9 +27,6 @@
 	}
 	
 
-	
-	
-
 	if (isset($_GET['delete'])) {
                     $delete = $_GET['delete'];
                     $query = "DELETE FROM tasks WHERE id = '$delete' ";

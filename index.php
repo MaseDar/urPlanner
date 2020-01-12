@@ -79,14 +79,7 @@
          <img src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="112" height="28">
         <img>
         </a>
-         <div class="buttons" >
-          <a class="button is-primary" href="/register.php">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light" href="/register.php">
-            Log in
-          </a>
-        </div>  
+        
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -94,7 +87,7 @@
     </a>
   </div>
 
-  <div  class="navbar-menu">
+  <div  class="navbar-menu has-background-dark has-text-white">
     <div class="navbar-start">
     
       <a class="navbar-item has-text-white" href="/planer2.html"> 
@@ -141,9 +134,16 @@
         </a>
         </div>
         </div>
-           
+           <div class="buttons" >
+          <a class="button is-primary" href="/register.php">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/register.php">
+            Log in
+          </a>
+        </div>  
      </div>
-     
+      
   </div>
 
 </nav>
@@ -163,7 +163,7 @@
 
       <div class="column is-6 ">
         <div class="box-shadow">
-        <div class="tile is-parent">
+        <div class="tile">
           
             <article class="tile is-child notification is-dark">
               <?php

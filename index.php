@@ -40,10 +40,6 @@
                     }
                   }
 
-
-  
-
-
 ?>
 
 <!DOCTYPE html>
@@ -163,19 +159,6 @@
         </a>
         </div>
         </div>
-     <!--  </div>
-            <div class="buttons" href="https://masedar.github.io/urPlanner/autent.html">
-          <a class="button is-primary" href="https://masedar.github.io/urPlanner/autent.html">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light" href="https://masedar.github.io/urPlanner/autent.html">
-            Log in
-          </a>
-        </div>  
-     </div> 
-
-      </div>--> 
-
             <div class="buttons" href="C:\Users\molot\Desktop\urPlanner\urPlanner\autent.html">
           <a class="button is-primary" href="C:\Users\molot\Desktop\urPlanner\urPlanner\autent.html">
             <strong>Sign up</strong>

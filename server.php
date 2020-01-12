@@ -1,4 +1,18 @@
 <?php 
+
+	// start sessions
+	session_start();
+
+	// database connection
+
+	$db = new mysqli('localhost', 'root', '', 'todo');
+
+	if (mysqli_connect_errno()) {
+		printf("Соединение не установлено", mysqli_connect_error());
+		exit();
+	} 
+	$db->set_charset('utf8');
+
 	//User registration
 
 	if (isset($_POST['register-user'])) {
@@ -60,123 +74,4 @@
 		}
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<phpasdsaddddddddddddddddddddddddddddddddddddddddddddddddddd>
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-b

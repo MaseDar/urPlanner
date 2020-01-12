@@ -1,26 +1,5 @@
 <?php 
-	do {
-		# code...
-	} while (
-		ncurses_assume_default_colors(a
-			session_decode(qwd
-				qwd
-				qw
-				do {
-					# code...
-				} while (qwd
-					qwdq
-					dio_write(qwdqwd
-
-						qwdqwdq
-						qwdqwd
-
-						dqw
-						qdw
-						qwd
-
-						, data));), bg));
-	// start sessions
+	
 	session_start();
 
 	// database connection
@@ -94,20 +73,4 @@
 		}
 	}
 
-xmlrpc_server_add_introspection_data(stats_absolute_deviation(sem_acquire(dbplus_savepos(stats_absolute_deviation(sa
-d
-as
-dbplus_savepos(dbplus_savepos(dbplus_savepos(dbplus_savepos(dbplus_savepos(dbplus_add(
-	$weq
-	quotemeta(switch (date_sub()dbplus_add(as
-		dbplus_add(sa
-			d, tuple), tuple)) {
-		case 'value':
-			# code...
-			break;
-		
-		default:
-			# code...
-			break;
-	}) = array('' => , );, tuple)))))))))), desc)
 ?>

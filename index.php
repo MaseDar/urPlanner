@@ -1,7 +1,7 @@
 <?php
   
   
-    
+    session_start();
   
 
 
@@ -280,10 +280,10 @@
       <div class="tile is-parent ">
           <article class="tile is-child notification is-dark">
 
-            <?php session_start(); ?>
+            
               <?php if (isset($_SESSION['username'])) : ?> 
                 <p class="title">Ваш список <?php echo $_SESSION['username']; ?></p>
-              <?php end if ?>
+              <?php endif ?>
             <p class="subtitle"></p>
             <div class="content">
               

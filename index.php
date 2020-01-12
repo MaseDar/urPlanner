@@ -154,15 +154,16 @@
 <section class="hero is-medium ">
 
   <div class="hero-body">
-    <div class="container">
-    <img id="image_fade" src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="1920" height="1080">
+     <img id="image_fade" src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="1920" height="1080">
     
+    <div id="content_fade" class="container" >
+   
     
     <div class="columns">
 
 
       <div class="column is-6 ">
-        <div class="box-shadow">
+        <div class="box-shadow is-parent">
         <div class="tile">
           
             <article class="tile is-child notification is-dark">
@@ -356,8 +357,8 @@
   </div>
 </section>
 
-  <img src="https://avatars.mds.yandex.net/get-pdb/2352951/9a962537-6054-42dc-b5ef-f53c9183aa58/s1200" width="1920" height="300">
-    <img src="https://avatars.mds.yandex.net/get-pdb/2981802/09acfa22-a2ec-4f2b-808e-c4c5a231beef/s1200" width="1920" height="1080">
+  <!-- <img src="https://avatars.mds.yandex.net/get-pdb/2352951/9a962537-6054-42dc-b5ef-f53c9183aa58/s1200" width="1920" height="300">
+    <img src="https://avatars.mds.yandex.net/get-pdb/2981802/09acfa22-a2ec-4f2b-808e-c4c5a231beef/s1200" width="1920" height="1080"> -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/myjavascript.js"></script>
   </body>

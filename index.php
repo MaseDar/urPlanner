@@ -1,43 +1,39 @@
 <?php
+  
+  
+    
+  
 
-//print_r($_GET);
-/*INSERT INTO `challenges` (`id`, `text`, `date`) VALUES ('1', 'Отпраздновать нг!', '2019-12-31 08:00:00');*/
 
-	$db = new mysqli('localhost', 'root', '', 'todo');
+  $db = new mysqli('localhost', 'root', '', 'todo');
 
-	if (mysqli_connect_errno()) {
-		printf("Соединение не установлено", mysqli_connect_error());
-		exit();
-	} 
-	$db->set_charset('utf8');
+  if (mysqli_connect_errno()) {
+    printf("Соединение не установлено", mysqli_connect_error());
+    exit();
+  } 
+  $db->set_charset('utf8');
 
-	/*$query = $mysqli->query('SELECT * FROM zadachi2');*/
-
-	/*while ( $row = mysqli_fetch_assoc($query) ) {
-		echo $row['text']." ".$row['date']."<br>";
-	}*/
-
-	if (isset($_POST['submit'])) {
-		$task = $_POST['task'];
-		if ($task != "") {
-			$query = "INSERT INTO tasks (task) VALUES('$task')";
-			$run_query = mysqli_query($db, $query);
-		}
-		
-	}
-	
-
-	if (isset($_GET['delete'])) {
-                    $delete = $_GET['delete'];
-                    $query = "DELETE FROM tasks WHERE id = '$delete' ";
-                    $run = mysqli_query($db, $query);
-
-                    if (!$run) {
-                      echo "alert('delete query failed')";
-                    }
-                  }
+  if (isset($_POST['submit'])) {
+    $task = $_POST['task'];
+    if ($task != "") {
+      $query = "INSERT INTO tasks (task) VALUES('$task')";
+      $run_query = mysqli_query($db, $query);
+    }
+    
+  }
+  
+  if (isset($_GET['delete'])) {
+   $delete = $_GET['delete'];
+   $query = "DELETE FROM tasks WHERE id = '$delete' ";
+   $run = mysqli_query($db, $query);
+    if (!$run) {
+    echo "alert('delete query failed')";
+     }
+  }
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -276,10 +272,11 @@
       </div>
 
     </div>
+    <?php session_start(); ?>
     <div class="column">
       <div class="tile is-parent ">
           <article class="tile is-child notification is-dark">
-            <p class="title">Ваш список</p>
+            <p class="title">Ваш список </p>
             <p class="subtitle"></p>
             <div class="content">
               
@@ -327,20 +324,6 @@
                  
                  
                   <?php } 
-                  
-
-                  
-
-                  /*if (isset($_GET['edit'])) {
-                    $edit = $_GET['edit'];
-                    $query = "UPDATE `tasks` SET `task` = 'LOLLOLO' WHERE `tasks`.`id` = $edit ";
-                    $run2 = mysqli_query($db, $query);
-
-                    if (!$run2) {
-                      echo "alert('edit query failed')";
-                    }
-                  }*/
-
 
                   $db->close();
                   ?>

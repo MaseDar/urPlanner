@@ -1,9 +1,6 @@
 <?php 
 	//include the server file
-	include "/server.php";
-
-
-
+	/*include "/server.php";*/
 	
 ?>
 
@@ -13,6 +10,7 @@
 		<?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
 	</div>
 	<?php endif; ?>
+
 
 
 	<!DOCTYPE html>
@@ -50,52 +48,8 @@
           }
   </style>
   <!--Чтобы убрать видимость section написать hero  -->
-<section class="is-dark is-bold">
-    
 
-<nav class="navbar is-fixed-top is-dark is-bold " role="navigation" aria-label="main navigation">
-  
-  <div class="navbar-brand">
-        <a class="navbar-item" href="/index.php">
-         <img src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="112" height="28">
-        <img>
-        </a>
-
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div  class="navbar-menu">
-    <div class="navbar-start">
-    
-      <a class="navbar-item has-text-white" href="/planer2.html"> 
-          Profile
-      </a>
-
-      <div class="navbar-item">
-        <div class="navbar-item has-dropdown is-hoverable">
-          
-        <a class="navbar-link is-arrowless">
-          Versions
-        </a>
-        <div class="navbar-dropdown is-boxed has-background-dark">
-        <a class="navbar-item" href="https://urplanner.masedar.repl.co/">
-        v1.0
-        </a>
-        <a class="navbar-item" href="/version_romeo/index.php">
-        v1.1 Romeo
-        </a>
-        
-
-        </a>
-        </div>
-        
-      </div>
-     </div>
-
+<<<<<<< HEAD
     </div>
 
     
@@ -121,12 +75,15 @@
 
 </nav>
 </section>
+=======
+>>>>>>> fe7aeeee4f281d480c4b3dd012e36dcf3a945071
 
 
 
 <section class="hero is-medium ">
 
   <div class="hero-body">
+<<<<<<< HEAD
     
          
       </div>
@@ -137,6 +94,38 @@
                   <input class="input" type="text" placeholder="4">
                   <input class="input" type="text" placeholder="5">
                   <input class="input" type="text" placeholder="6">
+=======
+    <div class="container">
+        
+    
+    <div class="columns">
+
+
+      <div class="column is-6 ">
+
+    
+
+      
+
+    </div>
+    <div class="column">
+      <div class="tile is-parent ">
+          <article class="tile is-child notification is-dark">
+            <p class="title">Ваш список</p>
+            <p class="subtitle"></p>
+            <div class="content">
+              
+            </div>
+          </article>
+      </div>
+                  
+                  <input name="firstname" class="input" type="text" placeholder="1">
+                  <input  name="lastname" class="input" type="text" placeholder="2">
+                  <input  name="username" class="input" type="text" placeholder="3">
+                  <input     name="email" class="input" type="email" placeholder="4">
+                  <input  name="password" class="input" type="password" placeholder="5">
+                  <input  name="passconf" class="input" type="password" placeholder="6">
+>>>>>>> fe7aeeee4f281d480c4b3dd012e36dcf3a945071
                    <div class="buttons" >
 			          <a class="button is-light" href="/register.php">
 			            Log in
@@ -144,3 +133,4 @@
 		        </div>  
   </body>
 </html>
+

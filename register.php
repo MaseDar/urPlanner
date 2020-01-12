@@ -155,14 +155,14 @@
 			  <div class="tile is-child notification is-dark is-bold">
 				<form method="post" action="" name="frmRegistration" autocomplete="off">
 					<div class="field">
-					  <label class="label has-text-grey">Name</label>
+					  <label class="label has-text-light">Name</label>
 					  <div class="control">
 					     <input name="firstname" class="input" type="text" placeholder="Имя">
 					  </div>
 					</div>
 
 					<div class="field">
-					  <label class="label">Last name</label>
+					  <label class="label has-text-light">Last name</label>
 					  <div class="control">
 					      <input  name="lastname" class="input" type="text" placeholder="Фамилия">
 					  </div>
@@ -170,7 +170,7 @@
 					
 					
 					<div class="field">
-					  <label class="label">Username</label>
+					  <label class="label has-text-light">Username</label>
 					  <div class="control has-icons-left has-icons-right">
 					    <input  name="username" class="input" type="text" placeholder="Никнейм">
 					    <span class="icon is-small is-left">
@@ -184,13 +184,13 @@
 					</div>
 
 					<div class="field">
-					  <label class="label">Email</label>
+					  <label class="label has-text-light">Email</label>
 					  <div class="control has-icons-left has-icons-right">
 					    <input     name="email" class="input" type="email" placeholder="Email: example@yandex.ru">
 					    <span class="icon is-small is-left">
 					      <i class="fas fa-envelope"></i>
 					    </span>
-					    <span class="icon is-small is-right">
+					    <span class="icon is-small is-right ">
 					      <i class="fas fa-exclamation-triangle"></i>
 					    </span>
 					  </div>
@@ -198,7 +198,7 @@
 					</div>
 						<!-- <div class="field is-grouped"> -->
 						<div class="field">
-						<label class="label">Password</label>
+						<label class="label has-text-light">Password</label>
 						  <p class="control has-icons-left">
 						    <input  name="password" class="input" type="password" placeholder="Password">
 						    <span class="icon is-small is-left">
@@ -208,7 +208,7 @@
 						</div>
 
 						<div class="field">
-						<label class="label">Password confirm</label>
+						<label class="label has-text-light">Password confirm</label>
 						  <p class="control has-icons-left">
 						    <input  name="passconf" class="input" type="password" placeholder="Password confirm">
 						    <span class="icon is-small is-left">
@@ -221,7 +221,7 @@
 									
 					<div class="field is-grouped is-grouped-centered">
 					  <div class="control">
-					    <label class="checkbox">
+					    <label class="checkbox has-text-light">
 					      <input type="checkbox">
 					      Я принимаю эти условия, что ты...<a href="#"></a>
 					    </label>
@@ -234,16 +234,21 @@
 					  <button name="register-user" type="submit" class="button is-primary ">Регнуться!</button>
 					  </div>
 					</div>
+
+			<div class="field is-grouped is-grouped-centered">
+					  <div class="control">
+					  	<style type="text/css"></style>
+					  	<p class="subtitle is-6"><a class="has-text-primary" href="/login.php">Зарегистрированы?</a></p>
+					  </div>
+					</div>
 				</div>
+
 			</form>
 		</div>
 	</div>
 <!-- --------------------------------------------------------------------------- -->
 
-				</div></div>
-	        <div class="column is-4">
-		        
-	</div>	</div>	 
+	
 
   </body>
 </html>

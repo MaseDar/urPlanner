@@ -83,21 +83,6 @@
 <nav class="navbar is-fixed-top is-dark is-bold " role="navigation" aria-label="main navigation">
   
   <div class="navbar-brand">
-    <!-- <a class="navbar-item" href="/">
-      <img src="https://avatars.mds.yandex.net/get-pdb/2979185/ae145977-9c08-440d-8004-1d2d74220e34/s1200" width="112" height="28">
-    </a> -->
-
-    
-     <!-- <a class="navbar-item" href="/">
-      <img src="https://avatars.mds.yandex.net/get-pdb/2839356/3b141e3f-eec9-4dc5-98c9-24fef9ed772e/s1200" width="112" height="28">
-    </a> -->
-     
-
-     <!-- <a class="navbar-item" href="https://masedar.github.io/urPlanner">
-         <img src="https://avatars.mds.yandex.net/get-pdb/2855700/cd642d75-804b-4e7d-8374-8993e34b8fc4/s1200" width="112" height="28">
-        <img>
-        </a> НА ГИТЕ ССЫЛКИ -->
-     
         <a class="navbar-item" href="/index.php">
          <img src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="112" height="28">
         <img>
@@ -112,9 +97,7 @@
 
   <div  class="navbar-menu">
     <div class="navbar-start">
-      <!-- <a class="navbar-item has-text-white" href="https://masedar.github.io/urPlanner/planer.html"> 
-          Profile
-      </a>             НА ГИТЕ ПРОВЕРКА   -->
+    
       <a class="navbar-item has-text-white" href="/planer2.html"> 
           Profile
       </a>

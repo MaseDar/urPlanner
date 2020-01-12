@@ -102,7 +102,6 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="navbar-item has-dropdown is-hoverable">
-          
         <a class="navbar-link is-arrowless">
           Developers
         </a>
@@ -115,14 +114,7 @@
         </a>
         </div>
         </div>
-            <div class="buttons" >
-          <a class="button is-primary" href="/register.php">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light" href="/register.php">
-            Log in
-          </a>
-        </div>  
+           
      </div>
      
   </div>
@@ -135,46 +127,10 @@
 <section class="hero is-medium ">
 
   <div class="hero-body">
-    <div class="container">
-    <img id="image_fade" src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="1920" height="1080">
     
-    
-    <div class="columns">
-
-
-      <div class="column is-6 ">
-
-    
-
-      <div class="tile is-parent ">
-          <article class="tile is-child is-white">
-            <div class="content">
-                <form  action="/" method="post">
-                  <div class="field is-grouped">
-                     <input class="tile input is-rounded is-dark" name="task" type="text" placeholder="Напиши задачу">
-                     <div>
-                      <p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-                     </div>
-                     <button name="submit" type="submit" class="button is-dark ">   Добавь!</button>
-
-                  </div>
-                </form>
-            </div>
-          </article>
+         
       </div>
-
-    </div>
-    <div class="column">
-      <div class="tile is-parent ">
-          <article class="tile is-child notification is-dark">
-            <p class="title">Ваш список</p>
-            <p class="subtitle"></p>
-            <div class="content">
-              
-            </div>
-          </article>
-      </div>
-                  
+                 
                   <input class="input" type="text" placeholder="1">
                   <input class="input" type="text" placeholder="2">
                   <input class="input" type="text" placeholder="3">

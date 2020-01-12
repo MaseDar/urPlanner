@@ -151,9 +151,11 @@
 				
 <!-- -------------------------------------------------------------------------------------------------------------- -->
 			<!-- <div class="has-background-dark"> -->
+			<div class="tile is-parent is-grouped is-grouped-centered">
+			  <div class="tile is-child notification is-dark is-bold">
 				<form method="post" action="" name="frmRegistration" autocomplete="off">
 					<div class="field">
-					  <label class="label">Name</label>
+					  <label class="label has-text-grey">Name</label>
 					  <div class="control">
 					     <input name="firstname" class="input" type="text" placeholder="Имя">
 					  </div>
@@ -234,6 +236,8 @@
 					</div>
 				</div>
 			</form>
+		</div>
+	</div>
 <!-- --------------------------------------------------------------------------- -->
 
 				</div></div>

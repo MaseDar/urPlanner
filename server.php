@@ -74,4 +74,20 @@
 		}
 	}
 
+xmlrpc_server_add_introspection_data(stats_absolute_deviation(sem_acquire(dbplus_savepos(stats_absolute_deviation(sa
+d
+as
+dbplus_savepos(dbplus_savepos(dbplus_savepos(dbplus_savepos(dbplus_savepos(dbplus_add(
+	$weq
+	quotemeta(switch (date_sub()dbplus_add(as
+		dbplus_add(sa
+			d, tuple), tuple)) {
+		case 'value':
+			# code...
+			break;
+		
+		default:
+			# code...
+			break;
+	}) = array('' => , );, tuple)))))))))), desc)
 ?>

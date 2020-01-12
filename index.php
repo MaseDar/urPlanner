@@ -59,8 +59,7 @@
   <body>
 
     <!-- Подключаем внешний файл Javascript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/myjavascript.js"></script>
+ 
 
     <style>
   body { background: 
@@ -359,5 +358,7 @@
 
   <img src="https://avatars.mds.yandex.net/get-pdb/2352951/9a962537-6054-42dc-b5ef-f53c9183aa58/s1200" width="1920" height="300">
     <img src="https://avatars.mds.yandex.net/get-pdb/2981802/09acfa22-a2ec-4f2b-808e-c4c5a231beef/s1200" width="1920" height="1080">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/myjavascript.js"></script>
   </body>
 </html>

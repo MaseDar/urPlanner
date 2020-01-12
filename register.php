@@ -44,57 +44,16 @@
   body { background: 
           url(https://storge.pic2.me/cm/1920x1080/748/5bad5b010b82b.jpg) no-repeat,
           url(https://storge.pic2.me/cm/1920x1080/624/fleohweb4mw6.jpg); 
-
           }
   </style>
   <!--Чтобы убрать видимость section написать hero  -->
 
-<<<<<<< HEAD
-    </div>
-
-    
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link is-arrowless">
-          Developers
-        </a>
-        <div class="navbar-dropdown is-boxed has-background-dark">
-        <a class="navbar-item" href="https://vk.com/masedar/">
-        MaseDar
-        </a>
-        <a class="navbar-item" href="https://vk.com/mujjum/">
-        Mujjum
-        </a>
-        </div>
-        </div>
-           
-     </div>
-     
-  </div>
-
-</nav>
-</section>
-=======
->>>>>>> fe7aeeee4f281d480c4b3dd012e36dcf3a945071
 
 
 
 <section class="hero is-medium ">
 
   <div class="hero-body">
-<<<<<<< HEAD
-    
-         
-      </div>
-                 
-                  <input class="input" type="text" placeholder="1">
-                  <input class="input" type="text" placeholder="2">
-                  <input class="input" type="text" placeholder="3">
-                  <input class="input" type="text" placeholder="4">
-                  <input class="input" type="text" placeholder="5">
-                  <input class="input" type="text" placeholder="6">
-=======
     <div class="container">
         
     
@@ -125,7 +84,6 @@
                   <input     name="email" class="input" type="email" placeholder="4">
                   <input  name="password" class="input" type="password" placeholder="5">
                   <input  name="passconf" class="input" type="password" placeholder="6">
->>>>>>> fe7aeeee4f281d480c4b3dd012e36dcf3a945071
                    <div class="buttons" >
 			          <a class="button is-light" href="/register.php">
 			            Log in
@@ -133,4 +91,3 @@
 		        </div>  
   </body>
 </html>
-

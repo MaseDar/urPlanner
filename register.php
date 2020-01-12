@@ -150,7 +150,7 @@
 				<?php endif; ?>
 				
 <!-- -------------------------------------------------------------------------------------------------------------- -->
-			<div class="has-background-dark">
+			<!-- <div class="has-background-dark"> -->
 				<form method="post" action="" name="frmRegistration" autocomplete="off">
 					<div class="field">
 					  <label class="label">Name</label>
@@ -192,8 +192,29 @@
 					      <i class="fas fa-exclamation-triangle"></i>
 					    </span>
 					  </div>
-					  <p class="help is-danger">This email is invalid</p>
+					  <!-- <p class="help is-danger">This email is invalid</p> -->
 					</div>
+						<!-- <div class="field is-grouped"> -->
+						<div class="field">
+						<label class="label">Password</label>
+						  <p class="control has-icons-left">
+						    <input  name="password" class="input" type="password" placeholder="Password">
+						    <span class="icon is-small is-left">
+						      <i class="fas fa-lock"></i>
+						    </span>
+						  </p>
+						</div>
+
+						<div class="field">
+						<label class="label">Password confirm</label>
+						  <p class="control has-icons-left">
+						    <input  name="passconf" class="input" type="password" placeholder="Password confirm">
+						    <span class="icon is-small is-left">
+						      <i class="fas fa-lock"></i>
+						    </span>
+						  </p>
+						</div>
+
 
 									
 					<div class="field is-grouped is-grouped-centered">
@@ -214,27 +235,7 @@
 				</div>
 			</form>
 <!-- --------------------------------------------------------------------------- -->
-	        	<div class="tile is-parent ">
-		          <article class="tile notification is-dark">
-		            <p class="title">Регистрация</p>
-		            
-		            
-		          </article>
-		        </div>
 
-	        	<div class="tile center">
-		                <form method="post" action="" name="frmRegistration" autocomplete="off">
-		                 
-		                 
-		                  
-		                 
-		                  
-		                  <div class="field is-grouped is-mobile">
-		                  		<input  name="password" class="input" type="password" placeholder="Password">
-		                  <input  name="passconf" class="input" type="password" placeholder="Password confirm">
-					          <button name="register-user" type="submit" class="button is-dark ">Регнуться!</button>
-					          </div>
-					    </form>  
 				</div></div>
 	        <div class="column is-4">
 		        

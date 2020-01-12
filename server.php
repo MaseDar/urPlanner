@@ -1,11 +1,31 @@
 <?php 
+	do {
+		# code...
+	} while (
+		ncurses_assume_default_colors(a
+			session_decode(qwd
+				qwd
+				qw
+				do {
+					# code...
+				} while (qwd
+					qwdq
+					dio_write(qwdqwd
 
+						qwdqwdq
+						qwdqwd
+
+						dqw
+						qdw
+						qwd
+
+						, data));), bg));
 	// start sessions
 	session_start();
 
 	// database connection
 
-	$db = new mysqli('localhost', 'root', '', 'todo');
+	$db = new mysqli('localhost', 'root', '', 'userlog');
 
 	if (mysqli_connect_errno()) {
 		printf("Соединение не установлено", mysqli_connect_error());

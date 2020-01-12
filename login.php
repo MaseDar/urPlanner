@@ -146,53 +146,38 @@
 				<?php endif; ?>
 				
 <!-- -------------------------------------------------------------------------------------------------------------- -->
-					<div class="has-background-dark">
+					<div class="tile is-parent is-dark">
+						<div class="tile is-child notification is-dark ">
+					<form method="post" action=""  autocomplete="off">
+						<div class="field">
+						  <label class="label has-text-white">Username</label>
+						  <div class="control has-icons-left has-icons-right">
+						    <input name="username" class="input is-success" type="text" placeholder="Никнейм" >
+						    <span class="icon is-small is-left">
+						      <i class="fas fa-user"></i>
+						    </span>
+						    <span class="icon is-small is-right">
+						      <i class="fas fa-check"></i>
+						    </span>
+						  </div>
+						  <p class="help is-success">This username is available</p>
+						</div>
 					
-					<div class="field">
-					  <label class="label">Username</label>
-					  <div class="control has-icons-left has-icons-right">
-					    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-					    <span class="icon is-small is-left">
-					      <i class="fas fa-user"></i>
-					    </span>
-					    <span class="icon is-small is-right">
-					      <i class="fas fa-check"></i>
-					    </span>
-					  </div>
-					  <p class="help is-success">This username is available</p>
-					</div>
-					<form method="post" action="" name="frmRegistration" autocomplete="off">
 						<div class="field is-grouped is-mobile">
 		                  	<input  name="password" class="input" type="password" placeholder="Password">
-		                    <input  name="passconf" class="input" type="password" placeholder="Password confirm"> </div>
-					
+		                    </div>
 
-						<div class="field">
-						  <label class="label">Subject</label>
-						  <div class="control">
-						    <div class="select">
-						      <select>
-						        <option>Select dropdown</option>
-						        <option>With options</option>
-						      </select>
-						    </div>
-						  </div>
-						</div>
-
-					
-
-					
-
-
-						<div class="field is-grouped-centered">
+						<div class="field is-grouped is-grouped-centered">
 						  <div class="control ">
-						  <button name="register-user" type="submit" class="button is-primary ">Регнуться!</button>
+						  <button name="register-user" type="submit" class="button is-primary ">Войти!</button>
 						  </div>
 						</div>
 					</form>
+					</div>
+					</div>
+
 				</div>
-<!-- --------------------------------------------------------------------------- -->
-	        	
+
 		        
 	</div>	</div>	 
 

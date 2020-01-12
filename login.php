@@ -146,10 +146,11 @@
 				<?php endif; ?>
 				
 <!-- -------------------------------------------------------------------------------------------------------------- -->
-					<div class="has-background-dark">
+					<div class="tile is-parent is-dark">
+						<div class="tile is-child notification is-dark ">
 					<form method="post" action=""  autocomplete="off">
 						<div class="field">
-						  <label class="label">Username</label>
+						  <label class="label has-text-white">Username</label>
 						  <div class="control has-icons-left has-icons-right">
 						    <input name="username" class="input is-success" type="text" placeholder="Никнейм" >
 						    <span class="icon is-small is-left">
@@ -166,16 +167,17 @@
 		                  	<input  name="password" class="input" type="password" placeholder="Password">
 		                    </div>
 
-						<div class="field is-grouped-centered">
+						<div class="field is-grouped is-grouped-centered">
 						  <div class="control ">
 						  <button name="register-user" type="submit" class="button is-primary ">Войти!</button>
 						  </div>
 						</div>
 					</form>
-					
+					</div>
+					</div>
+
 				</div>
-<!-- --------------------------------------------------------------------------- -->
-	        	
+
 		        
 	</div>	</div>	 
 

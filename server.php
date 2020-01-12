@@ -18,7 +18,7 @@
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
-		$query = "SELECT * FROM users username = '$username' AND password = '$password' ";
+		$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
 		$run = mysqli_query($db, $query);
 
 		if ($run) {
@@ -29,7 +29,7 @@
 				$_SESSION['firstname'] = $new_user['firstname'];
 				$_SESSION['email'] = $new_user['email'];
 
-				$_SESSION['success'] = "<div>Все ок! Зарегистрирован</div>";
+				$_SESSION['success'] = "<div>Все ок! вы вошли</div>";
 
 				header('location: index.php');
 				exit();
@@ -39,7 +39,7 @@
 				exit();
 			}
 		} else {
-			echo "Не пошло блдь, вот ошибка: " . mysqli.error();
+			echo "Не пошло блдь, вот ошибка: " . mysqli_error();
 		}
 	}
 

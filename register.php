@@ -44,7 +44,6 @@
   body { background: 
           url(https://storge.pic2.me/cm/1920x1080/748/5bad5b010b82b.jpg) no-repeat,
           url(https://storge.pic2.me/cm/1920x1080/624/fleohweb4mw6.jpg); 
-
           }
   </style>
   <!--Чтобы убрать видимость section написать hero  -->
@@ -92,4 +91,3 @@
 		        </div>  
   </body>
 </html>
-

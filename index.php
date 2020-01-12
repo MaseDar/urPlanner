@@ -5,24 +5,24 @@
   
 
 
-	$db = new mysqli('localhost', 'root', '', 'todo');
+  $db = new mysqli('localhost', 'root', '', 'todo');
 
-	if (mysqli_connect_errno()) {
-		printf("Соединение не установлено", mysqli_connect_error());
-		exit();
-	} 
-	$db->set_charset('utf8');
+  if (mysqli_connect_errno()) {
+    printf("Соединение не установлено", mysqli_connect_error());
+    exit();
+  } 
+  $db->set_charset('utf8');
 
-	if (isset($_POST['submit'])) {
-		$task = $_POST['task'];
-		if ($task != "") {
-			$query = "INSERT INTO tasks (task) VALUES('$task')";
-			$run_query = mysqli_query($db, $query);
-		}
-		
-	}
-	
-	if (isset($_GET['delete'])) {
+  if (isset($_POST['submit'])) {
+    $task = $_POST['task'];
+    if ($task != "") {
+      $query = "INSERT INTO tasks (task) VALUES('$task')";
+      $run_query = mysqli_query($db, $query);
+    }
+    
+  }
+  
+  if (isset($_GET['delete'])) {
    $delete = $_GET['delete'];
    $query = "DELETE FROM tasks WHERE id = '$delete' ";
    $run = mysqli_query($db, $query);

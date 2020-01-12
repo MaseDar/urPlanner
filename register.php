@@ -214,7 +214,7 @@
 					</div>
 
 
-					<div class="field is-grouped">
+					<div class="field is-grouped-centered">
 					  <div class="control ">
 					  <button name="register-user" type="submit" class="button is-primary ">Регнуться!</button>
 					  </div>

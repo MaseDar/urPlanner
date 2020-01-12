@@ -12,6 +12,38 @@
 	} 
 	$db->set_charset('utf8');
 
+// User login case
+
+	if (isset($_POST['submit'])) {
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+
+		$query = "SELECT * FROM users username = '$username' AND password = '$password' ";
+		$run = mysqli_query($db, $query);
+
+		if ($run) {
+			if (mysqli_num_rows($run) > 0) {
+				$new_user = mysqli_fetch_assoc($run);
+
+				$_SESSION['username'] = $new_user['username'];
+				$_SESSION['firstname'] = $new_user['firstname'];
+				$_SESSION['email'] = $new_user['email'];
+
+				$_SESSION['success'] = "<div>Все ок! Зарегистрирован</div>";
+
+				header('location: index.php');
+				exit();
+			} else {
+				$_SESSION['error'] = "<div>Проверь введные данные сука</div>";
+				header('locatin: login.php');
+				exit();
+			}
+		} else {
+			echo "Не пошло блдь, вот ошибка: " . mysqli.error();
+		}
+	}
+
+
 	//User registration
 
 	if (isset($_POST['register-user'])) {

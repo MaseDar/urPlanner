@@ -13,6 +13,8 @@
   } 
   $db->set_charset('utf8');
 
+    //Слушатель кнопки добавить
+
   if (isset($_POST['submit'])) {
     $task = $_POST['task'];
     if ($task != "") {
@@ -22,6 +24,8 @@
     
   }
   
+    //Удаление задачи из списка
+
   if (isset($_GET['delete'])) {
    $delete = $_GET['delete'];
    $query = "DELETE FROM tasks WHERE id = '$delete' ";
@@ -30,6 +34,13 @@
     echo "alert('delete query failed')";
      }
   }
+
+  if (!isset($_SESSION['username'])) {
+    header('location: login.php');
+    exit();
+  }
+
+
 
 ?>
 
@@ -135,6 +146,15 @@
           <a class="button is-light" href="/login.php">
             Log in
           </a>
+          <?php if (isset($_SESSION['username'])) : ?> 
+            <?php if(isset($_SESSION['success'])) : ?>
+        <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+        <?php endif; ?>
+                <a class="button is-light" href="/logout.php">
+            Logout
+          </a>
+              <?php endif; ?>
+          
         </div>  
      </div>
       
@@ -276,8 +296,8 @@
 
             
               <?php if (isset($_SESSION['username'])) : ?> 
-                <p class="title">Ваш список <?php echo $_SESSION['username']; ?></p>
-              <?php endif ?>
+                <p class="title is-5">Ваш список <?php echo $_SESSION['username']; ?></p>
+              <?php endif; ?>
             <p class="subtitle"></p>
             <div class="content">
               

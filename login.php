@@ -144,10 +144,16 @@
 						</article>
 					</div>
 				<?php endif; ?>
+
+				<?php if(isset($_SESSION['success'])) : ?>
+				<?php echo $_SESSION['success']; unset($_SESSION['success']); session_destroy();?>
+				<?php endif; ?>
 				
-<!-- -------------------------------------------------------------------------------------------------------------- -->
+
 					<div class="tile is-parent is-dark">
 						<div class="tile is-child notification is-dark ">
+
+						
 					<form method="post" action=""  autocomplete="off">
 						<div class="field">
 						  <label class="label has-text-white">Username</label>
@@ -169,9 +175,10 @@
 
 						<div class="field is-grouped is-grouped-centered">
 						  <div class="control ">
-						  <button name="register-user" type="submit" class="button is-primary ">Войти!</button>
+						  <button name="submit" type="submit" class="button is-primary ">Войти!</button>
 						  </div>
 						</div>
+						<p class="subtitle is-8"><a href="/register.php"></a></p>
 					</form>
 					</div>
 					</div>

@@ -132,7 +132,7 @@
           <a class="button is-primary" href="/register.php">
             <strong>Sign up</strong>
           </a>
-          <a class="button is-light" href="/register.php">
+          <a class="button is-light" href="/login.php">
             Log in
           </a>
         </div>  

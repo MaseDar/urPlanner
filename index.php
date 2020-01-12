@@ -63,7 +63,7 @@
   <body>
       
   <!--Чтобы убрать видимость section написать hero  -->
-<section class="is-dark is-bold">
+<section class="is-dark">
     
 
 <nav class="navbar is-fixed-top is-dark is-bold " role="navigation" aria-label="main navigation">
@@ -110,8 +110,9 @@
      </div>
 
     </div>
-
-    
+    <a class="navbar-item ">
+    <p class=" subtitle is-6  has-text-light ">v1.2 Balenciaga</p>    
+    </a>
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="navbar-item has-dropdown is-hoverable">

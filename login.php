@@ -178,7 +178,12 @@
 						  <button name="submit" type="submit" class="button is-primary ">Войти!</button>
 						  </div>
 						</div>
-						
+						<div class="field is-grouped is-grouped-centered">
+            <div class="control">
+              <style type="text/css"></style>
+              <p class="subtitle is-6"><a class="has-text-primary" href="/login.php">Зарегистрироваться</a></p>
+            </div>
+          </div>
 					</form>
 					</div>
 					</div>

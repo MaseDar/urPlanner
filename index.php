@@ -121,8 +121,8 @@
      </div>
 
     </div>
-    <a class="navbar-item ">
-    <p class=" subtitle is-6  has-text-light ">v1.2 Balenciaga</p>    
+    <a class="navbar-item has-background-dark ">
+    <p class="subtitle is-6  has-text-light ">v1.2 Balenciaga</p>    
     </a>
     <div class="navbar-end">
       <div class="navbar-item">

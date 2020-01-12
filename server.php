@@ -54,6 +54,7 @@
 					$_SESSION['email']     = $new_user['email'];
 
 					header('location: /index.php');
+					exit();
 				}
 			}
 		}

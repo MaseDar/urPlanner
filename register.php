@@ -150,17 +150,27 @@
 				<?php endif; ?>
 				
 <!-- -------------------------------------------------------------------------------------------------------------- -->
-					<div class="has-background-dark">
+			<!-- <div class="has-background-dark"> -->
+				<form method="post" action="" name="frmRegistration" autocomplete="off">
 					<div class="field">
 					  <label class="label">Name</label>
 					  <div class="control">
-					    <input class="input" type="text" placeholder="Text input">
+					     <input name="firstname" class="input" type="text" placeholder="Имя">
 					  </div>
 					</div>
+
+					<div class="field">
+					  <label class="label">Last name</label>
+					  <div class="control">
+					      <input  name="lastname" class="input" type="text" placeholder="Фамилия">
+					  </div>
+					</div>
+					
+					
 					<div class="field">
 					  <label class="label">Username</label>
 					  <div class="control has-icons-left has-icons-right">
-					    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+					    <input  name="username" class="input" type="text" placeholder="Никнейм">
 					    <span class="icon is-small is-left">
 					      <i class="fas fa-user"></i>
 					    </span>
@@ -174,7 +184,7 @@
 					<div class="field">
 					  <label class="label">Email</label>
 					  <div class="control has-icons-left has-icons-right">
-					    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+					    <input     name="email" class="input" type="email" placeholder="Email: example@yandex.ru">
 					    <span class="icon is-small is-left">
 					      <i class="fas fa-envelope"></i>
 					    </span>
@@ -182,66 +192,50 @@
 					      <i class="fas fa-exclamation-triangle"></i>
 					    </span>
 					  </div>
-					  <p class="help is-danger">This email is invalid</p>
+					  <!-- <p class="help is-danger">This email is invalid</p> -->
 					</div>
+						<!-- <div class="field is-grouped"> -->
+						<div class="field">
+						<label class="label">Password</label>
+						  <p class="control has-icons-left">
+						    <input  name="password" class="input" type="password" placeholder="Password">
+						    <span class="icon is-small is-left">
+						      <i class="fas fa-lock"></i>
+						    </span>
+						  </p>
+						</div>
 
-					<div class="field">
-					  <label class="label">Subject</label>
-					  <div class="control">
-					    <div class="select">
-					      <select>
-					        <option>Select dropdown</option>
-					        <option>With options</option>
-					      </select>
-					    </div>
-					  </div>
-					</div>
+						<div class="field">
+						<label class="label">Password confirm</label>
+						  <p class="control has-icons-left">
+						    <input  name="passconf" class="input" type="password" placeholder="Password confirm">
+						    <span class="icon is-small is-left">
+						      <i class="fas fa-lock"></i>
+						    </span>
+						  </p>
+						</div>
 
-					<div class="field">
-					  <label class="label">Message</label>
-					  <div class="control">
-					    <textarea class="textarea" placeholder="Textarea"></textarea>
-					  </div>
-					</div>
 
-					<div class="field">
+									
+					<div class="field is-grouped is-grouped-centered">
 					  <div class="control">
 					    <label class="checkbox">
 					      <input type="checkbox">
-					      I agree to the <a href="#">terms and conditions</a>
+					      Я принимаю эти условия, что ты...<a href="#"></a>
 					    </label>
 					  </div>
 					</div>
 
 
-					<div class="field is-grouped-centered">
+					<div class="field is-grouped is-grouped-centered">
 					  <div class="control ">
 					  <button name="register-user" type="submit" class="button is-primary ">Регнуться!</button>
 					  </div>
 					</div>
 				</div>
+			</form>
 <!-- --------------------------------------------------------------------------- -->
-	        	<div class="tile is-parent ">
-		          <article class="tile notification is-dark">
-		            <p class="title">Регистрация</p>
-		            
-		            
-		          </article>
-		        </div>
 
-	        	<div class="tile center">
-		                <form method="post" action="" name="frmRegistration" autocomplete="off">
-		                  <input name="firstname" class="input" type="text" placeholder="Имя">
-		                  <input  name="lastname" class="input" type="text" placeholder="Фамилия">
-		                  <input  name="username" class="input" type="text" placeholder="Никнейм">
-		                  <input     name="email" class="input" type="email" placeholder="Email: example@yandex.ru">
-		                  
-		                  <div class="field is-grouped is-mobile">
-		                  		<input  name="password" class="input" type="password" placeholder="Password">
-		                  <input  name="passconf" class="input" type="password" placeholder="Password confirm">
-					          <button name="register-user" type="submit" class="button is-dark ">Регнуться!</button>
-					          </div>
-					    </form>  
 				</div></div>
 	        <div class="column is-4">
 		        

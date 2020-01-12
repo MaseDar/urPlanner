@@ -57,17 +57,16 @@
 
   </head>
   <body>
-
-    <!-- Подключаем внешний файл Javascript -->
- 
-
-    <style>
-  body { background: 
-          url(https://storge.pic2.me/cm/1920x1080/748/5bad5b010b82b.jpg) no-repeat,
-          url(https://storge.pic2.me/cm/1920x1080/624/fleohweb4mw6.jpg); 
-
-          }
+  
+  <style>
+    body,html { 
+    background: url(https://storge.pic2.me/cm/1920x1080/748/5bad5b010b82b.jpg);
+    background-size:auto auto; 
+    }
   </style>
+  
+
+    
   <!--Чтобы убрать видимость section написать hero  -->
 <section class="is-dark is-bold">
     

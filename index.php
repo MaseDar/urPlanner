@@ -159,11 +159,11 @@
         </a>
         </div>
         </div>
-            <div class="buttons" href="C:\Users\molot\Desktop\urPlanner\urPlanner\autent.html">
-          <a class="button is-primary" href="C:\Users\molot\Desktop\urPlanner\urPlanner\autent.html">
+            <div class="buttons" >
+          <a class="button is-primary" href="/register.php">
             <strong>Sign up</strong>
           </a>
-          <a class="button is-light" href="C:\Users\molot\Desktop\urPlanner\urPlanner\autent.html">
+          <a class="button is-light" href="/register.php">
             Log in
           </a>
         </div>  

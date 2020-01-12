@@ -1,6 +1,6 @@
 <?php 
-	
-	session_start();
+
+	session_start(); //Регистрация
 
 	// database connection
 
@@ -21,53 +21,57 @@
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 		$passconf = $_POST['passconf'];
-	}
+	
 
-	//User Validity
+		//User Validity
 
-	if ($password !== $passconf) {
-		$_SESSION['error'] = "Wrong combination";
-		header('location: /register.php');
-		exit();
-	}
-
-	//Check already user
-
-	$query = "SELECT * FROM users WHERE email = '$email' ";
-	$run_query = mysqli_query($db, $query);
-
-	if ($run_query) {
-		if (mysqli_num_rows($run_query) > 0) {
-			$_SESSION['error'] = "Sorry, this email already";
-			header('location: /register.php');
+		if ($password !== $passconf) {
+			$_SESSION['error'] = "Wrong combination";
+			header('location: register.php');
 			exit();
-		} else {
-			//if user does not already register
+		}
 
-			$query = "INSERT INTO users (firstname, lastname, username, email, password) ";
-			$query = "VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
+		//Check already user
 
-			$execute_query = mysqli_query($db, $query);
+		$query = "SELECT * FROM users WHERE email = '$email' ";
+		$run_query = mysqli_query($db, $query);
 
-			if ($execute_query) {
-				$_SESSION['success'] = "Man shit! Successfully registered";
-				$_SESSION['id'] = $db->insert_db;
+		if ($run_query) {
+			if (mysqli_num_rows($run_query) > 0) {
+				$_SESSION['error'] = "Sorry, this email already";
+				header('location: register.php');
+				exit();
 			} else {
-				$_SESSION['error'] = "Try again nigga";
-			}
+				//if user does not already register
 
-			//If user is registered, redirect
+				$query = "INSERT INTO users (firstname, lastname, username, email, password) ";
+				$query .= "VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
 
-			if ($results) {
-				if (mysqli_num_rows($results) > 0) {
-					$new_user = mysqli_fetch_assoc($results);
+				$execute_query = mysqli_query($db, $query);
 
-					$_SESSION['username']  = $new_user['username'];
-					$_SESSION['firstname'] = $new_user['firstname'];
-					$_SESSION['email']     = $new_user['email'];
+				if ($execute_query) {
+					$_SESSION['id'] = $db->insert_id;
+					$_SESSION['success'] = "Man shit! Successfully registered";
+				} else {
+					$_SESSION['error'] = "Try again nigga";
+				}
 
-					header('location: /index.php');
-					exit();
+				//If user is registered, redirect
+
+				$query = "SELECT * FROM users WHERE id = " . $_SESSION['id'];
+				$results = mysqli_query($db, $query);
+
+				if ($results) {
+					if (mysqli_num_rows($results) > 0) {
+						$new_user = mysqli_fetch_assoc($results);
+
+						$_SESSION['username']  = $new_user['username'];
+						$_SESSION['firstname'] = $new_user['firstname'];
+						$_SESSION['email']     = $new_user['email'];
+
+						header('location: index.php');
+						exit();
+					}
 				}
 			}
 		}

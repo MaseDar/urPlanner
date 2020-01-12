@@ -5,11 +5,7 @@
 ?>
 
 
-<?php if(!empty($_SESSION['error'])) : ?>
-	<div class="error">
-		<?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
-	</div>
-	<?php endif; ?>
+
 
 
 
@@ -30,6 +26,10 @@
     text-align: center;
     color: white;
    } 
+
+   div.center {
+   	text-align: center;
+   }
     
   </style>
 
@@ -60,34 +60,42 @@
     <div class="columns">
 
 
-      <div class="column is-6 ">
-
-    
-
       
-
-    </div>
-    <div class="column">
-      <div class="tile is-parent ">
-          <article class="tile is-child notification is-dark">
-            <p class="title">Ваш список</p>
-            <p class="subtitle"></p>
-            <div class="content">
-              
-            </div>
-          </article>
-      </div>
-                  
-                  <input name="firstname" class="input" type="text" placeholder="1">
-                  <input  name="lastname" class="input" type="text" placeholder="2">
-                  <input  name="username" class="input" type="text" placeholder="3">
-                  <input     name="email" class="input" type="email" placeholder="4">
-                  <input  name="password" class="input" type="password" placeholder="5">
-                  <input  name="passconf" class="input" type="password" placeholder="6">
-                   <div class="buttons" >
-			          <a class="button is-light" href="/register.php">
-			            Log in
-			          </a>
-		        </div>  
+	  
+	    	<div class="column is-4">
+		        
+	        </div>
+	        <div class="column is-4">
+	        	<?php if(!empty($_SESSION['error'])) : ?>
+					<div class="tile ">
+						<article class="tile  notification is-danger">
+							<p class="subtitle is-6"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
+						</article>
+					</div>
+				<?php endif; ?>
+	        	<div class="tile is-parent ">
+		          <article class="tile notification is-dark">
+		            <p class="title">Регистрация</p>
+		            
+		            
+		          </article>
+		        </div>
+	        	<div class="tile center">
+		                <form method="post" action="" name="frmRegistration" autocomplete="off">
+		                  <input name="firstname" class="input" type="text" placeholder="Имя">
+		                  <input  name="lastname" class="input" type="text" placeholder="Фамилия">
+		                  <input  name="username" class="input" type="text" placeholder="Никнейм">
+		                  <input     name="email" class="input" type="email" placeholder="Email: example@yandex.ru">
+		                  
+		                  <div class="field is-grouped is-mobile">
+		                  		<input  name="password" class="input" type="password" placeholder="Password">
+		                  <input  name="passconf" class="input" type="password" placeholder="Password confirm">
+					          <button name="register-user" type="submit" class="button is-dark ">Регнуться!</button>
+					          </div>
+					    </form>  
+				</div></div>
+	        <div class="column is-4">
+		        
+	</div>	</div>	 
   </body>
 </html>

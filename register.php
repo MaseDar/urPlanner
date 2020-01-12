@@ -31,22 +31,97 @@
    	text-align: center;
    }
     
+    body,html { 
+    background: url(https://storge.pic2.me/cm/1920x1080/748/5bad5b010b82b.jpg);
+    background-size:auto auto; 
+    }
   </style>
 
   </head>
   <body>
 
-    <!-- Подключаем внешний файл Javascript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/myjavascript.js"></script>
 
-    <style>
-  body { background: 
-          url(https://storge.pic2.me/cm/1920x1080/748/5bad5b010b82b.jpg) no-repeat,
-          url(https://storge.pic2.me/cm/1920x1080/624/fleohweb4mw6.jpg); 
-          }
-  </style>
-  <!--Чтобы убрать видимость section написать hero  -->
+  	<section class="is-dark is-bold">
+    
+
+<nav class="navbar is-fixed-top is-dark is-bold " role="navigation" aria-label="main navigation">
+  
+  <div class="navbar-brand">
+        <a class="navbar-item" href="/index.php">
+         <img src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="112" height="28">
+        <img>
+        </a>
+        
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div  class="navbar-menu has-background-dark has-text-white">
+    <div class="navbar-start">
+    
+      <a class="navbar-item has-text-white" href="/planer2.html"> 
+          Profile
+      </a>
+
+      <div class="navbar-item">
+        <div class="navbar-item has-dropdown is-hoverable">
+          
+        <a class="navbar-link is-arrowless">
+          Versions
+        </a>
+        <div class="navbar-dropdown is-boxed has-background-dark">
+        <a class="navbar-item" href="https://urplanner.masedar.repl.co/">
+        v1.0
+        </a>
+        <a class="navbar-item" href="/version_romeo/index.php">
+        v1.1 Romeo
+        </a>
+        
+
+        </a>
+        </div>
+        
+      </div>
+     </div>
+
+    </div>
+
+    
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="navbar-item has-dropdown is-hoverable">
+          
+        <a class="navbar-link is-arrowless">
+          Developers
+        </a>
+        <div class="navbar-dropdown is-boxed has-background-dark">
+        <a class="navbar-item" href="https://vk.com/masedar/">
+        MaseDar
+        </a>
+        <a class="navbar-item" href="https://vk.com/mujjum/">
+        Mujjum
+        </a>
+        </div>
+        </div>
+           <div class="buttons" >
+          <a class="button is-primary" href="/register.php">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/register.php">
+            Log in
+          </a>
+        </div>  
+     </div>
+      
+  </div>
+
+</nav>
+</section>
+
+
 
 
 
@@ -73,6 +148,79 @@
 						</article>
 					</div>
 				<?php endif; ?>
+				
+<!-- -------------------------------------------------------------------------------------------------------------- -->
+					<div class="has-background-dark">
+					<div class="field">
+					  <label class="label">Name</label>
+					  <div class="control">
+					    <input class="input" type="text" placeholder="Text input">
+					  </div>
+					</div>
+					<div class="field">
+					  <label class="label">Username</label>
+					  <div class="control has-icons-left has-icons-right">
+					    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+					    <span class="icon is-small is-left">
+					      <i class="fas fa-user"></i>
+					    </span>
+					    <span class="icon is-small is-right">
+					      <i class="fas fa-check"></i>
+					    </span>
+					  </div>
+					  <p class="help is-success">This username is available</p>
+					</div>
+
+					<div class="field">
+					  <label class="label">Email</label>
+					  <div class="control has-icons-left has-icons-right">
+					    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+					    <span class="icon is-small is-left">
+					      <i class="fas fa-envelope"></i>
+					    </span>
+					    <span class="icon is-small is-right">
+					      <i class="fas fa-exclamation-triangle"></i>
+					    </span>
+					  </div>
+					  <p class="help is-danger">This email is invalid</p>
+					</div>
+
+					<div class="field">
+					  <label class="label">Subject</label>
+					  <div class="control">
+					    <div class="select">
+					      <select>
+					        <option>Select dropdown</option>
+					        <option>With options</option>
+					      </select>
+					    </div>
+					  </div>
+					</div>
+
+					<div class="field">
+					  <label class="label">Message</label>
+					  <div class="control">
+					    <textarea class="textarea" placeholder="Textarea"></textarea>
+					  </div>
+					</div>
+
+					<div class="field">
+					  <div class="control">
+					    <label class="checkbox">
+					      <input type="checkbox">
+					      I agree to the <a href="#">terms and conditions</a>
+					    </label>
+					  </div>
+					</div>
+
+
+					<div class="field is-grouped">
+					  <div class="control ">
+					  <button name="register-user" type="submit" class="button is-primary ">Регнуться!</button>
+					  </div>
+					</div>
+				</div>
+<!-- --------------------------------------------------------------------------- -->
 	        	<div class="tile is-parent ">
 		          <article class="tile notification is-dark">
 		            <p class="title">Регистрация</p>
@@ -80,6 +228,7 @@
 		            
 		          </article>
 		        </div>
+
 	        	<div class="tile center">
 		                <form method="post" action="" name="frmRegistration" autocomplete="off">
 		                  <input name="firstname" class="input" type="text" placeholder="Имя">
@@ -97,5 +246,6 @@
 	        <div class="column is-4">
 		        
 	</div>	</div>	 
+
   </body>
 </html>

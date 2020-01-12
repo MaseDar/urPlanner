@@ -53,20 +53,15 @@
     color: white;
    } 
     
-  </style>
-
-  </head>
-  <body>
-  
-  <style>
     body,html { 
     background: url(https://storge.pic2.me/cm/1920x1080/748/5bad5b010b82b.jpg);
     background-size:auto auto; 
     }
   </style>
-  
 
-    
+  </head>
+  <body>
+      
   <!--Чтобы убрать видимость section написать hero  -->
 <section class="is-dark is-bold">
     

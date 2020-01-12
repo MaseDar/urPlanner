@@ -87,7 +87,14 @@
          <img src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="112" height="28">
         <img>
         </a>
-
+         <div class="buttons" >
+          <a class="button is-primary" href="/register.php">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/register.php">
+            Log in
+          </a>
+        </div>  
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -142,14 +149,7 @@
         </a>
         </div>
         </div>
-            <div class="buttons" >
-          <a class="button is-primary" href="/register.php">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light" href="/register.php">
-            Log in
-          </a>
-        </div>  
+           
      </div>
      
   </div>

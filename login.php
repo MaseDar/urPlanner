@@ -178,7 +178,7 @@
 						  <button name="submit" type="submit" class="button is-primary ">Войти!</button>
 						  </div>
 						</div>
-						<p class="subtitle is-8"><a href="/register.php"></a></p>
+						
 					</form>
 					</div>
 					</div>

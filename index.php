@@ -1,7 +1,7 @@
 <?php
   
   
-    
+    session_start();
   
 
 
@@ -272,11 +272,18 @@
       </div>
 
     </div>
-    <?php session_start(); ?>
+
+    
+      
+
     <div class="column">
       <div class="tile is-parent ">
           <article class="tile is-child notification is-dark">
-            <p class="title">Ваш список </p>
+
+            
+              <?php if (isset($_SESSION['username'])) : ?> 
+                <p class="title">Ваш список <?php echo $_SESSION['username']; ?></p>
+              <?php endif ?>
             <p class="subtitle"></p>
             <div class="content">
               

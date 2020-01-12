@@ -33,6 +33,29 @@
 
 			$query = "INSERT INTO users (firstname, lastname, username, email, password) ";
 			$query = "VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
+
+			$execute_query = mysqli_query($db, $query);
+
+			if ($execute_query) {
+				$_SESSION['success'] = "Man shit! Successfully registered";
+				$_SESSION['id'] = $db->insert_db;
+			} else {
+				$_SESSION['error'] = "Try again nigga";
+			}
+
+			//If user is registered, redirect
+
+			if ($results) {
+				if (mysqli_num_rows($results) > 0) {
+					$new_user = mysqli_fetch_assoc($results);
+
+					$_SESSION['username']  = $new_user['username'];
+					$_SESSION['firstname'] = $new_user['firstname'];
+					$_SESSION['email']     = $new_user['email'];
+
+					header('location: /index.php');
+				}
+			}
 		}
 	}
 

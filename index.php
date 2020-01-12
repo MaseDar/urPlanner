@@ -1,7 +1,9 @@
 <?php
+  
+  
+    
+  
 
-//print_r($_GET);
-/*INSERT INTO `challenges` (`id`, `text`, `date`) VALUES ('1', 'Отпраздновать нг!', '2019-12-31 08:00:00');*/
 
 	$db = new mysqli('localhost', 'root', '', 'todo');
 
@@ -10,12 +12,6 @@
 		exit();
 	} 
 	$db->set_charset('utf8');
-
-	/*$query = $mysqli->query('SELECT * FROM zadachi2');*/
-
-	/*while ( $row = mysqli_fetch_assoc($query) ) {
-		echo $row['text']." ".$row['date']."<br>";
-	}*/
 
 	if (isset($_POST['submit'])) {
 		$task = $_POST['task'];
@@ -26,21 +22,18 @@
 		
 	}
 	
-
-	
-	
-
 	if (isset($_GET['delete'])) {
-                    $delete = $_GET['delete'];
-                    $query = "DELETE FROM tasks WHERE id = '$delete' ";
-                    $run = mysqli_query($db, $query);
-
-                    if (!$run) {
-                      echo "alert('delete query failed')";
-                    }
-                  }
+   $delete = $_GET['delete'];
+   $query = "DELETE FROM tasks WHERE id = '$delete' ";
+   $run = mysqli_query($db, $query);
+    if (!$run) {
+    echo "alert('delete query failed')";
+     }
+  }
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -87,7 +80,14 @@
          <img src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="112" height="28">
         <img>
         </a>
-
+         <div class="buttons" >
+          <a class="button is-primary" href="/register.php">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/register.php">
+            Log in
+          </a>
+        </div>  
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -142,14 +142,7 @@
         </a>
         </div>
         </div>
-            <div class="buttons" >
-          <a class="button is-primary" href="/register.php">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light" href="/register.php">
-            Log in
-          </a>
-        </div>  
+           
      </div>
      
   </div>
@@ -279,10 +272,11 @@
       </div>
 
     </div>
+    <?php session_start(); ?>
     <div class="column">
       <div class="tile is-parent ">
           <article class="tile is-child notification is-dark">
-            <p class="title">Ваш список</p>
+            <p class="title">Ваш список </p>
             <p class="subtitle"></p>
             <div class="content">
               
@@ -330,20 +324,6 @@
                  
                  
                   <?php } 
-                  
-
-                  
-
-                  /*if (isset($_GET['edit'])) {
-                    $edit = $_GET['edit'];
-                    $query = "UPDATE `tasks` SET `task` = 'LOLLOLO' WHERE `tasks`.`id` = $edit ";
-                    $run2 = mysqli_query($db, $query);
-
-                    if (!$run2) {
-                      echo "alert('edit query failed')";
-                    }
-                  }*/
-
 
                   $db->close();
                   ?>

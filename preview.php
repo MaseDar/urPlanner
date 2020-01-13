@@ -298,9 +298,9 @@
           <article class="tile is-child notification is-dark">
 
             
-              <?php if (isset($_SESSION['username'])) : ?> 
-                <p class="title is-5">Ваш список <?php echo $_SESSION['username']; ?></p>
-              <?php endif; ?>
+              
+            <p class="title is-5">Ваш список</p>
+             
             <p class="subtitle"></p>
             <div class="content">
               

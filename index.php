@@ -13,7 +13,7 @@
   } 
   $db->set_charset('utf8');
 
-    //Слушатель кнопки добавить
+    //Слушатель кнопки добавить задачу
 
   if (isset($_POST['submit'])) {
     $task = $_POST['task'];
@@ -281,7 +281,7 @@
       <div class="tile is-parent ">
           <article class="tile is-child is-white">
             <div class="content">
-                <form  action="/" method="post">
+                <form  action="/" method="post" >
                   <div class="field is-grouped">
                      <input class="tile input is-rounded is-dark" name="task" type="text" placeholder="Напиши задачу">
                      <div>

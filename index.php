@@ -283,7 +283,7 @@
             <div class="content">
                 <form  action="/" method="post">
                   <div class="field is-grouped">
-                     <input class="tile input is-rounded is-dark" name="task" type="text" placeholder="Напиши задачу">
+                     <input class="tile input is-rounded is-dark" name="task" id="message-text" type="text" placeholder="Напиши задачу">
                      <div>
                       <p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
                      </div>

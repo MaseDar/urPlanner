@@ -35,7 +35,7 @@
 				exit();
 			} else {
 				$_SESSION['error'] = "<div>Проверь введные данные сука</div>";
-				header('locatin: login.php');
+				header('location: login.php');
 				exit();
 			}
 		} else {

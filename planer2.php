@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -120,12 +121,23 @@
       </div>--> 
 
             <div class="buttons" href="C:\Users\molot\Desktop\urPlanner\urPlanner\autent.html">
+              <?php if (!isset($_SESSION['username'])) : ?>
           <a class="button is-primary" href="C:\Users\molot\Desktop\urPlanner\urPlanner\autent.html">
             <strong>Sign up</strong>
           </a>
           <a class="button is-light" href="C:\Users\molot\Desktop\urPlanner\urPlanner\autent.html">
             Log in
           </a>
+          
+          <?php endif; ?>
+          <?php if (isset($_SESSION['username'])) : ?> 
+            <?php if(isset($_SESSION['success'])) : ?>
+        <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+        <?php endif; ?>
+                <a class="button is-light" href="/logout.php">
+            Logout
+          </a>
+              <?php endif; ?>
         </div>  
      </div>
      

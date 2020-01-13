@@ -95,7 +95,7 @@
   <div  class="navbar-menu has-background-dark has-text-white">
     <div class="navbar-start">
     
-      <a class="navbar-item has-text-white" href="/planer2.html"> 
+      <a class="navbar-item has-text-white" href="/planer2.php"> 
           Profile
       </a>
 
@@ -141,12 +141,14 @@
         </div>
         </div>
            <div class="buttons" >
+            <?php if (!isset($_SESSION['username'])) : ?>
           <a class="button is-primary" href="/register.php">
             <strong>Sign up</strong>
           </a>
           <a class="button is-light" href="/login.php">
             Log in
           </a>
+          <?php endif; ?>
           <?php if (isset($_SESSION['username'])) : ?> 
             <?php if(isset($_SESSION['success'])) : ?>
         <?php echo $_SESSION['success']; unset($_SESSION['success']);?>

@@ -57,7 +57,7 @@
   <div  class="navbar-menu has-background-dark has-text-white">
     <div class="navbar-start">
     
-      <a class="navbar-item has-text-white" href="/planer2.html"> 
+      <a class="navbar-item has-text-white" href="/planer2.php"> 
           Profile
       </a>
 

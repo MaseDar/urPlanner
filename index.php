@@ -171,7 +171,7 @@
   <div class="hero-body">
      <img id="image_fade" src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="1920" height="1080">
     
-    <div id="content_fade" class="container" >
+    <div id="main_container" class="container" >
    
     
     <div class="columns">

@@ -2,7 +2,6 @@
 //include the server file
 	include "server.php";
 
-
 ?>
 
 <!DOCTYPE html>
@@ -149,29 +148,29 @@
 				<?php echo $_SESSION['success']; unset($_SESSION['success']); session_destroy();?>
 				<?php endif; ?>
 				
-
-					<div class="tile is-parent is-dark">
-						<div class="tile is-child notification is-dark ">
+<!-- ----------------------------------------------------------------------------------------- -->
+			<div class="tile is-parent is-dark">
+				<div class="tile is-child notification is-dark ">
 
 						
 					<form method="post" action=""  autocomplete="off">
-						<div class="field">
-						  <label class="label has-text-white">Username</label>
-						  <div class="control has-icons-left has-icons-right">
-						    <input name="username" class="input is-success" type="text" placeholder="Никнейм" >
-						    <span class="icon is-small is-left">
-						      <i class="fas fa-user"></i>
-						    </span>
-						    <span class="icon is-small is-right">
-						      <i class="fas fa-check"></i>
-						    </span>
-						  </div>
-						  <p class="help is-success">This username is available</p>
-						</div>
 					
-						<div class="field is-grouped is-mobile">
-		                  	<input  name="password" class="input" type="password" placeholder="Password">
-		                    </div>
+            <div class="field">
+            <label class="label has-text-light">Username</label>
+            <div class="control">
+              <input name="username" class="input is-success" type="text" placeholder="Никнейм" >
+            </div>
+          </div>
+
+            <div class="field">
+            <label class="label has-text-light">Password</label>
+              <p class="control has-icons-left">
+                <input  name="password" class="input" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
 
 						<div class="field is-grouped is-grouped-centered">
 						  <div class="control ">
@@ -180,19 +179,22 @@
 						</div>
 						<div class="field is-grouped is-grouped-centered">
             <div class="control">
-              <style type="text/css"></style>
               <p class="subtitle is-6"><a class="has-text-primary" href="/login.php">Зарегистрироваться</a></p>
+
             </div>
           </div>
 					</form>
-					</div>
-					</div>
-
 				</div>
+			</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+			</div>
 
 		        
-	</div>	</div>	 
-
+	</div>
+</div>	 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/myjavascript.js"></script>
   </body>
 </html>
+
 

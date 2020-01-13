@@ -7,6 +7,7 @@ var success = "Все ок, ты лох!";
 
 $(document).ready(function() {
 
+
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(function() {
 
@@ -16,3 +17,6 @@ $(document).ready(function() {
 
   });
 });
+$("#logoutbtn").click(function(){
+	$(".button").toggleClass("is-loading");
+})

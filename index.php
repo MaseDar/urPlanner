@@ -157,7 +157,7 @@
             <?php if(isset($_SESSION['success'])) : ?>
         <!-- <script type="text/javascript">alert("Все ты авторизован, ты лох!");</script>  -->
         <?php endif; ?>
-                <a class="button is-light" href="/logout.php">
+                <a id="logoutbtn" class="button is-light" >
             Logout
           </a>
               <?php endif; ?>

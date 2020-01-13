@@ -2,7 +2,7 @@
 	session_start();
 
 	$_SESSION['username']  = NULL;
-	$_SESSION['firstnamw'] = NULL;
+	$_SESSION['firstname'] = NULL;
 	$_SESSION['email']     = NULL;
 
 	header('refresh: 3, login.php');

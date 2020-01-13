@@ -36,11 +36,22 @@
   }
 
 
+
+
   if (!isset($_SESSION['username'])) {
     header('location: preview.php');
     exit();
   }
 
+
+  if (isset($_POST['submit_logout'])) {
+    $_SESSION['username']  = NULL;
+    $_SESSION['firstname'] = NULL;
+    $_SESSION['email']     = NULL;
+
+  header('location: preview.php');
+
+  }
 
 
 ?>
@@ -157,11 +168,12 @@
             <?php if(isset($_SESSION['success'])) : ?>
         <!-- <script type="text/javascript">alert("Все ты авторизован, ты лох!");</script>  -->
         <?php endif; ?>
-                <a id="logoutbtn" class="button is-light" >
-            Logout
-          </a>
+        <form  action="/" method="post" >
+                <button  name="submit_logout" type="submit" id="logoutbtn" class="button is-light" >
+                  Logout
+                </button>
               <?php endif; ?>
-          
+          </form>
         </div>  
      </div>
       

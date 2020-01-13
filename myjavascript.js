@@ -18,5 +18,5 @@ $(document).ready(function() {
   });
 });
 $("#logoutbtn").click(function(){
-	$(".button").toggleClass("is-loading");
+	$("#logoutbtn").toggleClass("is-loading");
 })

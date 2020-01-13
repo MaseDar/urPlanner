@@ -21,7 +21,6 @@
       $query = "INSERT INTO tasks (task) VALUES('$task')";
       $run_query = mysqli_query($db, $query);
     }
-   
     
   }
   
@@ -36,10 +35,7 @@
      }
   }
 
-  if (!isset($_SESSION['username'])) {
-    header('location: login.php');
-    exit();
-  }
+
 
 
 
@@ -70,6 +66,9 @@
     background-size:auto auto; 
     }
   </style>
+
+  
+
 
   </head>
   <body>

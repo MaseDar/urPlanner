@@ -4,9 +4,6 @@
 <head>
 <meta name="" content="">
 <title>DynamicPulldown</title>
- <?php if (!isset($_SESSION['username'])) : ?>
-  <meta http-equiv="refresh" content="0;URL=/login.php" />
-  <?php endif ?>
 
   </head>
    <body>

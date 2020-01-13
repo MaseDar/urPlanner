@@ -1,5 +1,5 @@
 $( "#main_container" ).fadeOut(0);
-$('#image_fade').fadeOut(5000,"linear",function(){
+$('#image_fade').fadeOut(2000,"linear",function(){
 	$( "#main_container" ).fadeIn(2500);
 });
 

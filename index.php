@@ -37,7 +37,7 @@
 
 
   if (!isset($_SESSION['username'])) {
-    header('location: peview.php');
+    header('location: preview.php');
     exit();
   }
 

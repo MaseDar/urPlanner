@@ -21,6 +21,7 @@
       $query = "INSERT INTO tasks (task) VALUES('$task')";
       $run_query = mysqli_query($db, $query);
     }
+   
     
   }
   

@@ -81,7 +81,7 @@
 					$_SESSION['error'] = "Sorry, this email already";
 					header('location: register.php');
 					exit();
-				} else {
+					} else {
 					//if user does not already register
 
 					$query = "INSERT INTO users (firstname, lastname, username, email, password) ";

@@ -145,7 +145,7 @@
 				<?php endif; ?>
 
 				<?php if(isset($_SESSION['success'])) : ?>
-				    <script type="text/javascript">alert("Все, пора заканчивать...");</script>
+				  <!--   <script type="text/javascript">alert("Все, пора заканчивать...");</script> -->
         <?session_destroy();?>
 				<?php endif; ?>
 				

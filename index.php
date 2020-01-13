@@ -151,7 +151,7 @@
           <?php endif; ?>
           <?php if (isset($_SESSION['username'])) : ?> 
             <?php if(isset($_SESSION['success'])) : ?>
-        <script type="text/javascript">alert("Все ты авторизован, ты лох!");</script> 
+        <!-- <script type="text/javascript">alert("Все ты авторизован, ты лох!");</script>  -->
         <?php endif; ?>
                 <a class="button is-light" href="/logout.php">
             Logout
@@ -379,4 +379,4 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/myjavascript.js"></script>
   </body>
-</html>
+</html> 

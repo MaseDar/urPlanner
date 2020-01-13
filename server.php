@@ -68,44 +68,52 @@
 		$query = "SELECT * FROM users WHERE email = '$email' ";
 		$run_query = mysqli_query($db, $query);
 
+		$query_user = "SELECT * FROM users WHERE username = '$username' ";
+		$run_query_user= mysqli_query($db, $query);
+
 		if ($run_query) {
 			if (mysqli_num_rows($run_query) > 0) {
-				$_SESSION['error'] = "Sorry, this email already";
-				header('location: register.php');
-				exit();
+				$_SESSION['error'] = "Sorry, this login already";
+					header('location: register.php');
+					exit();
 			} else {
-				//if user does not already register
-
-				$query = "INSERT INTO users (firstname, lastname, username, email, password) ";
-				$query .= "VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
-
-				$execute_query = mysqli_query($db, $query);
-
-				if ($execute_query) {
-					$_SESSION['id'] = $db->insert_id;
-					$_SESSION['success'] = "Man shit! Successfully registered";
+				if (mysqli_num_rows($run_query) > 0) {
+					$_SESSION['error'] = "Sorry, this email already";
+					header('location: register.php');
+					exit();
 				} else {
-					$_SESSION['error'] = "Try again nigga";
-				}
+					//if user does not already register
 
-				//If user is registered, redirect
+					$query = "INSERT INTO users (firstname, lastname, username, email, password) ";
+					$query .= "VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
 
-				$query = "SELECT * FROM users WHERE id = " . $_SESSION['id'];
-				$results = mysqli_query($db, $query);
+					$execute_query = mysqli_query($db, $query);
 
-				if ($results) {
-					if (mysqli_num_rows($results) > 0) {
-						$new_user = mysqli_fetch_assoc($results);
-
-						$_SESSION['username']  = $new_user['username'];
-						$_SESSION['firstname'] = $new_user['firstname'];
-						$_SESSION['email']     = $new_user['email'];
-
-						header('location: index.php');
-						exit();
+					if ($execute_query) {
+						$_SESSION['id'] = $db->insert_id;
+						$_SESSION['success'] = "Man shit! Successfully registered";
+					} else {
+						$_SESSION['error'] = "Try again nigga";
 					}
-				}
-			}
+
+					//If user is registered, redirect
+
+					$query = "SELECT * FROM users WHERE id = " . $_SESSION['id'];
+					$results = mysqli_query($db, $query);
+
+					if ($results) {
+						if (mysqli_num_rows($results) > 0) {
+							$new_user = mysqli_fetch_assoc($results);
+
+							$_SESSION['username']  = $new_user['username'];
+							$_SESSION['firstname'] = $new_user['firstname'];
+							$_SESSION['email']     = $new_user['email'];
+
+							header('location: index.php');
+							exit();
+						}
+					}
+			}	}
 		}
 	}
 

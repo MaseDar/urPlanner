@@ -13,7 +13,7 @@
   } 
   $db->set_charset('utf8');
 
-    //Слушатель кнопки добавить
+    //Слушатель кнопки добавить задачу
 
   if (isset($_POST['submit'])) {
     $task = $_POST['task'];
@@ -36,11 +36,22 @@
   }
 
 
+
+
   if (!isset($_SESSION['username'])) {
     header('location: preview.php');
     exit();
   }
 
+
+  if (isset($_POST['submit_logout'])) {
+    $_SESSION['username']  = NULL;
+    $_SESSION['firstname'] = NULL;
+    $_SESSION['email']     = NULL;
+
+  header('location: preview.php');
+
+  }
 
 
 ?>
@@ -157,11 +168,12 @@
             <?php if(isset($_SESSION['success'])) : ?>
         <!-- <script type="text/javascript">alert("Все ты авторизован, ты лох!");</script>  -->
         <?php endif; ?>
-                <a id="logoutbtn" class="button is-light" >
-            Logout
-          </a>
+        <form  action="/" method="post" >
+                <button  name="submit_logout" type="submit" id="logoutbtn" class="button is-light" >
+                  Logout
+                </button>
               <?php endif; ?>
-          
+          </form>
         </div>  
      </div>
       
@@ -281,7 +293,7 @@
       <div class="tile is-parent ">
           <article class="tile is-child is-white">
             <div class="content">
-                <form  action="/" method="post">
+                <form  action="/" method="post" >
                   <div class="field is-grouped">
                      <input class="tile input is-rounded is-dark" name="task" id="message-text" type="text" placeholder="Напиши задачу">
                      <div>

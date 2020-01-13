@@ -3,6 +3,7 @@ $('#image_fade').fadeOut(5000,"linear",function(){
 	$( "#main_container" ).fadeIn(2500);
 });
 
+var success = "Все ок, ты лох!";
 
 $(document).ready(function() {
 

@@ -145,7 +145,8 @@
 				<?php endif; ?>
 
 				<?php if(isset($_SESSION['success'])) : ?>
-				<?php echo $_SESSION['success']; unset($_SESSION['success']); session_destroy();?>
+				    <script type="text/javascript">alert("Все, пора заканчивать...");</script>
+        <?session_destroy();?>
 				<?php endif; ?>
 				
 <!-- ----------------------------------------------------------------------------------------- -->
@@ -179,7 +180,7 @@
 						</div>
 						<div class="field is-grouped is-grouped-centered">
             <div class="control">
-              <p class="subtitle is-6"><a class="has-text-primary" href="/login.php">Зарегистрироваться</a></p>
+              <p class="subtitle is-6"><a class="has-text-primary" href="/register.php">Зарегистрироваться</a></p>
 
             </div>
           </div>

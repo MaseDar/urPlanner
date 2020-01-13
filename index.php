@@ -151,7 +151,7 @@
           <?php endif; ?>
           <?php if (isset($_SESSION['username'])) : ?> 
             <?php if(isset($_SESSION['success'])) : ?>
-        <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+        <script type="text/javascript">alert("Все ты авторизован, ты лох!");</script> 
         <?php endif; ?>
                 <a class="button is-light" href="/logout.php">
             Logout

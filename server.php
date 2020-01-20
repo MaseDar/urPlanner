@@ -92,6 +92,8 @@
 					if ($execute_query) {
 						$_SESSION['id'] = $db->insert_id;
 						$_SESSION['success'] = "Man shit! Successfully registered";
+
+						
 					} else {
 						$_SESSION['error'] = "Try again nigga";
 					}
@@ -108,6 +110,25 @@
 							$_SESSION['username']  = $new_user['username'];
 							$_SESSION['firstname'] = $new_user['firstname'];
 							$_SESSION['email']     = $new_user['email'];
+
+							$user_unique_base = $_SESSION['username'];
+
+							$db2 = new mysqli('localhost', 'root', '', 'bigpopa');
+							$db2->set_charset('utf8');
+
+							$sql = "CREATE TABLE `$user_unique_base` (
+							id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+							
+							task VARCHAR(200),
+							
+							time TIMESTAMP
+							)";
+							if ($db2->query($sql) === TRUE) {
+							   echo $user_unique_base ." таблица создана успешно!";
+							} else {
+							   echo "Ошибка создания таблицы: " . $conn->error;
+							}
+
 
 							header('location: index.php');
 							exit();

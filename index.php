@@ -4,11 +4,9 @@
     session_start(); // Регистрация 
 
 
-    
-  
 
 
-  $db = new mysqli('localhost', 'root', '', 'todo');
+  $db = new mysqli('localhost', 'root', '', 'bigpopa');
 
   if (mysqli_connect_errno()) {
     printf("Соединение не установлено", mysqli_connect_error());
@@ -16,12 +14,22 @@
   } 
   $db->set_charset('utf8');
 
+// Перенаправка пользователя, если он не авторизован
+
+  if (!isset($_SESSION['username'])) {
+    header('location: preview.php');
+    exit();
+  } else {
+    $username_base = $_SESSION['username']; // присвоиваем переменной никнейм пользователя в сессии
+  }
+
+
     //Слушатель кнопки добавить задачу
 
   if (isset($_POST['submit'])) {
     $task = $_POST['task'];
     if ($task != "") {
-      $query = "INSERT INTO tasks (task) VALUES('$task')";
+      $query = "INSERT INTO `$username_base` (`task`) VALUES ('$task');";
       $run_query = mysqli_query($db, $query);
     }
     
@@ -31,7 +39,7 @@
 
   if (isset($_GET['delete'])) {
    $delete = $_GET['delete'];
-   $query = "DELETE FROM tasks WHERE id = '$delete' ";
+   $query = "DELETE FROM `$username_base` WHERE id = '$delete' ";
    $run = mysqli_query($db, $query);
     if (!$run) {
     echo "alert('delete query failed')";
@@ -41,10 +49,8 @@
 
 
 
-  if (!isset($_SESSION['username'])) {
-    header('location: preview.php');
-    exit();
-  }
+  
+
 
 
   if (isset($_POST['submit_logout'])) {
@@ -321,7 +327,7 @@
 
             
               <?php if (isset($_SESSION['username'])) : ?> 
-                <p class="title is-5">Ваш список <?php echo $_SESSION['username']; ?></p>
+                <p class="title is-5">Ваш список <?php echo $_SESSION['username'];  ?></p>
               <?php endif; ?>
             <p class="subtitle"></p>
             <div class="content">
@@ -334,7 +340,7 @@
               
 
                   <?php 
-                  $run_task = mysqli_query($db, "SELECT * FROM tasks LIMIT 20");
+                  $run_task = mysqli_query($db, "SELECT * FROM $username_base LIMIT 20");
                   while ($row = mysqli_fetch_assoc($run_task)) {
                     $id = $row['id'];
                     $task1 = $row['task'];

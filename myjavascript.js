@@ -23,3 +23,49 @@ $(document).ready(function() {
 $("#logoutbtn").click(function(){
 	$("#logoutbtn").toggleClass("is-loading");
 })
+
+
+// $.ajax({
+//   url: "index.php",
+//   success: function(data){
+//     alert( "Прибыли данные: " + data );
+//   }
+// });
+
+
+$('#todoform').submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    type: $(this).attr('method'),
+    url: '/index.php',
+    data: $(this).serialize(),
+    async: false,
+    dataType: "text",
+    success: function(result){
+      alert('Форма отправлена');
+      $.get(
+			 '/index.php',          // адрес отправки запроса
+			 
+			  function(data) {              
+			    $('#tasksjs').append('<div class="tile is-parent ">\
+                        <article class="tile is-child notification is-dark ">\
+                          <div class="content">\
+                            <div class="columns is-mobile">\
+                              <div class="column ">\
+                                <p class="subtitle is-5"><?php echo $task1;  ?></p>\
+                              </div>\
+                              <div class="column is-1 ">\
+                                <div class="field is-grouped">\
+                                <td class="delete"><a href="index.php?delete=<?php echo $id; ?>"> <i class="fas fa-times has-text-danger"></i></a></td>\
+                                </div>\
+                              </div>\
+                            </div>\
+                          </div>\
+                        </article>\
+                    </div>\ ')
+			  }
+		   );
+    }
+  });
+});
+

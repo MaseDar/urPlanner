@@ -1,7 +1,10 @@
 <?php
   
   
-    session_start(); // Регистрация
+    session_start(); // Регистрация 
+
+
+    
   
 
 

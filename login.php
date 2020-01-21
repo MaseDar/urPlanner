@@ -31,7 +31,7 @@
     background-size:auto auto; 
     }
   </style>
-
+<link rel="shortcut icon" href="/img/favicon.png" type="image/png">
   </head>
   <body>
 

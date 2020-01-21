@@ -47,7 +47,7 @@
       <link rel="stylesheet" href="css/mystyles.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
   </head>
   <body>
 

@@ -72,7 +72,7 @@
 		$run_query_user= mysqli_query($db, $query);
 
 		if ($run_query) {
-			if (mysqli_num_rows($run_query) > 0) {
+			if (mysqli_num_rows($run_query_user) > 0) {
 				$_SESSION['error'] = "Sorry, this login already";
 					header('location: register.php');
 					exit();

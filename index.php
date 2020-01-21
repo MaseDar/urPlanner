@@ -302,7 +302,7 @@
       <div class="tile is-parent ">
           <article class="tile is-child is-white">
             <div class="content">
-                <form  action="/" method="post" >
+                <form id="todoform" action="/" method="post" >
                   <div class="field is-grouped">
                      <input class="tile input is-rounded is-dark" name="task" id="message-text" type="text" placeholder="Напиши задачу">
                      <div>
@@ -313,7 +313,7 @@
                   </div>
                 </form>
             </div>
-          </article>
+          </article>`
       </div>
 
     </div>
@@ -350,7 +350,7 @@
                   ?>
                 
 
-                    <div class="tile is-parent ">
+                    <div id="tasksjs" class="tile is-parent ">
                         <article class="tile is-child notification is-dark ">
                           <div class="content">
                             <div class="columns is-mobile">

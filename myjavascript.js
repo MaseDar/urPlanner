@@ -42,17 +42,18 @@ $('#todoform').submit(function(e) {
     async: false,
     dataType: "text",
     success: function(result){
-      alert('Форма отправлена');
+      alert(data);
       $.get(
 			 '/index.php',          // адрес отправки запроса
 			 
-			  function(data) {              
+			  function(data) { 
+			  	//alert(data);             
 			    $('#tasksjs').append('<div class="tile is-parent ">\
                         <article class="tile is-child notification is-dark ">\
                           <div class="content">\
                             <div class="columns is-mobile">\
                               <div class="column ">\
-                                <p class="subtitle is-5"><?php echo $task1;  ?></p>\
+                                <p class="subtitle is-5">УРА!</p>\
                               </div>\
                               <div class="column is-1 ">\
                                 <div class="field is-grouped">\
@@ -63,8 +64,10 @@ $('#todoform').submit(function(e) {
                           </div>\
                         </article>\
                     </div>\ ')
-			  }
+			  },
+
 		   );
+      
     }
   });
 });

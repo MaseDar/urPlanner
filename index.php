@@ -349,8 +349,8 @@
                   
                   ?>
                 
-
-                    <div id="tasksjs" class="tile is-parent ">
+                  <div id="tasksjs">
+                    <div  class="tile is-parent ">
                         <article class="tile is-child notification is-dark ">
                           <div class="content">
                             <div class="columns is-mobile">
@@ -367,7 +367,7 @@
                           </div>
                         </article>
                     </div>
-
+                  </div>
                     
                     
 

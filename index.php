@@ -145,8 +145,8 @@
      </div>
 
     </div>
-    <a class="navbar-item has-background-dark ">
-    <p class="subtitle is-6  has-text-light ">v1.2 Balenciaga</p>    
+    <a class="navbar-item has-background-dark" x>
+    <p class="subtitle is-6  has-text-light" >v1.2 Balenciaga</p>    
     </a>
     <div class="navbar-end">
       <div class="navbar-item">
@@ -302,21 +302,23 @@
       <div class="tile is-parent ">
           <article class="tile is-child is-white">
             <div class="content">
-                <form id="todoform" action="/" method="post" >
+                <!-- <form id="todoform" action="/" method="post" > -->
                   <div class="field is-grouped">
-                     <input class="tile input is-rounded is-dark" name="task" id="message-text" type="text" placeholder="Напиши задачу">
+                     <input class="tile input is-rounded is-dark" name="task" id="task" type="text" placeholder="Напиши задачу">
                      <div>
                       <p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
                      </div>
-                     <button name="submit" type="submit" class="button is-dark ">   Добавь!</button>
-
+                     <input name="button" id="send" type="submit" class="button is-dark " value="Добавь"></input>
+                    
                   </div>
-                </form>
+
+                <!-- </form> -->
             </div>
           </article>`
       </div>
 
     </div>
+<!-- <div id="result"></div> -->
 
     
       
@@ -340,6 +342,7 @@
               
 
                   <?php 
+
                   $run_task = mysqli_query($db, "SELECT * FROM $username_base LIMIT 20");
                   while ($row = mysqli_fetch_assoc($run_task)) {
                     $id = $row['id'];

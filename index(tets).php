@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="" content="">
-<title>DynamicPulldown</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="name">
+	<input type="button" id="send" value="Сохранить">
 
-  </head>
-   <div class='chat'>
-	<div class='chat-messages'>
-		<div class='chat-messages__content' id='messages'>
-			Загрузка...
-		</div>
-	</div>
-	<div class='chat-input'>
-		<form method='post' id='chat-form'>
-			<input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение'> <input type='submit' class='chat-form__submit' value='=>'>
-		</form>
-	</div>
-</div>
+	<div id="result"></div>
+	<script type="text/javascript">
+		<script>
+			//при клике на кнопку
+			$("#send").click(
+			function() {
+			 
+			//отправляем ( куда , что (имя / значение) , получаем ответ)
+			 $.post('send.php', { name: $("#name").val() } , function(data) {
+			 //ответ заносим в див
+			    $('#result').html(data);
+			  }  );
+			} 
+			);
+</script>
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/myjavascript.js"></script>
 </body>
 </html>

@@ -189,6 +189,7 @@
   </div>
 
 </nav>
+
 </section>
 
 
@@ -409,5 +410,7 @@
     <img src="https://avatars.mds.yandex.net/get-pdb/2981802/09acfa22-a2ec-4f2b-808e-c4c5a231beef/s1200" width="1920" height="1080"> -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/myjavascript.js"></script>
+
+    <div id="square2"></div>
   </body>
 </html> 

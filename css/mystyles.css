@@ -25,6 +25,14 @@
   background-color: red;
   border: 2px solid black;
 }*/
+/*#square2{
+position: absolute;
+width: 2687px;
+height: 784.95px;
+left: -100px;
+background: #E0E0E0;
+transform: rotate(-7.04deg);
+}*/
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
 .pagination-link,

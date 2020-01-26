@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="" content="">
-<title>DynamicPulldown</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	  <form method="post" id="ajax_form" action="" >
+        <input type="text" name="name" placeholder="NAME" /><br>
+        <input type="text" name="phonenumber" placeholder="YOUR PHONE" /><br>
+        <input type="button" id="btn" value="Отправить" />
+    </form>
 
-  </head>
-   <div class='chat'>
-	<div class='chat-messages'>
-		<div class='chat-messages__content' id='messages'>
-			Загрузка...
-		</div>
-	</div>
-	<div class='chat-input'>
-		<form method='post' id='chat-form'>
-			<input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение'> <input type='submit' class='chat-form__submit' value='=>'>
-		</form>
-	</div>
-</div>
+    <br>
+
+    <div id="result_form"></div> 
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>

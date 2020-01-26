@@ -67,7 +67,7 @@
     }
   </style>
 
-  
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
 
 
   </head>
@@ -121,7 +121,7 @@
      </div>
 
     </div>
-    <a class="navbar-item has-background-dark ">
+    <a class="navbar-item has-background-dark" href="/versionstasks.php">
     <p class="subtitle is-6  has-text-light ">v1.2 Balenciaga</p>    
     </a>
     <div class="navbar-end">

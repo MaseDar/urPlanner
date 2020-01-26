@@ -5,27 +5,17 @@
 	<title>Document</title>
 </head>
 <body>
-	<input type="text" id="name">
-	<input type="button" id="send" value="Сохранить">
+	  <form method="post" id="ajax_form" action="" >
+        <input type="text" name="name" placeholder="NAME" /><br>
+        <input type="text" name="phonenumber" placeholder="YOUR PHONE" /><br>
+        <input type="button" id="btn" value="Отправить" />
+    </form>
 
-	<div id="result"></div>
-	<script type="text/javascript">
-		<script>
-			//при клике на кнопку
-			$("#send").click(
-			function() {
-			 
-			//отправляем ( куда , что (имя / значение) , получаем ответ)
-			 $.post('send.php', { name: $("#name").val() } , function(data) {
-			 //ответ заносим в див
-			    $('#result').html(data);
-			  }  );
-			} 
-			);
-</script>
-	</script>
+    <br>
+
+    <div id="result_form"></div> 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/myjavascript.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>

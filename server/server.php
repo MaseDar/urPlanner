@@ -21,10 +21,11 @@
 	$db->set_charset('utf8'); 	
 
 	// Логиню пользователя
-	if (isset($_POST[''])) {
+	if (isset($_POST['2'])) {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
+		//
 		$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
 		$run = mysqli_query($db, $query);
 
@@ -35,16 +36,19 @@
 				$new_user = mysqli_fetch_assoc($run);
 				$_SESSION['username'] = $new_user['username'];
 				$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
-				header('location: ')
+				header('location: ');
 				exit();
-			} else { header('location: server/log_case.php'); exit(); }
+			} else { 
+				header('location: log_case.php'); 
+				exit(); 
+			}
 		} else {
 			echo "Переменная run = false Подробнее: " . mysqli_error();
 		}
 	}
 
 	//Регистрирую пользователя
-	if (isset($_POST[''])) {
+	if (isset($_POST['1'])) {
 		   $email = $_POST['email'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -68,7 +72,7 @@
 		if ($run_query) {
 			if (mysqli_num_rows($run_query_user) > 0 || mysqli_num_rows($run_query_user) > 0) {
 				$_SESSION['error'] = "Этот никнейм/почта уже занята";
-				header('location: server/reg_case.php');
+				header('location: reg_case.php');
 				exit();
 			} else {
 				//Отправляю данные инфу о пользователе в базу данных
@@ -79,7 +83,9 @@
 				if ($execute_query) {
 					$_SESSION['id'] = $db->insert_id;
 					$_SESSION['success'] = "Добро пожалость -ник-!";
-				} else { $_SESSION['error'] = "Ошибка кокаята"; }
+				} else { 
+					$_SESSION['error'] = "Ошибка кокаята"; 
+				}
 
 				//Берем из базы данные, о только что зарегстрированно мпользваотеле по его id
 				$query = "SELECT * FROM users WHERE id = " . $_SESSION['id'];
@@ -93,7 +99,7 @@
 						$user_unique_base = $_SESSION['username'];
 						$db2 = new mysqli('localhost', 'root', '', 'bigpopa');
 						$db2->set_charset('utf8');
-
+						//Создаю таблицу с именем пользователя
 						$sql = "CREATE TABLE `$user_unique_base` (
 						id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,	
 						task VARCHAR(200),	
@@ -104,7 +110,7 @@
 							} else {
 							   echo "Ошибка создания таблицы: " . $conn->error;
 							}
-							header('location: index.php');
+							header('location: main_page.php');
 							exit();
 					}
 				}

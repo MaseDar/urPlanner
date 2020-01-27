@@ -174,9 +174,7 @@
           </a>
           <?php endif; ?>
           <?php if (isset($_SESSION['username'])) : ?> 
-            <?php if(isset($_SESSION['success'])) : ?>
-        <!-- <script type="text/javascript">alert("Все ты авторизован, ты лох!");</script>  -->
-        <?php endif; ?>
+            
         <form  action="/" method="post" >
                 <button  name="submit_logout" type="submit" id="logoutbtn" class="button is-light" >
                   Logout

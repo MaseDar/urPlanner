@@ -60,7 +60,7 @@
 			      			</div>
 			      			<div class="navbar-item has-dropdown is-hoverable">
 				      			<a class="navbar-link is-arrowless has-text-grey-light">
-						         	Developers
+						         	Developers 
 						        </a>
 						        <div class="navbar-dropdown is-boxed">
 						        	<a class="navbar-item"  href="https://vk.com/masedar">MaseDar</a>

@@ -124,7 +124,7 @@
 			<div class="field is-grouped is-grouped-centered">
 					  <div class="control">
 					  	<style type="text/css"></style>
-					  	<p class="subtitle is-6"><a class="has-text-primary" href="/login.php">Зарегистрированы?</a></p>
+					  	<p class="subtitle is-6"><a class="has-text-primary" href="log_case.php">Зарегистрированы?</a></p>
 					  </div>
 					</div>
 				</div>

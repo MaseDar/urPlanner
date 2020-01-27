@@ -85,7 +85,7 @@
 							<a class="navbar-item" href="">Profile</a>
 						</div>
 						<div class="navbar-item">
-							<a class="button is-link is-rounded" href="https://vk.com/masedar">Sign in</a>
+							<a class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
 						</div>
 					</div>
 		  
@@ -144,7 +144,7 @@
 						</div>
 						<div class="field is-grouped is-grouped-centered">
             <div class="control">
-              <p class="subtitle is-6"><a class="has-text-primary" href="/register.php">Зарегистрироваться</a></p>
+              <p class="subtitle is-6"><a class="has-text-primary" href="reg_case.php">Зарегистрироваться</a></p>
 
             </div>
           </div>

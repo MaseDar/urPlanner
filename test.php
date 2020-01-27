@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html ng-app='calendarApp' ng-cloak='true'>
   <head>

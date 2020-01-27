@@ -77,52 +77,51 @@ $('#first_title').fadeIn(1500,function(){
     	
       if (month === 0) {
         $(".date_item").first().css({
-          'margin-left': '200px'
-
+          'margin-left': '100px'
         })
       } else if (month === 1) {
         $("date_item").first().css({
-          'margin-left': '0px'
+          'margin-left': '250px'
         })
       } else if (month === 2) {
         $(".date_item").first().css({
-          'margin-left': '150px'
+          'margin-left': '300px'
         })
       } else if (month === 3) {
         $(".date_item").first().css({
-          'margin-left': '300px'
+          'margin-left': '100px'
         })
       } else if (month === 4) {
         $(".date_item").first().css({
-          'margin-left': '400px'
+          'margin-left': '200px'
         })
       } else if (month === 5) {
         $(".date_item").first().css({
-          'margin-left': '200px'
+          'margin-left': '0px'
         })
       } else if (month === 6) {
         $(".date_item").first().css({
-          'margin-left': '300px'
+          'margin-left': '100px'
         })
       } else if (month === 7) {
         $(".date_item").first().css({
-          'margin-left': '100px'
+          'margin-left': '250px'
         })
       } else if (month === 8) {
         $(".date_item").first().css({
-          'margin-left': '250px'
+          'margin-left': '50px'
         })
       } else if (month === 9) {
         $(".date_item").first().css({
-          'margin-left': '350px'
+          'margin-left': '150px'
         })
       } else if (month === 10) {
         $(".date_item").first().css({
-          'margin-left': '150px'
+          'margin-left': '300px'
         })
       } else if (month === 11) {
         $(".date_item").first().css({
-          'margin-left': '250px'
+          'margin-left': '50px'
         })
       }
     }

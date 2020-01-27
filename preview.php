@@ -121,7 +121,11 @@
 		    <div class='dates'></div>
 		  </div>
 		  <div class='calendar_right'>
+<<<<<<< HEAD
 		    <div class='list2'>
+=======
+		    <div class='calendar_list'>
+>>>>>>> ba538ac09cb75d45710d20287bab9b415bfc3abd
 		      <ul>
 		        <li class='bounce-in' ng-repeat='events in calendar.events' ng-show='events.id === calendar.dataId'>
 		          <span class='type'>It's a {{ events.type }} thing -</span>

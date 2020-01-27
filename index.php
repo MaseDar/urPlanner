@@ -1,7 +1,7 @@
 <?php 
   //session_start(); // Это функция запоминает уникального пользлователя хранит $_SESSION['login'] = 'admin'; и тд.
   //header('location: preview.php');
-//include "server/server.php";
+include "server/server.php";
 
   if (!isset($_SESSION['username'])) {
     header('location: preview.php');

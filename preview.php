@@ -82,7 +82,7 @@
 							<a class="navbar-item" href="">Profile</a>
 						</div>
 						<div class="navbar-item">
-							<a class="button is-link is-rounded" href="https://vk.com/masedar">Sign in</a>
+							<a class="button is-link is-rounded" href="server/reg_case.php">Sign in</a>
 						</div>
 					</div>
 		  
@@ -118,7 +118,7 @@
 		    <div class='dates'></div>
 		  </div>
 		  <div class='calendar_right'>
-		    <div class='list'>
+		    <div class='list2'>
 		      <ul>
 		        <li class='bounce-in' ng-repeat='events in calendar.events' ng-show='events.id === calendar.dataId'>
 		          <span class='type'>It's a {{ events.type }} thing -</span>

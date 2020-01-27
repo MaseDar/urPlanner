@@ -14,7 +14,7 @@
   </head>
   <body>
 <!-- 32px отступа по бокам -->
-	<div class="container is-fluid is-fullhd">
+	<div class="container is-fluid">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -84,11 +84,11 @@
 		</nav>
 
 		<!-- ----------------------------------NAVBAR----------------------------------------->
-    	<div id="first_title" class="content has-text-centered">
-    		<h1 class="title has-text-weight-semibold is-1">
+    	<div  class="content has-text-centered">
+    		<h1 id="first_title" class="title has-text-weight-semibold is-1">
     			Появилась идея? 
     		</h1>
-    		<h1 class="subtitle has-text-grey-light is-2 has-text-weight-light">
+    		<h1 id="first_subtitle" class="subtitle has-text-grey-light is-2 has-text-weight-light">
     			Запиши её прямо сейчас!
     		</h1>
     	</div>

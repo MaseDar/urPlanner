@@ -4,6 +4,11 @@
 // 	$( "#main_container" ).fadeIn(2500);
 // });
 
+$('#first_title').hide();
+$('#first_subtitle').hide();
+$('#first_title').fadeIn(1500,function(){
+	$('#first_subtitle').fadeIn(500);	
+});
 
 
 // на мобилках = бургер

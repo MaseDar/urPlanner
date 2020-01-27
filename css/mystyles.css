@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=cyrillic-ext");
+#first_title {
+  margin-top: 10%; }
+
 .calendar {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; }
+  margin-top: 5%;
+  height: 43vh; }
   .calendar_left {
     background: #00A8E8;
     width: 400px;

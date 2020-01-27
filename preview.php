@@ -46,9 +46,9 @@
 							
 					</div>
 			
-				
-					<div class="navbar-end">
-						
+
+						<div class="navbar-end">
+
 						
 					       	<div class="navbar-item has-dropdown is-hoverable">
 					          
@@ -82,7 +82,10 @@
 							<a class="navbar-item" href="">Profile</a>
 						</div>
 						<div class="navbar-item">
-							<a class="button is-link is-rounded" href="server/reg_case.php">Sign in</a>
+							<a class="button is-link is-rounded" href="server/reg_case.php"><b>Sign in</b></a>
+						</div>
+						<div class="navbar-item">
+							<a class="button is-link is-rounded" href="server/log_case.php">Log in</a>
 						</div>
 					</div>
 		  

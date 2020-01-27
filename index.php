@@ -25,16 +25,20 @@
 			    </a>
 			</div>
 			
-			<div class="navbar-menu">
+      <div class="navbar-brand">
+        <div class="subtitle">
+                <a class="navbar-item" href="">
+                  <h1 class="has-text-weight-bold">UR</h1>
+                  <h1 class="has-text-weight-regular">PLANNER</h1>
+                <!-- <p><b>UR</b>PLANNER</p> -->
+                </a>
+              </div>
+      </div>
+			
+      <div class="navbar-menu">
 					<div class="navbar-start">
 						
-							<div class="subtitle">
-								<a class="navbar-item" href="">
-									<h1 class="has-text-weight-bold">UR</h1>
-									<h1 class="has-text-weight-regular">PLANNER</h1>
-								<!-- <p><b>UR</b>PLANNER</p> -->
-								</a>
-							</div>
+							
 					</div>
 			
 				
@@ -80,16 +84,19 @@
 		</nav>
 
 		<!-- ----------------------------------NAVBAR----------------------------------------->
-	<div id="first_title" class="content has-text-centered">
-		<h1 class="title has-text-weight-semibold is-1">
-			Появилась идея? 
-		</h1>
-		<h1 class="subtitle has-text-grey-light is-2 has-text-weight-light">
-			Запиши её прямо сейчас!
-		</h1>
-	</div>
+    	<div id="first_title" class="content has-text-centered">
+    		<h1 class="title has-text-weight-semibold is-1">
+    			Появилась идея? 
+    		</h1>
+    		<h1 class="subtitle has-text-grey-light is-2 has-text-weight-light">
+    			Запиши её прямо сейчас!
+    		</h1>
+    	</div>
 
-	
-	</div>
+    
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/animation.js"></script>
   </body>
 </html>

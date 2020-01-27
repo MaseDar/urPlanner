@@ -74,7 +74,7 @@ $('#first_title').fadeIn(1500,function(){
 
     // Place Dates In Correct Place
     function placeIt() {
-    	alert(now.getFullYear());
+    	
       if (month === 0) {
         $(".date_item").first().css({
           'margin-left': '200px'

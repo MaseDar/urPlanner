@@ -8,7 +8,7 @@ $('#first_title').hide();
 $('#first_subtitle').hide();
 $('.calendar').hide();
 $('#first_title').fadeIn(1500,function(){
-	$('#first_subtitle').fadeIn(500,function(){
+	$('#first_subtitle').fadeIn(1000,function(){
 		$('.calendar').fadeIn(1500);
 	});
 
@@ -41,7 +41,7 @@ $('#first_title').fadeIn(1500,function(){
   function calendarController($scope) {
     var vm = this,
       now = new Date(),
-      months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
       jan = daysInMonth(1, now.getFullYear()),
       feb = daysInMonth(2, now.getFullYear()),
       mar = daysInMonth(3, now.getFullYear()),
@@ -74,9 +74,11 @@ $('#first_title').fadeIn(1500,function(){
 
     // Place Dates In Correct Place
     function placeIt() {
+    	alert(now.getFullYear());
       if (month === 0) {
         $(".date_item").first().css({
           'margin-left': '200px'
+
         })
       } else if (month === 1) {
         $("date_item").first().css({

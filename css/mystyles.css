@@ -35,18 +35,18 @@
     position: relative;
     transform: scale(0.95) translateX(-10px);
     z-index: 0; }
-    .calendar_right .list2 {
+    .calendar_right .calendar_list {
       height: 351px;
       overflow-y: scroll;
       padding: 1em; }
-      .calendar_right .list2 ul {
+      .calendar_right .calendar_list ul {
         padding: 2.25em; }
-      .calendar_right .list2 li {
+      .calendar_right .calendar_list li {
         padding: 1em;
         width: 180px;
         color: #FFF;
         transform: translateX(-700px); }
-      .calendar_right .list2 .description {
+      .calendar_right .calendar_list .description {
         font-size: 12px; }
     .calendar_right form {
       position: absolute;

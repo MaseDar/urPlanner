@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html ng-app='calendarApp' ng-cloak='true'>
   <head>
-    <meta charset="utf-8">
+    <meta charset="-8">
     <title>URPLANNER</title>
     
     <!-- Подключаем bulma -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-   <!-- ---------------- -->
     <!-- -----------ANGULARJS--------------------------- -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-animate.min.js"></script>
     <!-- ----------------------------------------------- -->
-   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
+   
     <link rel="stylesheet" href="css/mystyles.css">
     <link rel="stylesheet" href="css/custom.css">
   </head>
@@ -120,7 +118,7 @@
 		    <div class='dates'></div>
 		  </div>
 		  <div class='calendar_right'>
-		    <div class='list'>
+		    <div class='list2'>
 		      <ul>
 		        <li class='bounce-in' ng-repeat='events in calendar.events' ng-show='events.id === calendar.dataId'>
 		          <span class='type'>It's a {{ events.type }} thing -</span>

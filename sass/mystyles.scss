@@ -4,12 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=cyrillic-ext');
 
 
-* {
-  margin: 0; padding: 0;
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-}
-
 // Variables
 $primary-color: #00A8E8;
 $radius: 5px;
@@ -42,7 +36,7 @@ $radius: 5px;
     }
   }
   &_right {
-    background: darken(#324323, 5%);
+    background: darken($primary-color, 5%);
     width: 350px;
     height: 415px;
     border-top-right-radius: $radius;
@@ -50,7 +44,7 @@ $radius: 5px;
     position: relative;
     transform: scale(0.95) translateX(-10px);
     z-index: 0;
-    .list {
+    .list2 {
       height: 351px;
       overflow-y: scroll;
       padding: 1em;

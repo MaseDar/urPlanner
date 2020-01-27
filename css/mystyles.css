@@ -1,38 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=cyrillic-ext");
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(359deg); } }
-
-* {
-    box-sizing: border-box;
-}
-
-
-
-
-
-
-/*html, body {
-  height: 100%;
-  overflow: hidden;
-}*/
-
-/*div {
-  min-height: 100%;
-  background-color: red;
-  border: 2px solid black;
-}*/
-/*#square2{
-position: absolute;
-width: 2687px;
-height: 784.95px;
-left: -100px;
-background: #E0E0E0;
-transform: rotate(-7.04deg);
-}*/
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
 .pagination-link,
@@ -306,7 +279,7 @@ button,
 input,
 select,
 textarea {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 code,
 pre {
@@ -404,7 +377,7 @@ table th {
   overflow: hidden !important; }
 
 .is-size-1 {
-  font-size: 3rem !important; }
+  font-size: 4.5rem !important; }
 
 .is-size-2 {
   font-size: 2.5rem !important; }
@@ -426,7 +399,7 @@ table th {
 
 @media screen and (max-width: 768px) {
   .is-size-1-mobile {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
 
   .is-size-2-mobile {
     font-size: 2.5rem !important; }
@@ -447,7 +420,7 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (min-width: 769px), print {
   .is-size-1-tablet {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
 
   .is-size-2-tablet {
     font-size: 2.5rem !important; }
@@ -468,7 +441,7 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (max-width: 1023px) {
   .is-size-1-touch {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
 
   .is-size-2-touch {
     font-size: 2.5rem !important; }
@@ -489,7 +462,7 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (min-width: 1024px) {
   .is-size-1-desktop {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
 
   .is-size-2-desktop {
     font-size: 2.5rem !important; }
@@ -510,7 +483,7 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (min-width: 1216px) {
   .is-size-1-widescreen {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
 
   .is-size-2-widescreen {
     font-size: 2.5rem !important; }
@@ -531,7 +504,7 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (min-width: 1408px) {
   .is-size-1-fullhd {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
 
   .is-size-2-fullhd {
     font-size: 2.5rem !important; }
@@ -797,10 +770,10 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   background-color: #4a4a4a !important; }
 
 .has-text-grey {
-  color: #ffdc0d !important; }
+  color: #7a7a7a !important; }
 
 .has-background-grey {
-  background-color: #ffdc0d !important; }
+  background-color: #7a7a7a !important; }
 
 .has-text-grey-light {
   color: #b5b5b5 !important; }
@@ -842,13 +815,13 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-weight: 700 !important; }
 
 .is-family-primary {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
+  font-family: "Open Sans", sans-serif !important; }
 
 .is-family-secondary {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
+  font-family: "Open Sans", sans-serif !important; }
 
 .is-family-sans-serif {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
+  font-family: "Open Sans", sans-serif !important; }
 
 .is-family-monospace {
   font-family: monospace !important; }
@@ -1891,7 +1864,7 @@ a.box:active {
   .button.is-static {
     background-color: whitesmoke;
     border-color: #dbdbdb;
-    color: #ffdc0d;
+    color: #7a7a7a;
     box-shadow: none;
     pointer-events: none; }
   .button.is-rounded {
@@ -2683,7 +2656,7 @@ a.tag:hover {
   .title:not(.is-spaced) + .subtitle {
     margin-top: -1.25rem; }
   .title.is-1 {
-    font-size: 3rem; }
+    font-size: 4.5rem; }
   .title.is-2 {
     font-size: 2.5rem; }
   .title.is-3 {
@@ -2708,7 +2681,7 @@ a.tag:hover {
   .subtitle:not(.is-spaced) + .title {
     margin-top: -1.25rem; }
   .subtitle.is-1 {
-    font-size: 3rem; }
+    font-size: 4.5rem; }
   .subtitle.is-2 {
     font-size: 2.5rem; }
   .subtitle.is-3 {
@@ -2774,15 +2747,15 @@ a.tag:hover {
     background-color: whitesmoke;
     border-color: whitesmoke;
     box-shadow: none;
-    color: #ffdc0d; }
+    color: #7a7a7a; }
     [disabled].input::-moz-placeholder, [disabled].textarea::-moz-placeholder, .select select[disabled]::-moz-placeholder, fieldset[disabled] .input::-moz-placeholder, fieldset[disabled] .textarea::-moz-placeholder, fieldset[disabled] .select select::-moz-placeholder, .select fieldset[disabled] select::-moz-placeholder {
-      color: rgba(255, 220, 13, 0.3); }
+      color: rgba(122, 122, 122, 0.3); }
     [disabled].input::-webkit-input-placeholder, [disabled].textarea::-webkit-input-placeholder, .select select[disabled]::-webkit-input-placeholder, fieldset[disabled] .input::-webkit-input-placeholder, fieldset[disabled] .textarea::-webkit-input-placeholder, fieldset[disabled] .select select::-webkit-input-placeholder, .select fieldset[disabled] select::-webkit-input-placeholder {
-      color: rgba(255, 220, 13, 0.3); }
+      color: rgba(122, 122, 122, 0.3); }
     [disabled].input:-moz-placeholder, [disabled].textarea:-moz-placeholder, .select select[disabled]:-moz-placeholder, fieldset[disabled] .input:-moz-placeholder, fieldset[disabled] .textarea:-moz-placeholder, fieldset[disabled] .select select:-moz-placeholder, .select fieldset[disabled] select:-moz-placeholder {
-      color: rgba(255, 220, 13, 0.3); }
+      color: rgba(122, 122, 122, 0.3); }
     [disabled].input:-ms-input-placeholder, [disabled].textarea:-ms-input-placeholder, .select select[disabled]:-ms-input-placeholder, fieldset[disabled] .input:-ms-input-placeholder, fieldset[disabled] .textarea:-ms-input-placeholder, fieldset[disabled] .select select:-ms-input-placeholder, .select fieldset[disabled] select:-ms-input-placeholder {
-      color: rgba(255, 220, 13, 0.3); }
+      color: rgba(122, 122, 122, 0.3); }
 
 .input, .textarea {
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
@@ -2879,7 +2852,7 @@ a.tag:hover {
   .checkbox:hover, .radio:hover {
     color: #363636; }
   [disabled].checkbox, [disabled].radio, fieldset[disabled] .checkbox, fieldset[disabled] .radio {
-    color: #ffdc0d;
+    color: #7a7a7a;
     cursor: not-allowed; }
 
 .radio + .radio {
@@ -3006,7 +2979,7 @@ a.tag:hover {
   .select.is-large {
     font-size: 1.5rem; }
   .select.is-disabled::after {
-    border-color: #ffdc0d; }
+    border-color: #7a7a7a; }
   .select.is-fullwidth {
     width: 100%; }
     .select.is-fullwidth select {
@@ -3868,7 +3841,7 @@ a.list-item {
     padding-left: 0.75em; }
 
 .menu-label {
-  color: #ffdc0d;
+  color: #7a7a7a;
   font-size: 0.75em;
   letter-spacing: 0.1em;
   text-transform: uppercase; }
@@ -4950,7 +4923,7 @@ a.navbar-item,
     background-color: #dbdbdb;
     border-color: #dbdbdb;
     box-shadow: none;
-    color: #ffdc0d;
+    color: #7a7a7a;
     opacity: 0.5; }
 
 .pagination-previous,
@@ -5158,7 +5131,7 @@ label.panel-block {
   text-align: center;
   vertical-align: top;
   width: 1em;
-  color: #ffdc0d;
+  color: #7a7a7a;
   margin-right: 0.75em; }
   .panel-icon .fa {
     font-size: inherit;

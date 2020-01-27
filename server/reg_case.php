@@ -42,50 +42,6 @@
       </div>
 			
       <div class="navbar-menu">
-					<div class="navbar-start">
-						
-							
-					</div>
-			
-				
-					<div class="navbar-end">
-						
-						
-					       	<div class="navbar-item has-dropdown is-hoverable">
-					          
-						       <a class="navbar-link is-arrowless has-text-grey-light">
-						          v0.2 The Golden Age
-						        </a>
-						        <div class="navbar-dropdown is-boxed">
-							        <a class="navbar-item" href="https://urplanner.masedar.repl.co/">
-								        v0.0.1
-							        </a>
-							        <a class="navbar-item" href="/version_romeo/index.php">
-								        v0.1 Romeo
-							        </a> 
-							        <a class="navbar-item" href="/version_romeo/index.php">
-								        v0.1.1 Balenciaga
-							        </a> 
-							    </div>
-			      			</div>
-			      			<div class="navbar-item has-dropdown is-hoverable">
-				      			<a class="navbar-link is-arrowless has-text-grey-light">
-						         	Developers 
-						        </a>
-						        <div class="navbar-dropdown is-boxed">
-						        	<a class="navbar-item"  href="https://vk.com/masedar">MaseDar</a>
-						        	<a class="navbar-item" href="https://vk.com/mujjum">Mujjum</a>
-						        </div>
-								
-							</div>
-							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->
-						<div class="navbar-item has-dropdown is-hoverable">
-							<a class="navbar-item" href="">Profile</a>
-						</div>
-						<div class="navbar-item">
-							<a class="button is-link is-rounded" href="https://vk.com/masedar">Sign in</a>
-						</div>
-					</div>
 		  
 		</nav>
 <!-- ----------------------------------------окно регистрации------------------------------------------------------ -->

@@ -71,8 +71,8 @@
 				      			<a class="navbar-link is-arrowless has-text-grey-light">
 						         	Developers 
 						        </a>
-						        <div class="navbar-dropdown is-boxed">
-						        	<a class="navbar-item"  href="https://vk.com/masedar">MaseDar</a>
+						        <div class="navbar-dropdown is-boxed" >
+						        	<a class="navbar-item"  href="log_case.php">MaseDar</a>
 						        	<a class="navbar-item" href="https://vk.com/mujjum">Mujjum</a>
 						        </div>
 								
@@ -81,9 +81,9 @@
 						<div class="navbar-item has-dropdown is-hoverable">
 							
 						</div>
-						<div class="navbar-item">
+						<!-- <div class="navbar-item">
 							<a class="button is-link is-rounded is-small" href="log_case.php">Sign in</a>
-						</div>
+						</div> -->
 					</div>
 		</nav>
 <!-- ----------------------------------------окно регистрации------------------------------------------------------ -->

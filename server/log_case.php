@@ -72,16 +72,16 @@
 						         	Developers 
 						        </a>
 						        <div class="navbar-dropdown is-boxed">
-						        	<a class="navbar-item"  href="https://vk.com/masedar">MaseDar</a>
+						        	<a class="navbar-item"  href="reg_case.php">MaseDar</a>
 						        	<a class="navbar-item" href="https://vk.com/mujjum">Mujjum</a>
 						        </div>
 								
 							</div>
 							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->
 						
-						<div class="navbar-item">
+						<!-- <div class="navbar-item">
 							<a class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
-						</div>
+						</div> -->
 					</div>
 		</nav>
 <!-----------------------------------------окно регистрации------------------------------------------------------ -->

@@ -24,14 +24,21 @@
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
+				  <div class="subtitle">
+                <a class="navbar-item" href="">
+                  <h1 class="has-text-weight-bold">UR</h1>
+                  <h1 class="has-text-weight-regular">PLANNER</h1>
+                <!-- <p><b>UR</b>PLANNER</p> -->
+                </a>
+              </div>
 			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
 			      <span aria-hidden="true"></span>
 			      <span aria-hidden="true"></span>
 			      <span aria-hidden="true"></span>
 			    </a>
 			</div>
+	
 			
-      
       <div class="navbar-menu">
 		  <div class="navbar-menu">
 					<div class="navbar-start">

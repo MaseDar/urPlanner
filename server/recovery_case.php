@@ -4,8 +4,6 @@
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -80,37 +78,25 @@
 					</div>
 				<?php endif; ?>
 				<?php if(isset($_SESSION['success'])) : ?>
-				  <!--   <script type="text/javascript">alert("Все, пора заканчивать...");</script> -->
+				 <!--  <?php echo $_SESSION['success']; ?> -->
        			 	<?session_destroy();?>
 				<?php endif; ?>
+				
 <!-- ----------------------------------------------------------------------------------------- -->
 			<div class="box">
-				<p class="title">Вход</p>	
+				<p class="title">Введите вашу почту</p>	
 				<form method="post" action=""  autocomplete="off">
-
 	            	<div class="field">
 	            		<div class="control">
-	              			<input name="username" class="input is-success" type="text" placeholder="Никнейм" >
+	              			<input name="email" class="input is-success" type="email" placeholder="Email" >
 	           			</div>
 	          		</div>
-		            <div class="field">
-		              	<p class="control has-icons-left">
-		                	<input  name="password" class="input" type="password" placeholder="Password">
-		                		<span class="icon is-small is-left">
-		                  			<i class="fas fa-lock"></i>
-		                		</span>
-		              	</p>
-		            </div>
+
 					<div class="field is-grouped is-grouped-centered">
 					  	<div class="control">
-					  		<button name="submit" type="submit" class="button  is-light "><b>Войти</b></button>
+					  		<button name="submit_recovery" type="submit" class="button  is-light "><b>Восстановить</b></button>
 					  	</div>
 					</div>
-					<div class="field is-grouped is-grouped-centered">
-		              	<p class="subtitle is-6"><a class="has-text-primary" href="recovery_case.php">Забыли пароль?</a></p>
-		              	<p class="subtitle is-6"><a class="has-text-primary" href="reg_case.php">Зарегистрироваться</a></p>
-		            </div>
-
 				</form>
 			</div>
 		</div>

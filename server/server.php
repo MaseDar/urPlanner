@@ -47,14 +47,45 @@
 		}
 	}
 
+	//Восстановление пароля по почте
+
+	if (isset($_POST['submit_recovery'])) {
+		$email = $_POST['email'];
+		$query = "SELECT * FROM users WHERE email = '$email' ";
+		$run_query = mysqli_query($db, $query);
+		if (mysqli_num_rows($run_query) < 0) {
+			$_SESSION['error'] = "Нету такого пользователя";
+			header('location: recovery_case.php');
+			exit();
+		} else {
+			$user = mysqli_fetch_assoc($run_query);
+			$password = $user['password'];
+			if (mail("$email", "Заявка с сайта", "Пароль:".$password.". E-mail: ".$email ,"From: user8147@urplanner.ru \r\n")) {
+				echo "отправлено";
+			} else {
+				echo "Не отправлено";
+			}
+		}
+	}
+
+	/*$email = $_POST['email'];
+		if (mail("zx053c@yandex.ru", "Заявка с сайта", "Пароль:".$password.". E-mail: ".$email ,"From: zx053a@yandex.ru \r\n"))
+		 { echo "сообщение успешно отправлено"; 
+		} else { 
+		 echo "при отправке сообщения возникли ошибки";
+		}*/
+
+
 	//Регистрирую пользователя
 	if (isset($_POST['register-user'])) {
 		   $email = $_POST['email'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$passconf = $_POST['passconf'];
+		     $email = trim($email);
+		  $username = trim($username);
 
-		//Сравниваю пароли
+		//Сравниваю пароли и никнейм
 		if ($password !== $passconf || $password == "" || strlen($password) <= 5) {
 			$_SESSION['error'] = "Пароль должен содержать минимум 6 символов";
 			header('location: reg_case.php');
@@ -65,7 +96,6 @@
 			exit();
 		}
 
-
 		//Беру столбец с емаилом, если есть
 		$query = "SELECT * FROM users WHERE email = '$email' ";
 		$run_query = mysqli_query($db, $query);
@@ -75,7 +105,7 @@
 		$run_query_user = mysqli_query($db, $query);
 
 		if ($run_query) {
-			if (mysqli_num_rows($run_query_user) > 0 || mysqli_num_rows($run_query_user) > 0) {
+			if (mysqli_num_rows($run_query_user) > 0 || mysqli_num_rows($run_query) > 0) {
 				$_SESSION['error'] = "Этот никнейм/почта уже занята";
 				header('location: reg_case.php');
 				exit();

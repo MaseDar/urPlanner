@@ -19,36 +19,35 @@
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
   </head>
   <body>
+ <body>
 <!-- 32px отступа по бокам -->
 	<div class="container is-fluid">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-				  <div class="subtitle">
+				<div class="subtitle">
                 <a class="navbar-item" href="">
                   <h1 class="has-text-weight-bold">UR</h1>
                   <h1 class="has-text-weight-regular">PLANNER</h1>
                 <!-- <p><b>UR</b>PLANNER</p> -->
                 </a>
               </div>
+
 			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
 			      <span aria-hidden="true"></span>
 			      <span aria-hidden="true"></span>
 			      <span aria-hidden="true"></span>
 			    </a>
 			</div>
-	
+			
 			
       <div class="navbar-menu">
-		  <div class="navbar-menu">
-					<div class="navbar-start">
-						
-							
+					<div class="navbar-start">		
 					</div>
 			
-				
-					<div class="navbar-end">
-						
+
+						<div class="navbar-end">
+
 						
 					       	<div class="navbar-item has-dropdown is-hoverable">
 					          
@@ -81,9 +80,9 @@
 						<div class="navbar-item has-dropdown is-hoverable">
 							
 						</div>
-						<div class="navbar-item">
+						 <div class="navbar-item">
 							<a class="button is-link is-rounded is-small" href="log_case.php">Sign in</a>
-						</div>
+						</div> 
 					</div>
 		</nav>
 <!-- ----------------------------------------окно регистрации------------------------------------------------------ -->

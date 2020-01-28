@@ -8,7 +8,7 @@ include "server/server.php";
     exit();
   } else {
     header('location: main_page.php');
-    /*$username_base = $_SESSION['username']; // присвоиваем переменной никнейм пользователя в сессии*/
+    $username_base = $_SESSION['username']; // присвоиваем переменной никнейм пользователя в сессии*/
   }
 
 ?>

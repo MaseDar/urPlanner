@@ -82,13 +82,11 @@
 							</div>
 							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->
 						<div class="navbar-item has-dropdown is-hoverable">
-							<a class="navbar-item" href="">Profile</a>
 						</div>
 						<div class="navbar-item">
-							<a class="button is-link is-rounded" href="https://vk.com/masedar">Sign in</a>
+							<a class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
 						</div>
 					</div>
-		  
 		</nav>
 <!-- ----------------------------------------окно регистрации------------------------------------------------------ -->
 		<div class="columns">
@@ -99,7 +97,10 @@
 	    	<div class="column is-4">
 		        
 	        </div>
-	        <div class="column is-4">
+	        <div class="column is-4 ">
+	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
+	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
+	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 	        	<?php if(!empty($_SESSION['error'])) : ?>
 					<div class="tile ">
 						<article class="tile  notification is-danger">
@@ -114,21 +115,21 @@
 				<?php endif; ?>
 				
 <!-- ----------------------------------------------------------------------------------------- -->
-			<div class="tile is-parent is-dark">
-				<div class="tile is-child notification is-dark ">
+			<div class="box has-background-light">
+				
 
-						
+					<p class="title">Вход</p>	
 					<form method="post" action=""  autocomplete="off">
 					
             <div class="field">
-            <label class="label has-text-light">Username</label>
+        
             <div class="control">
               <input name="username" class="input is-success" type="text" placeholder="Никнейм" >
             </div>
           </div>
 
             <div class="field">
-            <label class="label has-text-light">Password</label>
+           
               <p class="control has-icons-left">
                 <input  name="password" class="input" type="password" placeholder="Password">
                 <span class="icon is-small is-left">
@@ -139,12 +140,12 @@
 
 						<div class="field is-grouped is-grouped-centered">
 						  <div class="control ">
-						  <button name="submit" type="submit" class="button is-primary ">Войти!</button>
+						  <button name="submit" type="submit" class="button is-outlined is-dark is-light ">Войти!</button>
 						  </div>
 						</div>
 						<div class="field is-grouped is-grouped-centered">
             <div class="control">
-              <p class="subtitle is-6"><a class="has-text-primary" href="/register.php">Зарегистрироваться</a></p>
+              <p class="subtitle is-6"><a class="has-text-primary" href="reg_case.php">Зарегистрироваться</a></p>
 
             </div>
           </div>

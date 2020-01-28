@@ -6,10 +6,10 @@
 	$host = 'localhost'; // адрес сервера 
 	$user = 'root'; // имя пользователя
 	$password = ''; // пароль
-	$database = ''; // имя базы данных
+	$database = 'userlog'; // имя базы данных
 
 	// Подключаемся к базе $database
-	$db = new mysqli($host, $user, $password, $database); 
+	$db = new mysqli('localhost', 'root', '', 'userlog'); 
 
 		// Получаем ошибку при неподключении 
 		if (mysqli_connect_errno()) { 
@@ -21,7 +21,7 @@
 	$db->set_charset('utf8'); 	
 
 	// Логиню пользователя
-	if (isset($_POST['2'])) {
+	if (isset($_POST['submit'])) {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
@@ -36,7 +36,7 @@
 				$new_user = mysqli_fetch_assoc($run);
 				$_SESSION['username'] = $new_user['username'];
 				$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
-				header('location: ');
+				header('location: \main_page.php');
 				exit();
 			} else { 
 				header('location: log_case.php'); 
@@ -48,7 +48,7 @@
 	}
 
 	//Регистрирую пользователя
-	if (isset($_POST['1'])) {
+	if (isset($_POST['register-user'])) {
 		   $email = $_POST['email'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -78,7 +78,7 @@
 				//Отправляю данные инфу о пользователе в базу данных
 				$query = "INSERT INTO users (username, email, password)";
 				$query .= "VALUES ('$username', '$email', '$password')";
-				$execute_query = mysqli($db, $query);
+				$execute_query = mysqli_query($db, $query);
 
 				if ($execute_query) {
 					$_SESSION['id'] = $db->insert_id;
@@ -91,7 +91,7 @@
 				$query = "SELECT * FROM users WHERE id = " . $_SESSION['id'];
 				$results = mysqli_query($db, $query);
 				if ($results) {
-					if (mysqli_num_rows() > 0) {
+					if (mysqli_num_rows($results) > 0) {
 						$new_user = mysqli_fetch_assoc($results);
 						$_SESSION['username'] = $new_user['username'];
 						   $_SESSION['email'] = $new_user['email'];
@@ -110,7 +110,7 @@
 							} else {
 							   echo "Ошибка создания таблицы: " . $conn->error;
 							}
-							header('location: main_page.php');
+							header('location: \main_page.php');
 							exit();
 					}
 				}

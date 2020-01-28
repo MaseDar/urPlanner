@@ -87,13 +87,16 @@
 							<a class="navbar-item" href="">Profile</a>
 						</div>
 						<div class="navbar-item">
-							<a class="button is-link is-rounded" href="https://vk.com/masedar">Sign in</a>
-
+							<?php if (!	isset($_SESSION['username'])) : ?> 
+							<a class="button is-link is-rounded is-small" href="https://vk.com/masedar">Sign in</a>
+							 <?php endif; ?>
 							
 							<?php if (isset($_SESSION['username'])) : ?> 
-					        	<form  action="/" method="post" >
-					                <button  name="submit_logout" type="submit" id="logoutbtn" class="button is-light" >
-					                  Logout
+					        	<form  action="" method="post" >
+					                <button  name="submit_logout" type="submit" id="logoutbtn" class="button  is-small is-rounded" >
+					                	<icon class="icon is-large">
+					                  		<i class="fas fa-sign-out-alt"></i>
+					              		</icon>
 					                </button>
 					        <?php endif; ?>
 					          	</form>

@@ -105,23 +105,22 @@
 
     	</div>
     	<!-- ----------------------------------CALENDAR-------------------------------------- -->
-    	<div class="calendar_background">
-    	</div>
+    	
 		<div class='calendar' ng-controller='calendarController as calendar'>
 		  <div class='calendar_left'>
-		    <div class='header2'>
-		      <i class='material-icons' ng-click='calendar.prev()'><</i>
-		      <h1>{{calendar.month}}</h1>
-		      <i class='material-icons' ng-click='calendar.next()'>></i>
+		    <div class='cal_header'>
+		      <i class='material-icons is-size-4' ng-click='calendar.prev()'><</i>
+		      <h1 class="is-size-4">{{calendar.month}}</h1>
+		      <i class='material-icons is-size-4' ng-click='calendar.next()'>></i>
 		    </div>
 		    <div class='days'>
-		      <div class='day_item'>Mon</div>
-		      <div class='day_item'>Tue</div>
-		      <div class='day_item'>Wed</div>
-		      <div class='day_item'>Thu</div>
-		      <div class='day_item'>Fri</div>
-		      <div class='day_item'>Sat</div>
-		      <div class='day_item'>Sun</div>
+		      <div class='day_item'>ПН</div>
+		      <div class='day_item'>ВТ</div>
+		      <div class='day_item'>СР</div>
+		      <div class='day_item'>ЧТ</div>
+		      <div class='day_item'>ПТ</div>
+		      <div class='day_item'>СБ</div>
+		      <div class='day_item'>ВС</div>
 		    </div>
 		    <div class='dates'></div>
 		  </div>

@@ -4,12 +4,16 @@
 #first_title {
   margin-top: 10%; }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .calendar {
-  z-index: 2;
   display: flex;
   justify-content: center;
-  margin-top: 5%;
-  height: 70vh; }
+  align-items: center;
+  height: 100vh; }
   .calendar_left {
     background: #00A8E8;
     width: 400px;
@@ -18,15 +22,14 @@
     border-bottom-left-radius: 5px;
     padding: 1.5em;
     z-index: 1; }
-    .calendar_left .header {
+    .calendar_left .cal_header {
       display: flex;
       justify-content: space-around;
-      margin-bottom: 2em;
-      color: #FFF;
-      font-size: 0.7em; }
-      .calendar_left .header h1 {
+      margin-bottom: 1.5em;
+      color: #FFF; }
+      .calendar_left .cal_header .h1_cl {
         line-height: 1em; }
-      .calendar_left .header i {
+      .calendar_left .cal_header i {
         cursor: pointer; }
   .calendar_right {
     background: #0096cf;
@@ -37,18 +40,18 @@
     position: relative;
     transform: scale(0.95) translateX(-10px);
     z-index: 0; }
-    .calendar_right .calendar_list {
+    .calendar_right .list {
       height: 351px;
       overflow-y: scroll;
       padding: 1em; }
-      .calendar_right .calendar_list ul {
+      .calendar_right .list ul {
         padding: 2.25em; }
-      .calendar_right .calendar_list li {
+      .calendar_right .list li {
         padding: 1em;
         width: 180px;
         color: #FFF;
         transform: translateX(-700px); }
-      .calendar_right .calendar_list .description {
+      .calendar_right .list .description {
         font-size: 12px; }
     .calendar_right form {
       position: absolute;
@@ -85,7 +88,7 @@
     color: #FFF;
     width: 50px;
     text-align: center;
-    padding-bottom: 1em; }
+    padding-bottom: 0em; }
 
 .dates {
   display: flex;

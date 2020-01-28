@@ -12,15 +12,21 @@ $radius: 5px;
 $back-color: #E0E0E0;
 
 
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+// Variables
+$primary-color: #00A8E8;
+$radius: 5px;
+
+
 .calendar {
-  z-index: 2;
   display: flex;
   justify-content: center;
-  // align-items: center;
-  margin-top: 5%;
-  height: 70vh;
-
-
+  align-items: center;
+  height: 100vh;
   &_left {
     background: $primary-color;
     width: 400px;
@@ -29,13 +35,12 @@ $back-color: #E0E0E0;
     border-bottom-left-radius: $radius;
     padding: 1.5em;
     z-index: 1;
-    .header {
+    .cal_header {
       display: flex;
       justify-content: space-around;
-      margin-bottom: 2em;
+      margin-bottom: 1.5em;
       color: #FFF;
-      font-size: 0.7em;
-      h1 {
+      .h1_cl {
         line-height: 1em;
       }
       i {
@@ -52,7 +57,7 @@ $back-color: #E0E0E0;
     position: relative;
     transform: scale(0.95) translateX(-10px);
     z-index: 0;
-    .calendar_list {
+    .list {
       height: 351px;
       overflow-y: scroll;
       padding: 1em;
@@ -109,7 +114,7 @@ $back-color: #E0E0E0;
     color: #FFF;
     width: 50px;
     text-align:center;
-    padding-bottom: 1em;
+    padding-bottom: 0em;
   }
 }
 
@@ -178,7 +183,6 @@ $back-color: #E0E0E0;
     transform: translateZ(0) scale(0.7);
   }
 }
-
 // $newcolor: #000033;
 // $dark: $newcolor;
 // $size-1: 4.5rem;

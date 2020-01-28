@@ -22,6 +22,9 @@
    
     <link rel="stylesheet" href="css/mystyles.css">
     <!-- <link rel="stylesheet" href="css/custom.css"> -->
+    <!-- MATERIAL ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> 
   </head>
   
 
@@ -109,9 +112,9 @@
 		<div class='calendar' ng-controller='calendarController as calendar'>
 		  <div class='calendar_left'>
 		    <div class='cal_header'>
-		      <i class='material-icons is-size-4' ng-click='calendar.prev()'></i>
+		      <i class='material-icons is-size-4' ng-click='calendar.prev()'>face</i>
 		      <h1 class="is-size-4">{{calendar.month}}</h1>
-		      <i class='material-icons is-size-4' ng-click='calendar.next()'></i>
+		      <i class='material-icons is-size-4' ng-click='calendar.next()'>face</i>
 		    </div>
 		    <div class='days'>
 		      <div class='day_item'>ПН</div>

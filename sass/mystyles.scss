@@ -39,20 +39,6 @@ $back-color: #E0E0E0;
       color: #FFF;
       i {
         cursor: pointer;
-        .material-icons {
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased; 
-}
       }
     }
   }
@@ -191,6 +177,7 @@ $back-color: #E0E0E0;
     transform: translateZ(0) scale(0.7);
   }
 }
+
 // $newcolor: #000033;
 // $dark: $newcolor;
 // $size-1: 4.5rem;

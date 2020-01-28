@@ -3,7 +3,15 @@
   <head>
     <meta charset="-8">
     <title>URPLANNER</title>
-    
+    <!-- ------------------ LOGO ------------------ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <!-- ------------------  ------------------ -->
     <!-- Подключаем bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -97,23 +105,22 @@
 
     	</div>
     	<!-- ----------------------------------CALENDAR-------------------------------------- -->
-    	<div class="calendar_background">
-    	</div>
+    	
 		<div class='calendar' ng-controller='calendarController as calendar'>
 		  <div class='calendar_left'>
-		    <div class='header2'>
-		      <i class='material-icons' ng-click='calendar.prev()'><</i>
-		      <h1>{{calendar.month}}</h1>
-		      <i class='material-icons' ng-click='calendar.next()'>></i>
+		    <div class='cal_header'>
+		      <i class='material-icons is-size-4' ng-click='calendar.prev()'><</i>
+		      <h1 class="is-size-4">{{calendar.month}}</h1>
+		      <i class='material-icons is-size-4' ng-click='calendar.next()'>></i>
 		    </div>
 		    <div class='days'>
-		      <div class='day_item'>Mon</div>
-		      <div class='day_item'>Tue</div>
-		      <div class='day_item'>Wed</div>
-		      <div class='day_item'>Thu</div>
-		      <div class='day_item'>Fri</div>
-		      <div class='day_item'>Sat</div>
-		      <div class='day_item'>Sun</div>
+		      <div class='day_item'>ПН</div>
+		      <div class='day_item'>ВТ</div>
+		      <div class='day_item'>СР</div>
+		      <div class='day_item'>ЧТ</div>
+		      <div class='day_item'>ПТ</div>
+		      <div class='day_item'>СБ</div>
+		      <div class='day_item'>ВС</div>
 		    </div>
 		    <div class='dates'></div>
 		  </div>

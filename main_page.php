@@ -5,6 +5,14 @@
 	    $_SESSION['email']     = NULL;
 	  	header('location: preview.php');
   	}
+
+  	if (!isset($_SESSION['username'])) {
+    	header('location: preview.php');
+    	exit();
+  	} else {
+   	 	$username_base = $_SESSION['username']; // присвоиваем переменной никнейм пользователя в сессии*/
+ 	}
+
 ?>
 
 

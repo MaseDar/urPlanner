@@ -19,7 +19,6 @@
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
   </head>
   <body>
- <body>
 <!-- 32px отступа по бокам -->
 	<div class="container is-fluid">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
@@ -124,11 +123,11 @@
 
 						<div class="field">
 						  	<div class="control has-icons-left has-icons-right">
-						    	<input name="email" class="input" type="email" placeholder="Email: example@yandex.ru">
+						    	<input name="email" class="input" type="email" placeholder="example@yandex.ru">
 						    		<span class="icon is-small is-left">
 						     	 		<i class="fas fa-envelope"></i>
 						    		</span>
-						    		<span class="icon is-small is-right ">
+						    		<span class="icon is-small is-right has-text-danger">
 						    	  		<i class="fas fa-exclamation-triangle"></i>
 						   			</span>
 							</div>
@@ -148,7 +147,7 @@
 
 						<div class="field is-grouped is-grouped-centered">
 						  	<div class="control ">
-						  		<button name="register-user" type="submit" class="button is-light"><b></b></button>
+						  		<button name="register-user" type="submit" class="button is-light"><b>Далее</b></button>
 						  	</div>
 						</div>
 					

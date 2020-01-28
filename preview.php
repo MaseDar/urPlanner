@@ -75,9 +75,7 @@
 								
 							</div>
 							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->
-						<div class="navbar-item has-dropdown is-hoverable">
-							<a class="navbar-item" href="">Profile</a>
-						</div>
+						
 						<div class="navbar-item ">
 							<div class="buttons">
 								<a class="button is-link is-small is-rounded" href="server/reg_case.php"><b>Sign in</b></a>

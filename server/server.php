@@ -55,11 +55,16 @@
 		$passconf = $_POST['passconf'];
 
 		//Сравниваю пароли
-		if ($password !== $passconf) {
-			$_SESSION['error'] = "Пароли не совпали";
+		if ($password !== $passconf || $password == "" || strlen($password) <= 5) {
+			$_SESSION['error'] = "Пароль должен содержать минимум 6 символов";
+			header('location: reg_case.php');
+			exit();
+		} else if ($username == "" || strlen($username) < 5) {
+			$_SESSION['error'] = "Длина логина менее 5";
 			header('location: reg_case.php');
 			exit();
 		}
+
 
 		//Беру столбец с емаилом, если есть
 		$query = "SELECT * FROM users WHERE email = '$email' ";

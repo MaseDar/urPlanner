@@ -149,7 +149,7 @@
 
 						<div class="field is-grouped is-grouped-centered">
 						  	<div class="control ">
-						  		<button name="register-user" type="submit" class="button is-light"><b>Далее</b></button>
+						  		<button name="register-user" type="submit" class="button is-light"><b></b></button>
 						  	</div>
 						</div>
 					

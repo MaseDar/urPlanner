@@ -33,6 +33,7 @@
                 <!-- <p><b>UR</b>PLANNER</p> -->
                 </a>
               </div>
+
 			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
 			      <span aria-hidden="true"></span>
 			      <span aria-hidden="true"></span>
@@ -40,15 +41,14 @@
 			    </a>
 			</div>
 			
+			
       <div class="navbar-menu">
-					<div class="navbar-start">
-						
-							
+					<div class="navbar-start">		
 					</div>
 			
-				
-					<div class="navbar-end">
-						
+
+						<div class="navbar-end">
+
 						
 					       	<div class="navbar-item has-dropdown is-hoverable">
 					          
@@ -72,18 +72,24 @@
 						         	Developers 
 						        </a>
 						        <div class="navbar-dropdown is-boxed">
-						        	<a class="navbar-item"  href="reg_case.php">MaseDar</a>
+						        	<a class="navbar-item"  href="https://vk.com/masedar">MaseDar</a>
 						        	<a class="navbar-item" href="https://vk.com/mujjum">Mujjum</a>
 						        </div>
 								
 							</div>
 							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->
-						
-						<!-- <div class="navbar-item">
+		
+					
+						<div class="navbar-item has-dropdown is-hoverable">
+							
+						</div>
+						 <div class="navbar-item">
 							<a class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
-						</div> -->
+						</div> 
 					</div>
+		  
 		</nav>
+
 <!-----------------------------------------окно регистрации------------------------------------------------------ -->
 		<div class="columns">
 

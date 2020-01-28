@@ -15,9 +15,9 @@
 <div class='calendar' ng-controller='calendarController as calendar'>
   <div class='calendar_left'>
     <div class='header'>
-      <i class='material-icons' ng-click='calendar.prev()'>navigate_before</i>
+      <i class='material-icons' ng-click='calendar.prev()'><</i>
       <h1>{{calendar.month}}</h1>
-      <i class='material-icons' ng-click='calendar.next()'>navigate_next</i>
+      <i class='material-icons' ng-click='calendar.next()'>></i>
     </div>
     <div class='days'>
       <div class='day_item'>Mon</div>

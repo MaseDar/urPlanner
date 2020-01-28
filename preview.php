@@ -106,9 +106,9 @@
 		<div class='calendar' ng-controller='calendarController as calendar'>
 		  <div class='calendar_left'>
 		    <div class='header'>
-		      <i class='material-icons' ng-click='calendar.prev()'>navigate_before</i>
+		      <i class='material-icons' ng-click='calendar.prev()'><</i>
 		      <h1>{{calendar.month}}</h1>
-		      <i class='material-icons' ng-click='calendar.next()'>navigate_next</i>
+		      <i class='material-icons' ng-click='calendar.next()'>></i>
 		    </div>
 		    <div class='days'>
 		      <div class='day_item'>Mon</div>
@@ -150,19 +150,9 @@
 
 		</div>	
 
-
-
-
-
-
-
 		<!-- -------------------------------------------------------------------------------- -->
   </div>
-  <p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-  <p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-  <p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-  <p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
- 
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

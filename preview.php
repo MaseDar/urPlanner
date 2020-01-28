@@ -112,9 +112,10 @@
 		<div class='calendar' ng-controller='calendarController as calendar'>
 		  <div class='calendar_left'>
 		    <div class='cal_header'>
-		      <i class='material-icons is-size-4' ng-click='calendar.prev()'>face</i>
-		      <h1 class="is-size-4">{{calendar.month}}</h1>
-		      <i class='material-icons is-size-4' ng-click='calendar.next()'>face</i>
+		      <i class='material-icons ' ng-click='calendar.prev()'>navigate_before</i>
+		      <!-- можно вписать class="is-size-4, но будет не ровно" -->
+		      <h1>{{calendar.month}}</h1>
+		      <i class='material-icons ' ng-click='calendar.next()'>navigate_next</i>
 		    </div>
 		    <div class='days'>
 		      <div class='day_item'>ПН</div>
@@ -131,27 +132,27 @@
 
 		    <div class='list2'>
 
-		    <div class='calendar_list'>
-
 		      <ul>
 		        <li class='bounce-in' ng-repeat='events in calendar.events' ng-show='events.id === calendar.dataId'>
-		          <span class='type'>It's a {{ events.type }} thing -</span>
+		          <span class='type'>{{ events.type }}</span>
 		          <span class='description'>{{ events.description }}</span>
 		        </li>
 		      </ul>
 		    </div>
 		    <form ng-submit='calendar.add()'>
-		      <input ng-model='calendar.description' placeholder='Enter a task for this day' type='text'>
+		      <input ng-model='calendar.description' placeholder='Введите вашу задачу' type='text'>
 		        <select ng-model='calendar.type' placeholder='calendar.type'>
-		          <option value='Social'>Social</option>
-		          <option value='Work'>Work</option>
+		          <option value='Работа'>Работа</option>
+		          <option value='Дом'>Дом</option>
+		          <option value='Свое'>Свое</option>
+		          <option value='Другое'>Другое</option>
 		        </select>
 		      </input>
 		    </form>
 		  </div>
 
 		</div>			
-	</div>
+	
 		
 
 		</div>	

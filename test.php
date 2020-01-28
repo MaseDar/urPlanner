@@ -131,7 +131,7 @@
 
         <div class='list2'>
 
-        <div class='calendar_list'>
+        
 
           <ul>
             <li class='bounce-in' ng-repeat='events in calendar.events' ng-show='events.id === calendar.dataId'>
@@ -150,7 +150,7 @@
         </form>
       </div>
 
-    </div>      
+          
   </div>
     
 

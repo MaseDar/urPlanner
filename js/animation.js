@@ -16,16 +16,16 @@ $('#first_title').fadeIn(1500,function(){
 
 
 // // на мобилках = бургер
-$(document).ready(function() {
+// $(document).ready(function() {
   
-  $(".navbar-burger").click(function() {
+//   $(".navbar-burger").click(function() {
 
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
+//       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+//       $(".navbar-burger").toggleClass("is-active");
+//       $(".navbar-menu").toggleClass("is-active");
 
-  });
-});
+//   });
+// });
 
 // // при выходе кнопка становится крутящейся
 // $("#logoutbtn").click(function(){
@@ -38,7 +38,7 @@ $(document).ready(function() {
     .module('calendarApp', ['ngAnimate'])
     .controller('calendarController', calendarController);
 
-  function calendarController($scope) {
+  function calendarController($scope) { 
     var vm = this,
       now = new Date(),
       months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
@@ -63,10 +63,10 @@ $(document).ready(function() {
       uid;
 
     vm.id = now.getDate().toString() + now.getMonth().toString();
-    vm.dataId;
+    vm.dataId = now.getDate().toString() + now.getMonth().toString();;
     vm.events = [];
     vm.description;
-    vm.type = 'Social';
+    vm.type = 'Работа'; // начальное присваивание 
     vm.month = months[month];
     vm.next = next;
     vm.prev = prev;
@@ -125,7 +125,6 @@ $(document).ready(function() {
         })
       }
     }
-
     // Highlight Present Day
     function presentDay() {
       $(".date_item").eq(n - 1).addClass("present");
@@ -174,12 +173,13 @@ $(document).ready(function() {
 
     // Add Events To Specified Date
     function add() {
+
       vm.events.push({
         id: vm.id,
         description: vm.description,
         type: vm.type
       });
-
+     // console.log("sadasd");
       vm.description = "";
     }
 
@@ -188,12 +188,15 @@ $(document).ready(function() {
       vm.id = $(this).attr('data');
       vm.dataId = $(this).attr('data');
       $(this).addClass("present").siblings().removeClass("present");
-      $scope.$apply();
+     $scope.$apply();
+     console.log($scope);
     });
+
 
     showDays(monthDay);
 
     presentDay();
+
 
     placeIt();
 

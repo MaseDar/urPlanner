@@ -17,16 +17,13 @@ $back-color: #E0E0E0;
   box-sizing: border-box;
 }
 
-// Variables
-$primary-color: #00A8E8;
-$radius: 5px;
 
 
 .calendar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
   &_left {
     background: $primary-color;
     width: 400px;
@@ -40,11 +37,22 @@ $radius: 5px;
       justify-content: space-around;
       margin-bottom: 1.5em;
       color: #FFF;
-      .h1_cl {
-        line-height: 1em;
-      }
       i {
         cursor: pointer;
+        .material-icons {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased; 
+}
       }
     }
   }

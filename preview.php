@@ -109,9 +109,9 @@
 		<div class='calendar' ng-controller='calendarController as calendar'>
 		  <div class='calendar_left'>
 		    <div class='cal_header'>
-		      <i class='material-icons is-size-4' ng-click='calendar.prev()'><</i>
+		      <i class='material-icons is-size-4' ng-click='calendar.prev()'></i>
 		      <h1 class="is-size-4">{{calendar.month}}</h1>
-		      <i class='material-icons is-size-4' ng-click='calendar.next()'>></i>
+		      <i class='material-icons is-size-4' ng-click='calendar.next()'></i>
 		    </div>
 		    <div class='days'>
 		      <div class='day_item'>ПН</div>

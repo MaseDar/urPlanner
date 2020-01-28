@@ -16,16 +16,16 @@ $('#first_title').fadeIn(1500,function(){
 
 
 // // на мобилках = бургер
-// $(document).ready(function() {
+$(document).ready(function() {
   
-//   $(".navbar-burger").click(function() {
+  $(".navbar-burger").click(function() {
 
-//       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-//       $(".navbar-burger").toggleClass("is-active");
-//       $(".navbar-menu").toggleClass("is-active");
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
 
-//   });
-// });
+  });
+});
 
 // // при выходе кнопка становится крутящейся
 // $("#logoutbtn").click(function(){

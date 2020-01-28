@@ -3,11 +3,16 @@
 #first_title {
   margin-top: 10%; }
 
+.calendar_background {
+  background: #E0E0E0 0 0 repeat;
+  clip-path: polygon(100% 0, 100% 51%, 0 100%, 0 50%); }
+
 .calendar {
+  z-index: 2;
   display: flex;
   justify-content: center;
   margin-top: 5%;
-  height: 43vh; }
+  height: 60vh; }
   .calendar_left {
     background: #00A8E8;
     width: 400px;

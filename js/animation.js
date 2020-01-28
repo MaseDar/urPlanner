@@ -63,7 +63,7 @@ $('#first_title').fadeIn(1500,function(){
       uid;
 
     vm.id = now.getDate().toString() + now.getMonth().toString();
-    vm.dataId = now.getDate().toString() + now.getMonth().toString();;
+    vm.dataId =  vm.id;
     vm.events = [];
     vm.description;
     vm.type = 'Работа'; // начальное присваивание 

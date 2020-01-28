@@ -23,13 +23,11 @@
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-				<div class="subtitle">
-                <a class="navbar-item" href="">
-                  <h1 class="has-text-weight-bold">UR</h1>
-                  <h1 class="has-text-weight-regular">PLANNER</h1>
-                <!-- <p><b>UR</b>PLANNER</p> -->
+			
+                <a class="navbar-item" href="/preview.php">
+                  <img src="https://avatars.mds.yandex.net/get-pdb/2979185/79c8ab7d-99e2-4fed-8bd1-0a77af904cf0/s1200" width="112" height="28">
                 </a>
-              </div>
+              
 
 			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
 			      <span aria-hidden="true"></span>
@@ -105,7 +103,7 @@
     	</div>
 		<div class='calendar' ng-controller='calendarController as calendar'>
 		  <div class='calendar_left'>
-		    <div class='header'>
+		    <div class='header2'>
 		      <i class='material-icons' ng-click='calendar.prev()'><</i>
 		      <h1>{{calendar.month}}</h1>
 		      <i class='material-icons' ng-click='calendar.next()'>></i>
@@ -155,7 +153,7 @@
 
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/js/animation.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=cyrillic-ext');
 
 #first_title{
-	margin-top: 10%;
+  margin-top: 10%;
 }
 // Variables
 $primary-color: #00A8E8;
@@ -12,23 +12,6 @@ $radius: 5px;
 $back-color: #E0E0E0;
 
 
-
-.calendar_background{
-  background: $back-color 0 0 repeat;
- clip-path: polygon(100% 0, 100% 51%, 0 100%, 0 50%);
-//.calendar_background:before{
-//   background: $back-color 0 0 repeat;
-//   content: "";
-//   position: absolute;
-//   width: 200%;
-//   height: 200%;
-//   top: -50%;
-//   left: -50%;
-//   z-index: 0;
-//   transform: rotate(-30deg);
-//   background: $back-color 0 0 repeat;
-// 
-}
 .calendar {
   z-index: 2;
   display: flex;
@@ -205,10 +188,10 @@ $family-sans-serif:'Open Sans', sans-serif;
 
 
 
-// @import "../sass/utilities/_all.sass";
-// @import "../sass/base/_all.sass";
-// @import "../sass/elements/_all.sass";
-// @import "../sass/form/_all.sass";
-// @import "../sass/components/_all.sass";
-// @import "../sass/grid/_all.sass";
-// @import "../sass/layout/_all.sass";
+@import "../sass/utilities/_all.sass";
+@import "../sass/base/_all.sass";
+@import "../sass/elements/_all.sass";
+@import "../sass/form/_all.sass";
+@import "../sass/components/_all.sass";
+@import "../sass/grid/_all.sass";
+@import "../sass/layout/_all.sass";

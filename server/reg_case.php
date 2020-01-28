@@ -19,19 +19,16 @@
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
   </head>
   <body>
- <body>
 <!-- 32px отступа по бокам -->
 	<div class="container is-fluid">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-				<div class="subtitle">
-                <a class="navbar-item" href="">
-                  <h1 class="has-text-weight-bold">UR</h1>
-                  <h1 class="has-text-weight-regular">PLANNER</h1>
-                <!-- <p><b>UR</b>PLANNER</p> -->
+				
+                <a class="navbar-item" href="/preview.php">
+                  <img src="https://avatars.mds.yandex.net/get-pdb/2979185/79c8ab7d-99e2-4fed-8bd1-0a77af904cf0/s1200" width="112" height="28">
                 </a>
-              </div>
+           
 
 			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
 			      <span aria-hidden="true"></span>

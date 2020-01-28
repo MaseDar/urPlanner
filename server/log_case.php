@@ -26,22 +26,19 @@
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
-			      <span aria-hidden="true"></span>
-			      <span aria-hidden="true"></span>
-			      <span aria-hidden="true"></span>
-			    </a>
-			</div>
-			
-      <div class="navbar-brand">
-        <div class="subtitle">
+				<div class="subtitle">
                 <a class="navbar-item" href="">
                   <h1 class="has-text-weight-bold">UR</h1>
                   <h1 class="has-text-weight-regular">PLANNER</h1>
                 <!-- <p><b>UR</b>PLANNER</p> -->
                 </a>
               </div>
-      </div>
+			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+			      <span aria-hidden="true"></span>
+			      <span aria-hidden="true"></span>
+			      <span aria-hidden="true"></span>
+			    </a>
+			</div>
 			
       <div class="navbar-menu">
 					<div class="navbar-start">
@@ -81,14 +78,13 @@
 								
 							</div>
 							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->
-						<div class="navbar-item has-dropdown is-hoverable">
-						</div>
+					
 						<div class="navbar-item">
 							<a class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
 						</div>
 					</div>
 		</nav>
-<!-- ----------------------------------------окно регистрации------------------------------------------------------ -->
+<!-----------------------------------------окно регистрации------------------------------------------------------ -->
 		<div class="columns">
 
 

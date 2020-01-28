@@ -31,16 +31,7 @@
 			    </a>
 			</div>
 			
-      <div class="navbar-brand">
-        <div class="subtitle">
-                <a class="navbar-item" href="">
-                  <h1 class="has-text-weight-bold">UR</h1>
-                  <h1 class="has-text-weight-regular">PLANNER</h1>
-                <!-- <p><b>UR</b>PLANNER</p> -->
-                </a>
-              </div>
-      </div>
-			
+      
       <div class="navbar-menu">
 		  <div class="navbar-menu">
 					<div class="navbar-start">

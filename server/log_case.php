@@ -111,7 +111,7 @@
 				<?php endif; ?>
 				
 <!-- ----------------------------------------------------------------------------------------- -->
-			<div class="box has-background-light">
+			<div class="box">
 				
 
 					<p class="title">Вход</p>	
@@ -136,7 +136,7 @@
 
 						<div class="field is-grouped is-grouped-centered">
 						  <div class="control ">
-						  <button name="submit" type="submit" class="button is-outlined is-dark is-light ">Войти!</button>
+						  <button name="submit" type="submit" class="button  is-light "><b>Войти</b></button>
 						  </div>
 						</div>
 						<div class="field is-grouped is-grouped-centered">

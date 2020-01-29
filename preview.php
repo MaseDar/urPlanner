@@ -104,11 +104,11 @@
     			Запиши её прямо сейчас!
     		</h1>
     	</div>
+    	
+    	<!-- ----------------------------------CALENDAR-------------------------------------- -->
     	<div id="rotate_background">
 
     	</div>
-    	<!-- ----------------------------------CALENDAR-------------------------------------- -->
-    	
 		<div class='calendar' ng-controller='calendarController as calendar'>
 		  <div class='calendar_left'>
 		    <div class='cal_header'>
@@ -163,6 +163,6 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/js/animation.js"></script>
+    <script src="js/animation.js"></script>
   </body>
 </html>

@@ -3,9 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=cyrillic-ext');
 
-// #first_title{
-//   margin-top: 5%;
-// }
+#first_title{
+  margin-top: 10%;
+  position: relative;
+  z-index: 30;
+}
 // Variables
 $primary-color: #00A8E8;
 $radius: 5px;
@@ -16,7 +18,12 @@ $back-color: #E0E0E0;
   margin: 0; padding: 0;
   box-sizing: border-box;
 }
-
+#first_title{
+  opacity: 0;
+}
+#first_subtitle{
+  opacity: 0;
+}
 
 
 .calendar {
@@ -30,6 +37,7 @@ $back-color: #E0E0E0;
     position: absolute;
     width: 1000%;
     height: 100%;
+    min-height: 500px;
     // width: 1920px;
     // height: 1080px;
     background: #E0E0E0;
@@ -44,6 +52,7 @@ $back-color: #E0E0E0;
     border-bottom-left-radius: $radius;
     padding: 1.5em;
     z-index: 3;
+      opacity: 0;
     .cal_header {
       display: flex;
       justify-content: space-around;
@@ -63,6 +72,7 @@ $back-color: #E0E0E0;
     position: relative;
     transform: scale(0.95) translateX(-10px);
     z-index: 2;
+      opacity: 0;
     .list2 {
       height: 351px;
       overflow-y: scroll;

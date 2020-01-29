@@ -4,17 +4,13 @@
 // 	$( "#main_container" ).fadeIn(2500);
 // });
 
-$('#first_title').hide();
-$('#first_subtitle').hide();
-$('.calendar_left').hide();
-$('.calendar_right').hide();
-$('#first_title').fadeIn(1500,function(){
-	$('#first_subtitle').fadeIn(1000,function(){
-		$('.calendar_left').fadeIn(1500);
-    $('.calendar_right').fadeIn(1500);
-	});
-
+$('#first_title').animate({opacity:1},1500,function(){
+  $('#first_subtitle').animate({opacity:1},1500,function(){
+    $('.calendar_left').animate({opacity:1},1500);
+    $('.calendar_right').animate({opacity:1},1500);
+  });  
 });
+
 
 
 // // на мобилках = бургер

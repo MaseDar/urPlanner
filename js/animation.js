@@ -4,10 +4,11 @@
 // 	$( "#main_container" ).fadeIn(2500);
 // });
 
+//Появление первых блоков, изменение видимости на 1 за 1,5 сек
 $('#first_title').animate({opacity:1},1500,function(){
-  $('#first_subtitle').animate({opacity:1},1500,function(){
-    $('.calendar_left').animate({opacity:1},1500);
-    $('.calendar_right').animate({opacity:1},1500);
+  $('#first_subtitle').animate({opacity:1},1000,function(){
+    $('.calendar_left').animate({opacity:1},2000);
+    $('.calendar_right').animate({opacity:1},2000);
   });  
 });
 

@@ -28,6 +28,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    <!--  -->
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!-- //Recapchta -->
   </head>
   <body>
 <!-- 32px отступа по бокам -->
@@ -81,10 +82,10 @@
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-	        	<?php if(!empty($_SESSION['error'])) : ?>
+	        	<?php if(!empty($_SESSION['error']) || !empty($_SESSION['error_google'])) : ?>
 					<div class="tile ">
 						<article class="tile  notification is-danger">
-							<p class="subtitle is-6"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
+							<p class="subtitle is-6"><?php echo $_SESSION['error']; unset($_SESSION['error']); echo $_SESSION['error_google']; unset($_SESSION['error_google']); ?></p>
 						</article>
 					</div>
 				<?php endif; ?>
@@ -94,7 +95,7 @@
 				<?php endif; ?>
 <!-- ----------------------------------------------------------------------------------------- -->
 			<div class="box">
-				<p class="title">Вход</p>	
+				<p class="title">Вход</p>	<?php $test = $_SESSION['count']; echo "Номер вашей сессии $test";?>
 				<form method="post" action=""  autocomplete="off">
 
 	            	<div class="field">
@@ -114,11 +115,17 @@
 					  	<div class="control">
 					  		<button name="submit" type="submit" class="button  is-light "><b>Войти</b></button>
 					  	</div>
-					</div>
-					<div class="field is-grouped is-grouped-centered">
-		              	<p class="subtitle is-6"><a class="has-text-primary" href="recovery_case.php">Забыли пароль?</a></p>
-		              	<p class="subtitle is-6"><a class="has-text-primary" href="reg_case.php">Зарегистрироваться</a></p>
-		            </div>
+						</div>
+						<?php if($_SESSION['count']  >  3 ) : ?>
+						<div class="field is-grouped is-grouped-centered">
+							<div class="g-recaptcha" data-sitekey="6LcI1dMUAAAAAIceMuRFrJLxllZqLyG7z7JVR6Kb"></div>
+
+						</div>
+						<?php endif; ?>
+						<div class="field is-grouped is-grouped-centered">
+			              	<p class="subtitle is-6"><a class="has-text-primary" href="recovery_case.php">Забыли пароль?</a></p>
+			              	<p class="subtitle is-6"><a class="has-text-primary" href="reg_case.php">Зарегистрироваться</a></p>
+			            </div>
 
 				</form>
 			</div>

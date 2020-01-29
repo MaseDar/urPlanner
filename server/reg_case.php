@@ -18,15 +18,25 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- ------------------  ------------------ -->
+   <!-- -----------ANGULARJS--------------------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-animate.min.js"></script>
+    <!-- ----------------------------------------------- -->
     <!-- Подключаем bulma -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link rel="stylesheet" href="css/mystyles.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <!-- <link rel="stylesheet" href="css/mystyles.css">
+    <link rel="stylesheet" href="css/custom.css"> -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    <!--  -->
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
+  
+
   </head>
+  
+
+
+
   <body>
 <!-- 32px отступа по бокам -->
 	<div class="container is-fluid">
@@ -174,6 +184,6 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/js/animation.js"></script>
+    <script src="\js/animation.js"></script>
   </body>
 </html>

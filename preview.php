@@ -4,11 +4,11 @@
     <meta charset="-8">
     <title>URPLANNER</title>
     <!-- ------------------ LOGO ------------------ -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- ------------------  ------------------ -->
@@ -30,7 +30,7 @@
 
   <body>
 <!-- 32px отступа по бокам -->
-	<div class="container is-fluid">
+	<!-- <div class="container is-field"> -->
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -106,10 +106,9 @@
     	</div>
     	
     	<!-- ----------------------------------CALENDAR-------------------------------------- -->
-    	<div id="rotate_background">
-
-    	</div>
-		<div class='calendar' ng-controller='calendarController as calendar'>
+    
+		<div class='calendar ' ng-controller='calendarController as calendar'>
+		<div class='calendar_rotate_background'></div>
 		  <div class='calendar_left'>
 		    <div class='cal_header'>
 		      <i class='material-icons ' ng-click='calendar.prev()'>navigate_before</i>

@@ -6,10 +6,12 @@
 
 $('#first_title').hide();
 $('#first_subtitle').hide();
-$('.calendar').hide();
+$('.calendar_left').hide();
+$('.calendar_right').hide();
 $('#first_title').fadeIn(1500,function(){
 	$('#first_subtitle').fadeIn(1000,function(){
-		$('.calendar').fadeIn(1500);
+		$('.calendar_left').fadeIn(1500);
+    $('.calendar_right').fadeIn(1500);
 	});
 
 });

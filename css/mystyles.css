@@ -8,16 +8,20 @@
   padding: 0;
   box-sizing: border-box; }
 
-#rotate_background {
-  width: 100%;
-  height: 100%; }
-
 .calendar {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  z-index: 1; }
+  padding-top: 5%;
+  z-index: 2; }
+  .calendar_rotate_background {
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background: #E0E0E0;
+    z-index: 1;
+    transform: rotate(-4deg); }
   .calendar_left {
     background: #00A8E8;
     width: 400px;
@@ -25,7 +29,7 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 1.5em;
-    z-index: 2; }
+    z-index: 3; }
     .calendar_left .cal_header {
       display: flex;
       justify-content: space-around;
@@ -41,7 +45,7 @@
     border-bottom-right-radius: 5px;
     position: relative;
     transform: scale(0.95) translateX(-10px);
-    z-index: 1; }
+    z-index: 2; }
     .calendar_right .list2 {
       height: 351px;
       overflow-y: scroll;

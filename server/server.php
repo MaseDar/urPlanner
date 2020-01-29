@@ -3,10 +3,10 @@
 	session_start(); // Это функция запоминает уникального пользователя, хранит $_SESSION['id] = '1; и тд.
 
 
-	$host = 'localhost'; // адрес сервера 
+	/*$host = 'localhost'; // адрес сервера 
 	$user = 'root'; // имя пользователя
 	$password = ''; // пароль
-	$database = 'userlog'; // имя базы данных
+	$database = 'userlog'; // имя базы данных*/
 
 	// Подключаемся к базе $database
 	$db = new mysqli('localhost', 'root', '', 'userlog'); 
@@ -21,7 +21,7 @@
 	$db->set_charset('utf8'); 	
 
 	// Логиню пользователя
-	if (isset($_POST['submit'])) {
+	/*if (isset($_POST['submit'])) {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
@@ -45,7 +45,115 @@
 		} else {
 			echo "Переменная run = false Подробнее: " . mysqli_error();
 		}
+	}*/
+
+	//Recaptcha для логина
+
+	if(  !isset(  $_SESSION['count']  )  )  $_SESSION['count']  =  0;
+    $_SESSION['count']++;
+    if(  $_SESSION['count']  >  3  )
+    {
+	    if (isset($_POST['g-recaptcha-response'])) {
+			$recaptcha = $_POST['g-recaptcha-response'];
+			if(!empty($recaptcha)) {
+		    $recaptcha = $_REQUEST['g-recaptcha-response'];
+		    $secret = '6LcI1dMUAAAAAIAllKNkUuTRFrWy_1HU0Xf4_haC';
+		    $url = "https://www.google.com/recaptcha/api/siteverify?secret=".$secret ."&response=".$recaptcha."&remoteip=".$_SERVER['REMOTE_ADDR'];
+		    $curl = curl_init();
+		    curl_setopt($curl, CURLOPT_URL, $url);
+		    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
+		    curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:8.0) Gecko/20100101 Firefox/8.0");
+		    $curlData = curl_exec($curl);
+		    curl_close($curl); 
+		    $curlData = json_decode($curlData, true);
+			    if($curlData['success']) {
+			    	unset($_SESSION['count']);
+			        if (isset($_POST['submit'])) {
+						$username = $_POST['username'];
+						$password = $_POST['password'];
+
+						//
+						$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
+						$run = mysqli_query($db, $query);
+
+						if ($run) {
+							// Проверяю есть ли такие ряды в базе данных
+							if (mysqli_num_rows($run) > 0) {
+								//Преобразую в массив и его записываю в переменную
+								$new_user = mysqli_fetch_assoc($run);
+								$_SESSION['username'] = $new_user['username'];
+								$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
+								header('location: \main_page.php');
+								exit();
+							} else { 
+								header('location: log_case.php'); 
+								exit(); 
+							}
+						} else {
+							echo "Переменная run = false Подробнее: " . mysqli_error();
+						}
+					}
+			    } else {
+			        $_SESSION['error_google'] = "Ошибка рекапчти, попробуйте снова";
+			    }
+			}
+			else {
+			    $_SESSION['error_google'] = "Поставьте галочку что вы не робот";
+			}
+		}
+    }
+
+	/*if (isset($_POST['g-recaptcha-response'])) {
+		$recaptcha = $_POST['g-recaptcha-response'];
+		if(!empty($recaptcha)) {
+	    $recaptcha = $_REQUEST['g-recaptcha-response'];
+	    $secret = '6LcI1dMUAAAAAIAllKNkUuTRFrWy_1HU0Xf4_haC';
+	    $url = "https://www.google.com/recaptcha/api/siteverify?secret=".$secret ."&response=".$recaptcha."&remoteip=".$_SERVER['REMOTE_ADDR'];
+	    $curl = curl_init();
+	    curl_setopt($curl, CURLOPT_URL, $url);
+	    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
+	    curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:8.0) Gecko/20100101 Firefox/8.0");
+	    $curlData = curl_exec($curl);
+	    curl_close($curl); 
+	    $curlData = json_decode($curlData, true);
+		    if($curlData['success']) {
+		        if (isset($_POST['submit'])) {
+					$username = $_POST['username'];
+					$password = $_POST['password'];
+
+					//
+					$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
+					$run = mysqli_query($db, $query);
+
+					if ($run) {
+						// Проверяю есть ли такие ряды в базе данных
+						if (mysqli_num_rows($run) > 0) {
+							//Преобразую в массив и его записываю в переменную
+							$new_user = mysqli_fetch_assoc($run);
+							$_SESSION['username'] = $new_user['username'];
+							$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
+							header('location: \main_page.php');
+							exit();
+						} else { 
+							header('location: log_case.php'); 
+							exit(); 
+						}
+					} else {
+						echo "Переменная run = false Подробнее: " . mysqli_error();
+					}
+				}
+		    } else {
+		        echo "Подтвердите, что вы не робот и попробуйте еще раз";
+		    }
 	}
+	else {
+	    echo "поставьте галочку в поле 'Я не робот' для отправки сообщения";
+	}
+	}*/
+	
+	
 
 	//Восстановление пароля по почте
 
@@ -68,12 +176,7 @@
 		}
 	}
 
-	/*$email = $_POST['email'];
-		if (mail("zx053c@yandex.ru", "Заявка с сайта", "Пароль:".$password.". E-mail: ".$email ,"From: zx053a@yandex.ru \r\n"))
-		 { echo "сообщение успешно отправлено"; 
-		} else { 
-		 echo "при отправке сообщения возникли ошибки";
-		}*/
+	
 
 
 	//Регистрирую пользователя

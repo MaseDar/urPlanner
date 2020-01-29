@@ -120,7 +120,7 @@
 				
 
 			<!-- <div class="has-background-dark"> -->
-			<div class="tile is-parent is-grouped ">
+			
 			  	<div class="box">
 					<form method="post" action="" name="frmRegistration" autocomplete="off">
 					  	<div class="field">

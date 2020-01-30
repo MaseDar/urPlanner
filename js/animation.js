@@ -4,19 +4,20 @@
 // 	$( "#main_container" ).fadeIn(2500);
 // });
 //Появление первых блоков, изменение видимости на 1 за 1,5 сек
-$('#first_title').animate({opacity:1},0,function(){
-  $('#first_subtitle').animate({opacity:1},0,function(){
-    $('.calendar_left').animate({opacity:1},0,function(){
+$('#first_title').animate({opacity:1},2000,function(){
+  $('#first_subtitle').animate({opacity:1},1000,function(){
+    $('.calendar_left').animate({opacity:1},1000,function(){
       $('.calendar_right').animate({opacity:1},0);
     });
     
   });  
 });
 
+// Открытие календаря, только 1 клик
 $('.dates').one('click', function(){
   
-  $('.calendar_left').animate({ "left": "-=240px" }, "slow" );
-  $('.calendar_right').animate({ "left": "+=200px" }, "slow" );
+  $('.calendar_left').animate({ "left": "-=200px" }, "slow" );
+  $('.calendar_right').animate({ "left": "+=240px" }, "slow" );
 })
 
 //Get the element you want to animate

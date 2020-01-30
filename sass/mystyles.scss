@@ -93,7 +93,8 @@ $back-color: #E0E0E0;
 
     .list2 {
       height: 351px;
-      overflow-y: scroll;
+      overflow: scroll;
+      // overflow-y: scroll;
       padding: 1em;
       ul {
         padding: 2.25em;  

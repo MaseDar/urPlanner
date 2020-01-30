@@ -16,8 +16,8 @@ $('#first_title').animate({opacity:1},2000,function(){
 // Открытие календаря, только 1 клик
 $('.dates').one('click', function(){
   
-  $('.calendar_left').animate({ "left": "-=200px" }, "slow" );
-  $('.calendar_right').animate({ "left": "+=240px" }, "slow" );
+  $('.calendar_left').animate({ "left": "-=190px" }, "slow" );
+  $('.calendar_right').animate({ "left": "+=250px" }, "slow" );
 })
 
 //Get the element you want to animate
@@ -64,6 +64,7 @@ $(document).ready(function() {
 // })
 
 // calendar
+var chid,chdataid;
 (function() {
   angular
     .module('calendarApp', ['ngAnimate'])
@@ -168,6 +169,9 @@ $(document).ready(function() {
         var uidm = month;
         var uid = uidi.toString() + uidm.toString();
         $(".dates").append("<div class='date_item' data='" + uid + "'>" + i + "</div>");
+        if(chid == uid)
+          console.log('test');
+
       }
     }
 
@@ -188,6 +192,10 @@ $(document).ready(function() {
       }
     }
 
+    function checkPresent(){
+
+    }
+    
     // Previous Month
     function prev() {
       if (month === 0) {
@@ -218,6 +226,8 @@ $(document).ready(function() {
     $(".dates").on("click", ".date_item", function() {
       vm.id = $(this).attr('data');
       vm.dataId = $(this).attr('data');
+      chid = vm.id;
+      chdataid = vm.dataId;
       $(this).addClass("present").siblings().removeClass("present");
      $scope.$apply();
      // console.log($scope);

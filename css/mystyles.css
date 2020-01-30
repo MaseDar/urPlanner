@@ -68,7 +68,7 @@
     opacity: 0; }
     .calendar_right .list2 {
       height: 351px;
-      overflow-y: scroll;
+      overflow: scroll;
       padding: 1em; }
       .calendar_right .list2 ul {
         padding: 2.25em; }

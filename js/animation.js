@@ -13,8 +13,8 @@ $('#first_title').animate({opacity:1},0,function(){
   });  
 });
 
-$('.dates').click(function(){
-  console.log("НУ ЧЕКАЕТ ЖЕ!");
+$('.dates').one('click', function(){
+  
   $('.calendar_left').animate({ "left": "-=240px" }, "slow" );
   $('.calendar_right').animate({ "left": "+=200px" }, "slow" );
 })

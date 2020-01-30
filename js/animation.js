@@ -4,19 +4,46 @@
 // 	$( "#main_container" ).fadeIn(2500);
 // });
 //Появление первых блоков, изменение видимости на 1 за 1,5 сек
-$('#first_title').animate({opacity:1},1500,function(){
+$('#first_title').animate({opacity:1},2000,function(){
   $('#first_subtitle').animate({opacity:1},1000,function(){
-    $('.calendar_left').animate({opacity:1},2000);
-     $('.calendar_right').animate({opacity:1},2000);
+    $('.calendar_left').animate({opacity:1},1000,function(){
+      $('.calendar_right').animate({opacity:1},0);
+    });
+    
   });  
 });
 
-$('.dates').click(function(){
-  console.log("НУ ЧЕКАЕТ ЖЕ!");
-  $('.calendar_left').animate({"left": "-=350px"}, "slow");
+// Открытие календаря, только 1 клик
+$('.dates').one('click', function(){
+  
+  $('.calendar_left').animate({ "left": "-=200px" }, "slow" );
+  $('.calendar_right').animate({ "left": "+=240px" }, "slow" );
 })
 
+//Get the element you want to animate
+// var testElement = $('.calendar_left');
 
+// function run(v){
+//   //Reverse the array
+//    var reversed = JSON.parse(JSON.stringify(v)).reverse();
+
+//   $(v[0]).animate(v[1], {
+//       //The speed the element moves - lower is faster
+//       duration: 2500,
+//       step: function(val) {
+//         //console.log(val);
+//           //Adding the transform to your element
+//           testElement.css("transform", `scale(1.4) translateX(${val}px)`); 
+//       },
+//       done: function(){
+//           //Re-running the function but in reverse with the reverse we did above
+//           run(reversed)
+//       }
+//   })
+// };
+
+// //Calling our function and passing in the parameters
+// run([{y:0}])
 
 
 // // на мобилках = бургер
@@ -79,53 +106,53 @@ $(document).ready(function() {
     // Place Dates In Correct Place
     function placeIt() {
     	
-      if (month === 0) {
+     if (month === 0) {
         $(".date_item").first().css({
-          'margin-left': '180px' // x2
+          'margin-left': '100px'
         })
       } else if (month === 1) {
         $("date_item").first().css({
-          'margin-left': '450px' // x5
+          'margin-left': '250px'
         })
       } else if (month === 2) {
         $(".date_item").first().css({
-          'margin-left': '540px' // x6
+          'margin-left': '300px'
         })
       } else if (month === 3) {
         $(".date_item").first().css({
-          'margin-left': '180px' // x2
+          'margin-left': '100px'
         })
       } else if (month === 4) {
         $(".date_item").first().css({
-          'margin-left': '360px' // x4
+          'margin-left': '200px'
         })
       } else if (month === 5) {
         $(".date_item").first().css({
-          'margin-left': '0px' // x0
+          'margin-left': '0px'
         })
       } else if (month === 6) {
         $(".date_item").first().css({
-          'margin-left': '180px' // x2
+          'margin-left': '100px'
         })
       } else if (month === 7) {
         $(".date_item").first().css({
-          'margin-left': '450px' // x5
+          'margin-left': '250px'
         })
       } else if (month === 8) {
         $(".date_item").first().css({
-          'margin-left': '90px' // x1
+          'margin-left': '50px'
         })
       } else if (month === 9) {
         $(".date_item").first().css({
-          'margin-left': '270px' // x3
+          'margin-left': '150px'
         })
       } else if (month === 10) {
         $(".date_item").first().css({
-          'margin-left': '540px' // x6
+          'margin-left': '300px'
         })
       } else if (month === 11) {
         $(".date_item").first().css({
-          'margin-left': '90px' // x1
+          'margin-left': '50px'
         })
       }
     }
@@ -140,7 +167,7 @@ $(document).ready(function() {
         var uidi = i;
         var uidm = month;
         var uid = uidi.toString() + uidm.toString();
-        $(".dates").append("<div class='date_item is-size-4' data='" + uid + "'>" + i + "</div>");
+        $(".dates").append("<div class='date_item' data='" + uid + "'>" + i + "</div>");
       }
     }
 
@@ -193,7 +220,7 @@ $(document).ready(function() {
       vm.dataId = $(this).attr('data');
       $(this).addClass("present").siblings().removeClass("present");
      $scope.$apply();
-     console.log($scope);
+     // console.log($scope);
     });
 
 

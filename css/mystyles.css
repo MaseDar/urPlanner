@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=cyrillic-ext");
 #first_title {
-  margin-top: 10%;
+  margin-top: 5%;
+  position: relative;
+  z-index: 30; }
+
+#first_subtitle {
   position: relative;
   z-index: 30; }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box; }
 
 #first_title {
@@ -16,30 +18,35 @@
 #first_subtitle {
   opacity: 0; }
 
+.padding_cal {
+  position: relative;
+  z-index: 3;
+  padding-left: 5%; }
+
 .calendar {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
-  z-index: 2; }
+  padding-top: 3%; }
   .calendar_rotate_background {
     position: absolute;
-    width: 1000%;
+    clip-path: polygon(0 28%, 100% 8%, 100% 72%, 0 92%);
+    width: 100%;
     height: 100%;
-    min-height: 500px;
+    min-height: 160%;
     background: #E0E0E0;
-    z-index: 1;
-    transform: rotate(-4deg); }
+    z-index: 1; }
   .calendar_left {
     background: #00A8E8;
-    width: 400px;
-    height: 415px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    box-shadow: 0px 4px 15px;
+    width: 680px;
+    height: 700px;
+    border-radius: 20px;
     padding: 1.5em;
     z-index: 3;
-    opacity: 0; }
+    opacity: 0;
+    position: inherit; }
     .calendar_left .cal_header {
       display: flex;
       justify-content: space-around;
@@ -49,12 +56,13 @@
         cursor: pointer; }
   .calendar_right {
     background: #0096cf;
-    width: 350px;
-    height: 415px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    position: relative;
-    transform: scale(0.95) translateX(-10px);
+    width: 680px;
+    height: 690px;
+    box-shadow: 0px 4px 15px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: inherit;
+    transform: scale(0.95) translateX(-20px);
     z-index: 2;
     opacity: 0; }
     .calendar_right .list2 {
@@ -83,8 +91,7 @@
       padding: 1.2em;
       flex: 2;
       outline: none;
-      color: #FFF;
-      border-bottom-right-radius: 5px; }
+      color: #FFF; }
     .calendar_right select {
       background: #007fb0;
       border: none;
@@ -94,16 +101,16 @@
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: 0;
-      border-bottom-right-radius: 5px;
+      border-bottom-right-radius: 20px;
       appearance: none; }
 
 .days {
   display: flex;
   justify-content: flex-start;
-  width: 400px; }
+  width: 630px; }
   .days .day_item {
     color: #FFF;
-    width: 50px;
+    width: 90px;
     text-align: center;
     padding-bottom: 0em; }
 
@@ -111,12 +118,12 @@
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
-  width: 350px; }
+  width: 630px; }
   .dates .date_item {
     color: #FFF;
-    width: 50px;
+    width: 90px;
     text-align: center;
-    height: 50px;
+    height: 90px;
     padding: 1em;
     cursor: pointer;
     border-radius: 100%; }

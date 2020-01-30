@@ -109,23 +109,25 @@
     
 		<div class='calendar ' ng-controller='calendarController as calendar'>
 		<div class='calendar_rotate_background'></div>
+		  <div class="padding_cal">
 		  <div class='calendar_left'>
 		    <div class='cal_header'>
-		      <i class='material-icons ' ng-click='calendar.prev()'>navigate_before</i>
+		      <i class='material-icons is-size-2' ng-click='calendar.prev()'>navigate_before</i>
 		      <!-- можно вписать class="is-size-4, но будет не ровно" -->
-		      <h1>{{calendar.month}}</h1>
-		      <i class='material-icons ' ng-click='calendar.next()'>navigate_next</i>
+		      <h1 class="is-size-4">{{calendar.month}}</h1>
+		      <i class='material-icons is-size-2 ' ng-click='calendar.next()'>navigate_next</i>
 		    </div>
 		    <div class='days'>
-		      <div class='day_item'>ПН</div>
-		      <div class='day_item'>ВТ</div>
-		      <div class='day_item'>СР</div>
-		      <div class='day_item'>ЧТ</div>
-		      <div class='day_item'>ПТ</div>
-		      <div class='day_item'>СБ</div>
-		      <div class='day_item'>ВС</div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ПН</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ВТ</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">СР</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ЧТ</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ПТ</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">СБ</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ВС</p></div>
 		    </div>
 		    <div class='dates'></div>
+		  </div>
 		  </div>
 		  <div class='calendar_right'>
 

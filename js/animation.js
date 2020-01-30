@@ -3,14 +3,19 @@
 // $('#image_fade').fadeOut(2000,"linear",function(){
 // 	$( "#main_container" ).fadeIn(2500);
 // });
-
 //Появление первых блоков, изменение видимости на 1 за 1,5 сек
 $('#first_title').animate({opacity:1},1500,function(){
   $('#first_subtitle').animate({opacity:1},1000,function(){
     $('.calendar_left').animate({opacity:1},2000);
-    $('.calendar_right').animate({opacity:1},2000);
+     $('.calendar_right').animate({opacity:1},2000);
   });  
 });
+
+$('.dates').click(function(){
+  console.log("НУ ЧЕКАЕТ ЖЕ!");
+  $('.calendar_left').animate({"left": "-=350px"}, "slow");
+})
+
 
 
 
@@ -76,51 +81,51 @@ $(document).ready(function() {
     	
       if (month === 0) {
         $(".date_item").first().css({
-          'margin-left': '100px'
+          'margin-left': '180px' // x2
         })
       } else if (month === 1) {
         $("date_item").first().css({
-          'margin-left': '250px'
+          'margin-left': '450px' // x5
         })
       } else if (month === 2) {
         $(".date_item").first().css({
-          'margin-left': '300px'
+          'margin-left': '540px' // x6
         })
       } else if (month === 3) {
         $(".date_item").first().css({
-          'margin-left': '100px'
+          'margin-left': '180px' // x2
         })
       } else if (month === 4) {
         $(".date_item").first().css({
-          'margin-left': '200px'
+          'margin-left': '360px' // x4
         })
       } else if (month === 5) {
         $(".date_item").first().css({
-          'margin-left': '0px'
+          'margin-left': '0px' // x0
         })
       } else if (month === 6) {
         $(".date_item").first().css({
-          'margin-left': '100px'
+          'margin-left': '180px' // x2
         })
       } else if (month === 7) {
         $(".date_item").first().css({
-          'margin-left': '250px'
+          'margin-left': '450px' // x5
         })
       } else if (month === 8) {
         $(".date_item").first().css({
-          'margin-left': '50px'
+          'margin-left': '90px' // x1
         })
       } else if (month === 9) {
         $(".date_item").first().css({
-          'margin-left': '150px'
+          'margin-left': '270px' // x3
         })
       } else if (month === 10) {
         $(".date_item").first().css({
-          'margin-left': '300px'
+          'margin-left': '540px' // x6
         })
       } else if (month === 11) {
         $(".date_item").first().css({
-          'margin-left': '50px'
+          'margin-left': '90px' // x1
         })
       }
     }
@@ -135,7 +140,7 @@ $(document).ready(function() {
         var uidi = i;
         var uidm = month;
         var uid = uidi.toString() + uidm.toString();
-        $(".dates").append("<div class='date_item' data='" + uid + "'>" + i + "</div>");
+        $(".dates").append("<div class='date_item is-size-4' data='" + uid + "'>" + i + "</div>");
       }
     }
 
@@ -202,3 +207,4 @@ $(document).ready(function() {
   }
 
 })();
+

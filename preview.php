@@ -4,11 +4,11 @@
     <meta charset="-8">
     <title>URPLANNER</title>
     <!-- ------------------ LOGO ------------------ -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- ------------------  ------------------ -->
@@ -30,7 +30,7 @@
 
   <body>
 <!-- 32px отступа по бокам -->
-	<div class="container is-fluid">
+	<!-- <div class="container is-field"> -->
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -104,29 +104,30 @@
     			Запиши её прямо сейчас!
     		</h1>
     	</div>
-    	<div id="rotate_background">
-
-    	</div>
-    	<!-- ----------------------------------CALENDAR-------------------------------------- -->
     	
-		<div class='calendar' ng-controller='calendarController as calendar'>
+    	<!-- ----------------------------------CALENDAR-------------------------------------- -->
+    
+		<div class='calendar ' ng-controller='calendarController as calendar'>
+		<div class='calendar_rotate_background'></div>
+		  <div class="padding_cal">
 		  <div class='calendar_left'>
 		    <div class='cal_header'>
-		      <i class='material-icons ' ng-click='calendar.prev()'>navigate_before</i>
+		      <i class='material-icons is-size-2' ng-click='calendar.prev()'>navigate_before</i>
 		      <!-- можно вписать class="is-size-4, но будет не ровно" -->
-		      <h1>{{calendar.month}}</h1>
-		      <i class='material-icons ' ng-click='calendar.next()'>navigate_next</i>
+		      <h1 class="is-size-4">{{calendar.month}}</h1>
+		      <i class='material-icons is-size-2 ' ng-click='calendar.next()'>navigate_next</i>
 		    </div>
 		    <div class='days'>
-		      <div class='day_item'>ПН</div>
-		      <div class='day_item'>ВТ</div>
-		      <div class='day_item'>СР</div>
-		      <div class='day_item'>ЧТ</div>
-		      <div class='day_item'>ПТ</div>
-		      <div class='day_item'>СБ</div>
-		      <div class='day_item'>ВС</div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ПН</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ВТ</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">СР</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ЧТ</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ПТ</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">СБ</p></div>
+		      <div class='day_item is-size-4'><p class="has-text-weight-light">ВС</p></div>
 		    </div>
 		    <div class='dates'></div>
+		  </div>
 		  </div>
 		  <div class='calendar_right'>
 
@@ -163,6 +164,6 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/js/animation.js"></script>
+    <script src="js/animation.js"></script>
   </body>
 </html>

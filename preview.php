@@ -112,19 +112,19 @@
 		  <div class="padding_cal">
 		  <div class='calendar_left'>
 		    <div class='cal_header'>
-		      <i class='material-icons is-size-2' ng-click='calendar.prev()'>navigate_before</i>
+		      <i class='material-icons' ng-click='calendar.prev()'>navigate_before</i>
 		      <!-- можно вписать class="is-size-4, но будет не ровно" -->
-		      <h1 class="is-size-4">{{calendar.month}}</h1>
-		      <i class='material-icons is-size-2 ' ng-click='calendar.next()'>navigate_next</i>
+		      <h1 >{{calendar.month}}</h1>
+		      <i class='material-icons' ng-click='calendar.next()'>navigate_next</i>
 		    </div>
 		    <div class='days'>
-		      <div class='day_item is-size-4'><p class="has-text-weight-light">ПН</p></div>
-		      <div class='day_item is-size-4'><p class="has-text-weight-light">ВТ</p></div>
-		      <div class='day_item is-size-4'><p class="has-text-weight-light">СР</p></div>
-		      <div class='day_item is-size-4'><p class="has-text-weight-light">ЧТ</p></div>
-		      <div class='day_item is-size-4'><p class="has-text-weight-light">ПТ</p></div>
-		      <div class='day_item is-size-4'><p class="has-text-weight-light">СБ</p></div>
-		      <div class='day_item is-size-4'><p class="has-text-weight-light">ВС</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ПН</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ВТ</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">СР</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ЧТ</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ПТ</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">СБ</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ВС</p></div>
 		    </div>
 		    <div class='dates'></div>
 		  </div>

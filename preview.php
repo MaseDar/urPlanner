@@ -190,7 +190,14 @@
 		<!-- ---------------------------------EASY START--------------------------------------------- -->
 
 			<div class="easy-start">
-				
+				<div  class="content has-text-centered">
+    		<h1 class="title has-text-weight-semibold is-1">
+    			Появилась идея? 
+    		</h1>
+    		<h1 class="subtitle has-text-grey-light is-2 has-text-weight-light">
+    			Запиши её прямо сейчас!
+    		</h1>
+    	</div>
 			</div>
 
 		<!-- ---------------------------------END EASY START--------------------------------------------- -->

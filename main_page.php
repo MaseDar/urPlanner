@@ -17,7 +17,7 @@
 
 
 <!DOCTYPE html>
-<html ng-app='preview_calendar' ng-cloak='true'>
+<html class="has-navbar-fixed-top" ng-app='main_calendar' ng-cloak='true'>
   <head>
     <meta charset="utf-8">
     <title>URPLANNER</title>
@@ -30,15 +30,20 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- ------------------  ------------------ -->
-    <!-- Подключаем bulma -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------- Подключаем bulma ------------>
+  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link rel="stylesheet" href="css/mystyles.css">
-    <link rel="stylesheet" href="css/custom.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    <!--  -->
+   <!-- -----------ANGULARJS--------------------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-animate.min.js"></script>
+    <!-- ----------------------------------------------- -->
+
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/mystyles.css">
   </head>
+
   <body>
 <!-- 32px отступа по бокам -->
 	
@@ -129,7 +134,7 @@
     	</div>
     	<!-- ----------------------------------CALENDAR-------------------------------------- -->
     
-		<div class='calendar' ng-controller='calendarController_main_page as calendar'>
+		<div class='calendar' ng-controller='main_calendarController as calendar'>
 		<div class='calendar_rotate_background'></div>
 		  <div class="padding_cal">
 		  <div class='calendar_left'>
@@ -185,7 +190,7 @@
     
  
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/animation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main_page.js"></script>
   </body>
 </html>

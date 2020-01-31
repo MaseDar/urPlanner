@@ -20,7 +20,6 @@
   </head>
   <body>
 <!-- 32px отступа по бокам -->
-<div class="container is-fluid">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -57,7 +56,7 @@
 							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->		
 		<div class="navbar-item has-dropdown is-hoverable"></div>
 		 	<div class="navbar-item">
-				<a class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
+				<a id="sign-button" class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
 			</div> 
 	</div>
 		  
@@ -83,6 +82,7 @@
 				<?php endif; ?>
 				
 <!-- ----------------------------------------------------------------------------------------- -->
+
 			<div class="box">
 				<p class="title">Введите вашу почту</p>	
 				<form method="post" action=""  autocomplete="off">
@@ -105,9 +105,9 @@
 </div>
 
     
-  </div>
+ 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/js/animation.js"></script>
+    <script src="\js/animation.js"></script>
   </body>
 </html>

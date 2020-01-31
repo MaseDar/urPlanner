@@ -18,18 +18,24 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- ------------------  ------------------ -->
+   <!-- -----------ANGULARJS--------------------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-animate.min.js"></script>
+    <!-- ----------------------------------------------- -->
     <!-- Подключаем bulma -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link rel="stylesheet" href="css/mystyles.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <!-- <link rel="stylesheet" href="css/mystyles.css">
+    <link rel="stylesheet" href="css/custom.css"> -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    <!--  -->
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
+  
+
   </head>
+  
   <body>
-<!-- 32px отступа по бокам -->
-	<div class="container is-fluid">
+  	<section class="hero">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -87,11 +93,13 @@
 							
 						</div>
 						 <div class="navbar-item">
-							<a class="button is-link is-rounded is-small" href="log_case.php">Sign in</a>
+							<a id="sign-button" class="button is-link is-rounded is-small" href="log_case.php">Sign in</a>
 						</div> 
 					</div>
 		</nav>
+	</section>
 <!-- ----------------------------------------окно регистрации------------------------------------------------------ -->
+		<div class='calendar_rotate_background'></div>
 		<div class="columns">
 	    	<div class="column is-4">
 		        
@@ -110,8 +118,8 @@
 				
 
 			<!-- <div class="has-background-dark"> -->
-			<div class="tile is-parent is-grouped ">
-			  	<div class="box">
+			
+			  	<div class="box ">
 					<form method="post" action="" name="frmRegistration" autocomplete="off">
 					  	<div class="field">
 					  		<p class="title">Регистрация</p>
@@ -130,7 +138,7 @@
 
 						<div class="field">
 						  	<div class="control has-icons-left has-icons-right">
-						    	<input name="email" class="input" type="email" placeholder="example@yandex.ru">
+						    	<input name="email" class="input" type="email" placeholder="example@gmail.com">
 						    		<span class="icon is-small is-left">
 						     	 		<i class="fas fa-envelope"></i>
 						    		</span>
@@ -140,15 +148,15 @@
 							</div>
 						</div>
 							
-						<div class="field is-grouped is-mobile">
-							<div class="">
-							    <input  name="password" class="input" type="password" placeholder="Password">
-							    	
+						<div class="field">
+							<div class="control">
+								    <input  name="password" class="input" type="password" placeholder="Пароль">
 							</div>
+						</div>
 
-							<div class="">
-							    <input  name="passconf" class="input" type="password" placeholder="Password confirm">
-							    	
+						<div class="field">
+							<div class="control">
+							    <input  name="passconf" class="input" type="password" placeholder="Подтверждение пароля">
 							</div>
 						</div>
 
@@ -170,10 +178,10 @@
 				</div>		
 			</div>
 		</div>
-	</div>
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/js/animation.js"></script>
+    <script src="\js/animation.js"></script>
   </body>
 </html>

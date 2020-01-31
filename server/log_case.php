@@ -28,10 +28,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    <!--  -->
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!-- //Recapchta -->
   </head>
   <body>
 <!-- 32px отступа по бокам -->
-<div class="container is-fluid">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -68,7 +68,7 @@
 							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->		
 		<div class="navbar-item has-dropdown is-hoverable"></div>
 		 	<div class="navbar-item">
-				<a class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
+				<a id="sign-button" class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
 			</div> 
 	</div>
 		  
@@ -81,10 +81,10 @@
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-	        	<?php if(!empty($_SESSION['error'])) : ?>
+	        	<?php if(!empty($_SESSION['error']) || !empty($_SESSION['error_google'])) : ?>
 					<div class="tile ">
 						<article class="tile  notification is-danger">
-							<p class="subtitle is-6"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
+							<p class="subtitle is-6"><?php echo $_SESSION['error']; unset($_SESSION['error']); echo $_SESSION['error_google']; unset($_SESSION['error_google']); ?></p>
 						</article>
 					</div>
 				<?php endif; ?>
@@ -94,7 +94,16 @@
 				<?php endif; ?>
 <!-- ----------------------------------------------------------------------------------------- -->
 			<div class="box">
-				<p class="title">Вход</p>	
+				<div class="control has-icons-left has-icons-right">
+				    	
+				     		<p class="title">Вход</p>
+				    	
+				    	<span class="icon is-right has-text-dark">
+					      	<div class="button " title = "Это тигр">
+							<?php $test = $_SESSION['count']; echo "$test";?>
+							</div>
+				    	</span>
+				</div>
 				<form method="post" action=""  autocomplete="off">
 
 	            	<div class="field">
@@ -114,11 +123,23 @@
 					  	<div class="control">
 					  		<button name="submit" type="submit" class="button  is-light "><b>Войти</b></button>
 					  	</div>
-					</div>
-					<div class="field is-grouped is-grouped-centered">
-		              	<p class="subtitle is-6"><a class="has-text-primary" href="recovery_case.php">Забыли пароль?</a></p>
-		              	<p class="subtitle is-6"><a class="has-text-primary" href="reg_case.php">Зарегистрироваться</a></p>
-		            </div>
+						</div>
+						<?php if($_SESSION['count']  >  3 ) : ?>
+						<div class="field is-grouped is-grouped-centered">
+							<div class="g-recaptcha" data-sitekey="6LcI1dMUAAAAAIceMuRFrJLxllZqLyG7z7JVR6Kb"></div>
+
+						</div>
+						<?php endif; ?>
+						<div class="field is-grouped is-grouped-centered">
+							<div class="control">
+				              	<p class="subtitle is-6"><a class="has-text-primary" href="recovery_case.php">Забыли пароль?</a></p>
+							</div>
+						</div>
+						<div class="field is-grouped is-grouped-centered">
+							<div class="control">
+				              	<p class="subtitle is-6"><a class="has-text-primary" href="reg_case.php">Зарегистрироваться</a></p>
+			                </div>
+			            </div>
 
 				</form>
 			</div>
@@ -128,9 +149,9 @@
 </div>
 
     
-  </div>
+ 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/js/animation.js"></script>
+    <script src="\js/animation.js"></script>
   </body>
 </html>

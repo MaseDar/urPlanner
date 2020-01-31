@@ -97,7 +97,7 @@
 							
 						</div>
 						 <div class="navbar-item">
-							<a class="button is-link is-rounded is-small" href="log_case.php">Sign in</a>
+							<a id="sign-button" class="button is-link is-rounded is-small" href="log_case.php">Sign in</a>
 						</div> 
 					</div>
 		</nav>
@@ -140,7 +140,7 @@
 
 						<div class="field">
 						  	<div class="control has-icons-left has-icons-right">
-						    	<input name="email" class="input" type="email" placeholder="example@yandex.ru">
+						    	<input name="email" class="input" type="email" placeholder="example@gmail.com">
 						    		<span class="icon is-small is-left">
 						     	 		<i class="fas fa-envelope"></i>
 						    		</span>
@@ -150,15 +150,15 @@
 							</div>
 						</div>
 							
-						<div class="field is-grouped is-mobile">
-							<div class="">
-							    <input  name="password" class="input" type="password" placeholder="Password">
-							    	
+						<div class="field">
+							<div class="control">
+								    <input  name="password" class="input" type="password" placeholder="Пароль">
 							</div>
+						</div>
 
-							<div class="">
-							    <input  name="passconf" class="input" type="password" placeholder="Password confirm">
-							    	
+						<div class="field">
+							<div class="control">
+							    <input  name="passconf" class="input" type="password" placeholder="Подтверждение пароля">
 							</div>
 						</div>
 

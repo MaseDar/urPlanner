@@ -15,14 +15,25 @@
 
 #statist{
   padding-top: 5%;
-  padding-left: 10%;
+  padding-left: 20%;
+  margin-bottom: 10%;
 }
+
 
 // Variables
 $primary-color: #00A8E8;
 $radius: 5px;
 $back-color: #E0E0E0;
 
+.easy-start{
+  
+  height: 400px;
+  opacity: 75%;
+  width: 100vw;
+  background:url(https://sun9-68.userapi.com/c853520/v853520553/1de677/nWlc2lDtfNo.jpg);
+  background-size: cover; 
+  margin-bottom: 10%;
+}
 
 * {
   // margin: 0; padding: 0;

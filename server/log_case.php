@@ -94,7 +94,16 @@
 				<?php endif; ?>
 <!-- ----------------------------------------------------------------------------------------- -->
 			<div class="box">
-				<p class="title">Вход</p>	<?php $test = $_SESSION['count']; echo "Номер вашей сессии $test";?>
+				<div class="control has-icons-left has-icons-right">
+				    	
+				     		<p class="title">Вход</p>
+				    	
+				    	<span class="icon is-right has-text-dark">
+					      	<div class="button " title = "Это тигр">
+							<?php $test = $_SESSION['count']; echo "$test";?>
+							</div>
+				    	</span>
+				</div>
 				<form method="post" action=""  autocomplete="off">
 
 	            	<div class="field">

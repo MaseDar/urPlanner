@@ -6,11 +6,11 @@
 #first_title{
   margin-top: 5%;
   position: relative;
-  z-index: 30;
+  z-index: 5;
 }
 #first_subtitle{
   position: relative;
-  z-index: 30;
+  z-index: 5;
 }
 
 #statist{
@@ -19,7 +19,6 @@
   // padding-right: 10%;
   margin-bottom: 10%;
 }
-
 
 // Variables
 $primary-color: #00A8E8;
@@ -35,7 +34,7 @@ $back-color: #E0E0E0;
   {
     position: relative;
     z-index: 4;
-    padding-top: 100px;
+    padding-top: 125px;
   }
   &-background{
     position: absolute;
@@ -53,9 +52,11 @@ $back-color: #E0E0E0;
   box-sizing: border-box;
 }
 #first_title{
+  position: relative;
   opacity: 0;
 }
 #first_subtitle{
+  position: relative;
   opacity: 0;
 }
 .padding_cal{

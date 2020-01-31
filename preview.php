@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html ng-app='calendarApp' ng-cloak='true'>
+<html class="has-navbar-fixed-top" ng-app='calendarApp' ng-cloak='true'>
   <head>
-    <meta charset="-8">
+    <meta charset="UTF-8">
     <title>URPLANNER</title>
     <!-- ------------------ LOGO ------------------ -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -32,7 +32,7 @@
 <!-- 32px отступа по бокам -->
 	<!-- <div class="container is-field"> -->
 		<!-- ----------------------------------NAVBAR----------------------------------------->
-		<nav class="navbar" role="navigation" aria-label="main navigation">
+		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 			
                 <a class="navbar-item" href="/preview.php">

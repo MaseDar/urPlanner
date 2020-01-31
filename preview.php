@@ -208,7 +208,7 @@
 	<footer class="footer">
 		<div class=" content has-text-centered">
 		  <p> Этот сервис является итогом длительного и кровопролитного пота двух разработчиков 
-		  		<a href="https://vk.com/mujjum">ДимДимыч</a>  и  <a href="https://vk.com/masedar">MaseDar</a></p>
+		  		<a href="https://vk.com/mujjum">Mujjum</a>  и  <a href="https://vk.com/masedar">MaseDar</a></p>
 		  		<p> <a href="/preview.php">
                   <img src="https://avatars.mds.yandex.net/get-pdb/2979185/79c8ab7d-99e2-4fed-8bd1-0a77af904cf0/s1200" width="112" height="28">
                 </a>

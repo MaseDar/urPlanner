@@ -20,7 +20,6 @@
   </head>
   <body>
 <!-- 32px отступа по бокам -->
-<div class="container is-fluid">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -106,7 +105,7 @@
 </div>
 
     
-  </div>
+ 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="\js/animation.js"></script>

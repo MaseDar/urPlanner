@@ -20,33 +20,6 @@
 	// Ставим кодировку в utf
 	$db->set_charset('utf8'); 	
 
-	// Логиню пользователя
-	/*if (isset($_POST['submit'])) {
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-
-		//
-		$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
-		$run = mysqli_query($db, $query);
-
-		if ($run) {
-			// Проверяю есть ли такие ряды в базе данных
-			if (mysqli_num_rows($run) > 0) {
-				//Преобразую в массив и его записываю в переменную
-				$new_user = mysqli_fetch_assoc($run);
-				$_SESSION['username'] = $new_user['username'];
-				$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
-				header('location: \main_page.php');
-				exit();
-			} else { 
-				header('location: log_case.php'); 
-				exit(); 
-			}
-		} else {
-			echo "Переменная run = false Подробнее: " . mysqli_error();
-		}
-	}*/
-
 	//Recaptcha для логина
 
 	if(  !isset(  $_SESSION['count']  )  )  $_SESSION['count']  =  0;
@@ -69,6 +42,7 @@
 		    $curlData = json_decode($curlData, true);
 			    if($curlData['success']) {
 			    	unset($_SESSION['count']);
+			    	// Логиню пользователя
 			        if (isset($_POST['submit'])) {
 						$username = $_POST['username'];
 						$password = $_POST['password'];
@@ -104,29 +78,29 @@
 		}
     } else {
     	if (isset($_POST['submit'])) {
-					$username = $_POST['username'];
-					$password = $_POST['password'];
+			$username = $_POST['username'];
+			$password = $_POST['password'];
 
-					//
-					$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
-					$run = mysqli_query($db, $query);
+			//
+			$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
+			$run = mysqli_query($db, $query);
 
-					if ($run) {
-						// Проверяю есть ли такие ряды в базе данных
-						if (mysqli_num_rows($run) > 0) {
-							//Преобразую в массив и его записываю в переменную
-							$new_user = mysqli_fetch_assoc($run);
-							$_SESSION['username'] = $new_user['username'];
-							$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
-							header('location: \main_page.php');
-							exit();
-						} else { 
-							header('location: log_case.php'); 
-							exit(); 
-						}
-					} else {
-						echo "Переменная run = false Подробнее: " . mysqli_error();
-					}
+			if ($run) {
+				// Проверяю есть ли такие ряды в базе данных
+				if (mysqli_num_rows($run) > 0) {
+					//Преобразую в массив и его записываю в переменную
+					$new_user = mysqli_fetch_assoc($run);
+					$_SESSION['username'] = $new_user['username'];
+					$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
+					header('location: \main_page.php');
+					exit();
+				} else { 
+					header('location: log_case.php'); 
+					exit(); 
+				}
+			} else {
+				echo "Переменная run = false Подробнее: " . mysqli_error();
+			}
 		}
     }
 

@@ -87,15 +87,16 @@
 						
 						<div class="navbar-item ">
 							<div class="buttons">
-								<a class="button is-link is-small is-rounded" href="server/reg_case.php"><b>Sign in</b></a>
-								<a class="button is-link is-light is-small is-rounded" href="server/log_case.php">Log in</a>
+								<a id="sign-button" class="button is-link is-small is-rounded" href="server/reg_case.php"><b>Sign in</b></a>
+								<a id="log-button" class="button  is-small is-rounded" href="server/log_case.php">Log in</a>
 							</div>
 						</div>
 					</div>
 		  
 		</nav>
 
-		<!-- ----------------------------------NAVBAR----------------------------------------->
+		<!-- ----------------------------------END NAVBAR----------------------------------------->
+    	<!-- -----------------------------------FIRST TITLE------------------------------------ -->
     	<div  class="content has-text-centered">
     		<h1 id="first_title" class="title has-text-weight-semibold is-1">
     			Появилась идея? 
@@ -104,7 +105,7 @@
     			Запиши её прямо сейчас!
     		</h1>
     	</div>
-    	
+    	<!-- --------------------------------END FIRST TITLE------------------------------------ -->
     	<!-- ----------------------------------CALENDAR-------------------------------------- -->
     
 		<div class='calendar ' ng-controller='calendarController as calendar'>
@@ -158,10 +159,41 @@
 
 		</div>	
 
-		<!-- -------------------------------------------------------------------------------- -->
-  </div>
+		<!-- -------------------------------END CALENDAR------------------------------------------ -->
+		<!-- --------------------------------STATS------------------------------------------------ -->
+  		<div id="statist">
+		  <div class="tile is-ancestor">
+			    <div class="tile">
+			      <div class="tile is-parent">
+			        <article class="tile is-child">
+				        <p class="image is-64x64">
+						   <img src="img/moregrap.png">
+						</p>
+				        <p class="title is-3 has-text-weight-light">Статистика</p>
+				        <p class="subtitle is-5 has-text-weight-light has-text-grey-light">Отслеживайте количество выполненных 
+	задач в виде графиков.</p>
+			        </article>
+			      </div>
+			      <div class="tile is-parent">
+			        <article class="tile is-child">
+			        	<p class="image is-64x64">
+						   <img src="img/icon_addtask.png">
+						</p>
+			          <p class="title is-3 has-text-weight-light">Простой интерфейс</p>
+			          <p class="subtitle is-5 has-text-weight-light has-text-grey-light">Для вас не будет проблемой добавить новую задачу.</p>
+			        </article>
+			      </div>
+				</div>
+			</div>
+		</div>
+		<!-- --------------------------------END STATS------------------------------------------------ -->
+		<!-- ---------------------------------EASY START--------------------------------------------- -->
 
+			<div class="easy-start">
+				
+			</div>
 
+		<!-- ---------------------------------END EASY START--------------------------------------------- -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/animation.js"></script>

@@ -58,10 +58,15 @@ $(document).ready(function() {
   });
 });
 
-// // при выходе кнопка становится крутящейся
-// $("#logoutbtn").click(function(){
-// 	$("#logoutbtn").toggleClass("is-loading");
-// })
+// при выходе кнопка становится крутящейся
+$("#sign-button").click(function(){
+ $("#sign-button").toggleClass("is-loading");
+})
+
+$("#log-button").click(function(){
+ $("#log-button").toggleClass("is-warning is-loading");
+})
+
 
 // calendar
 var chid,chdataid;

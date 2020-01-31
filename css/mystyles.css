@@ -3,11 +3,11 @@
 #first_title {
   margin-top: 5%;
   position: relative;
-  z-index: 30; }
+  z-index: 5; }
 
 #first_subtitle {
   position: relative;
-  z-index: 30; }
+  z-index: 5; }
 
 #statist {
   padding-top: 15%;
@@ -16,19 +16,30 @@
 
 .easy-start {
   height: 400px;
-  opacity: 75%;
   width: 100vw;
-  background: url(https://sun9-68.userapi.com/c853520/v853520553/1de677/nWlc2lDtfNo.jpg);
-  background-size: cover;
   margin-bottom: 10%; }
+  .easy-start-content {
+    position: relative;
+    z-index: 4;
+    padding-top: 125px; }
+  .easy-start-background {
+    position: absolute;
+    z-index: 3;
+    background: url(https://sun9-68.userapi.com/c853520/v853520553/1de677/nWlc2lDtfNo.jpg);
+    background-size: cover;
+    opacity: 30%;
+    height: 400px;
+    width: 100vw; }
 
 * {
   box-sizing: border-box; }
 
 #first_title {
+  position: relative;
   opacity: 0; }
 
 #first_subtitle {
+  position: relative;
   opacity: 0; }
 
 .padding_cal {

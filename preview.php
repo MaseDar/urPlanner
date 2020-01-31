@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html ng-app='calendarApp' ng-cloak='true'>
+<html class="has-navbar-fixed-top" ng-app='calendarApp' ng-cloak='true'>
   <head>
-    <meta charset="-8">
+    <meta charset="UTF-8">
     <title>URPLANNER</title>
     <!-- ------------------ LOGO ------------------ -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -32,7 +32,7 @@
 <!-- 32px отступа по бокам -->
 	<!-- <div class="container is-field"> -->
 		<!-- ----------------------------------NAVBAR----------------------------------------->
-		<nav class="navbar" role="navigation" aria-label="main navigation">
+		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 			
                 <a class="navbar-item" href="/preview.php">
@@ -190,13 +190,16 @@
 		<!-- ---------------------------------EASY START--------------------------------------------- -->
 
 			<div class="easy-start">
-				<div  class="content has-text-centered">
-    		<h1 class="title has-text-weight-semibold is-1 has-text-light">
-    			Появилась идея? 
-    		</h1>
-    		<h1 class="subtitle has-text-grey-light is-2 has-text-weight-light">
-    			Запиши её прямо сейчас!
-    		</h1>
+				<div class="easy-start-background"></div>
+				<div class="easy-start-content content has-text-centered">
+	    		<h1 class="title is-2 has-text-weight-light">
+	    			Быстрое начало
+	    		</h1>
+	    		<h1 class="subtitle is-4 has-text-grey has-text-weight-light">
+	    			Просто начните пользоваться URPLANNER 
+	    		</h1>
+				<a id="sign-button" class="button is-link is-rounded" href="server/reg_case.php">Начать</a>
+				
     	</div>
 			</div>
 

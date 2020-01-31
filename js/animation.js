@@ -72,7 +72,7 @@ $("#log-button").click(function(){
 var chid,chdataid;
 (function() {
   angular
-    .module('calendarApp', ['ngAnimate'])
+    .module('preview_calendar', ['ngAnimate'])
     .controller('calendarController', calendarController);
 
   function calendarController($scope) { 

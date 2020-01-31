@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top" ng-app='calendarApp' ng-cloak='true'>
+<html class="has-navbar-fixed-top" ng-app='preview_calendar' ng-cloak='true'>
   <head>
     <meta charset="UTF-8">
     <title>URPLANNER</title>
@@ -29,8 +29,7 @@
   
 
   <body>
-<!-- 32px отступа по бокам -->
-	<!-- <div class="container is-field"> -->
+	<!-- убрать hero для белого фона на navbar  -->
 	<section class="hero">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -205,6 +204,17 @@
 			</div>
 
 		<!-- ---------------------------------END EASY START--------------------------------------------- -->
+	<!-- ----------------------------------------FOOTER--------------------------------------------- -->
+	<footer class="footer">
+		<div class=" content has-text-centered">
+		  <p> Этот сервис является итогом длительного и кровопролитного пота двух разработчиков 
+		  		<a href="https://vk.com/mujjum">ДимДимыч</a>  и  <a href="https://vk.com/masedar">MaseDar</a></p>
+		  		<p> <a href="/preview.php">
+                  <img src="https://avatars.mds.yandex.net/get-pdb/2979185/79c8ab7d-99e2-4fed-8bd1-0a77af904cf0/s1200" width="112" height="28">
+                </a>
+		  <p>© All rights reserved</p>
+		</div>
+	</footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/animation.js"></script>

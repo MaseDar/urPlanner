@@ -34,12 +34,8 @@
 
   </head>
   
-
-
-
   <body>
-<!-- 32px отступа по бокам -->
-
+  	<section class="hero">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -101,7 +97,9 @@
 						</div> 
 					</div>
 		</nav>
+	</section>
 <!-- ----------------------------------------окно регистрации------------------------------------------------------ -->
+		<div class='calendar_rotate_background'></div>
 		<div class="columns">
 	    	<div class="column is-4">
 		        
@@ -121,7 +119,7 @@
 
 			<!-- <div class="has-background-dark"> -->
 			
-			  	<div class="box">
+			  	<div class="box ">
 					<form method="post" action="" name="frmRegistration" autocomplete="off">
 					  	<div class="field">
 					  		<p class="title">Регистрация</p>

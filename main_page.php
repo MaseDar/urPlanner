@@ -17,7 +17,7 @@
 
 
 <!DOCTYPE html>
-<html>
+<html ng-app='preview_calendar' ng-cloak='true'>
   <head>
     <meta charset="utf-8">
     <title>URPLANNER</title>
@@ -118,7 +118,7 @@
 		  
 		</nav>
 
-		<!-- ----------------------------------NAVBAR----------------------------------------->
+		<!-- ----------------------------------END NAVBAR----------------------------------------->
     	<div  class="content has-text-centered">
     		<h1 id="first_title" class="title has-text-weight-semibold is-1">
     			"Домашняя страница" 
@@ -127,6 +127,60 @@
     			Ты авторизовался!
     		</h1>
     	</div>
+    	<!-- ----------------------------------CALENDAR-------------------------------------- -->
+    
+		<div class='calendar' ng-controller='calendarController_main_page as calendar'>
+		<div class='calendar_rotate_background'></div>
+		  <div class="padding_cal">
+		  <div class='calendar_left'>
+		    <div class='cal_header'>
+		      <i class='material-icons' ng-click='calendar.prev()'>navigate_before</i>
+		      <!-- можно вписать class="is-size-4, но будет не ровно" -->
+		      <h1 >{{calendar.month}}</h1>
+		      <i class='material-icons' ng-click='calendar.next()'>navigate_next</i>
+		    </div>
+		    <div class='days'>
+		      <div class='day_item'><p class="has-text-weight-light">ПН</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ВТ</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">СР</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ЧТ</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ПТ</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">СБ</p></div>
+		      <div class='day_item'><p class="has-text-weight-light">ВС</p></div>
+		    </div>
+		    <div class='dates'></div>
+		  </div>
+		  </div>
+		  <div class='calendar_right'>
+
+		    <div class='list2'>
+
+		      <ul>
+		        <li class='bounce-in' ng-repeat='events in calendar.events' ng-show='events.id === calendar.dataId'>
+		          <span class='type'>{{ events.type }}</span>
+		          <span class='description'>{{ events.description }}</span>
+		        </li>
+		      </ul>
+		    </div>
+		    <form ng-submit='calendar.add()'>
+		      <input ng-model='calendar.description' placeholder='Введите вашу задачу' type='text'>
+		        <select ng-model='calendar.type' placeholder='calendar.type'>
+		          <option value='Работа'>Работа</option>
+		          <option value='Дом'>Дом</option>
+		          <option value='Свое'>Свое</option>
+		          <option value='Другое'>Другое</option>
+		        </select>
+		      </input>
+		    </form>
+		  </div>
+
+		</div>			
+	
+		
+
+		</div>	
+
+		<!-- -------------------------------END CALENDAR------------------------------------------ -->
 
     
  

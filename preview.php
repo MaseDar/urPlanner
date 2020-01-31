@@ -31,6 +31,7 @@
   <body>
 <!-- 32px отступа по бокам -->
 	<!-- <div class="container is-field"> -->
+	<section class="hero">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
 		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
@@ -94,7 +95,7 @@
 					</div>
 		  
 		</nav>
-
+	</section>
 		<!-- ----------------------------------END NAVBAR----------------------------------------->
     	<!-- -----------------------------------FIRST TITLE------------------------------------ -->
     	<div  class="content has-text-centered">

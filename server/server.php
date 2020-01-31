@@ -20,11 +20,17 @@
 	// Ставим кодировку в utf
 	$db->set_charset('utf8'); 	
 
-	//Recaptcha для логина
+	//Присваем новой сессии 0 значение
+	if(!isset($_SESSION['count']))  $_SESSION['count']  =  0;
 
-	if(  !isset(  $_SESSION['count']  )  )  $_SESSION['count']  =  0;
-    $_SESSION['count']++;
-    if(  $_SESSION['count']  >  3  )
+	//Сброс каптчи (временная мера)
+	if (isset($_POST['reset_captcha']) && $_SESSION['count'] > 0) {
+		unset($_SESSION['count']);
+		header('location: log_case.php');
+	}
+
+	//Recaptcha для логина
+    if($_SESSION['count'] > 3)
     {
 	    if (isset($_POST['g-recaptcha-response'])) {
 			$recaptcha = $_POST['g-recaptcha-response'];
@@ -41,13 +47,13 @@
 		    curl_close($curl); 
 		    $curlData = json_decode($curlData, true);
 			    if($curlData['success']) {
+			    	//Если выполнить проверку я не робот, сбрасываю счетчик номера сессии до 0
 			    	unset($_SESSION['count']);
 			    	// Логиню пользователя
 			        if (isset($_POST['submit'])) {
 						$username = $_POST['username'];
 						$password = $_POST['password'];
 
-						//
 						$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
 						$run = mysqli_query($db, $query);
 
@@ -64,8 +70,6 @@
 								header('location: log_case.php'); 
 								exit(); 
 							}
-						} else {
-							echo "Переменная run = false Подробнее: " . mysqli_error();
 						}
 					}
 			    } else {
@@ -81,7 +85,8 @@
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 
-			//
+			//Прибавляем к номеру текущей сессии +1
+   			$_SESSION['count']++;
 			$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
 			$run = mysqli_query($db, $query);
 
@@ -98,65 +103,11 @@
 					header('location: log_case.php'); 
 					exit(); 
 				}
-			} else {
-				echo "Переменная run = false Подробнее: " . mysqli_error();
-			}
+			} 
 		}
     }
 
-	/*if (isset($_POST['g-recaptcha-response'])) {
-		$recaptcha = $_POST['g-recaptcha-response'];
-		if(!empty($recaptcha)) {
-	    $recaptcha = $_REQUEST['g-recaptcha-response'];
-	    $secret = '6LcI1dMUAAAAAIAllKNkUuTRFrWy_1HU0Xf4_haC';
-	    $url = "https://www.google.com/recaptcha/api/siteverify?secret=".$secret ."&response=".$recaptcha."&remoteip=".$_SERVER['REMOTE_ADDR'];
-	    $curl = curl_init();
-	    curl_setopt($curl, CURLOPT_URL, $url);
-	    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-	    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
-	    curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:8.0) Gecko/20100101 Firefox/8.0");
-	    $curlData = curl_exec($curl);
-	    curl_close($curl); 
-	    $curlData = json_decode($curlData, true);
-		    if($curlData['success']) {
-		        if (isset($_POST['submit'])) {
-					$username = $_POST['username'];
-					$password = $_POST['password'];
-
-					//
-					$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
-					$run = mysqli_query($db, $query);
-
-					if ($run) {
-						// Проверяю есть ли такие ряды в базе данных
-						if (mysqli_num_rows($run) > 0) {
-							//Преобразую в массив и его записываю в переменную
-							$new_user = mysqli_fetch_assoc($run);
-							$_SESSION['username'] = $new_user['username'];
-							$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
-							header('location: \main_page.php');
-							exit();
-						} else { 
-							header('location: log_case.php'); 
-							exit(); 
-						}
-					} else {
-						echo "Переменная run = false Подробнее: " . mysqli_error();
-					}
-				}
-		    } else {
-		        echo "Подтвердите, что вы не робот и попробуйте еще раз";
-		    }
-	}
-	else {
-	    echo "поставьте галочку в поле 'Я не робот' для отправки сообщения";
-	}
-	}*/
-	
-	
-
 	//Восстановление пароля по почте
-
 	if (isset($_POST['submit_recovery'])) {
 		$email = $_POST['email'];
 		$query = "SELECT * FROM users WHERE email = '$email' ";
@@ -176,9 +127,6 @@
 		}
 	}
 
-	
-
-
 	//Регистрирую пользователя
 	if (isset($_POST['register-user'])) {
 		   $email = $_POST['email'];
@@ -189,12 +137,16 @@
 		  $username = trim($username);
 
 		//Сравниваю пароли и никнейм
-		if ($password !== $passconf || $password == "" || strlen($password) <= 5) {
-			$_SESSION['error'] = "Пароль должен содержать минимум 6 символов";
+		if ($password !== $passconf || $password == "") {
+			$_SESSION['error'] = "Пароли не совпали";
 			header('location: reg_case.php');
 			exit();
-		} else if ($username == "" || strlen($username) < 5) {
-			$_SESSION['error'] = "Длина логина менее 5";
+		} else if ($username == "" || strlen($username) <= 5) {
+			$_SESSION['error'] = "Слишком короткий логин";
+			header('location: reg_case.php');
+			exit();
+		} else if (strlen($password) <= 5) {
+			$_SESSION['error'] = "Пароль должен содержать минимум 6 символов";
 			header('location: reg_case.php');
 			exit();
 		}

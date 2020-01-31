@@ -67,7 +67,14 @@
 		</div>
 							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->		
 		<div class="navbar-item has-dropdown is-hoverable"></div>
-		 	<div class="navbar-item">
+			<?php if($_SESSION['count'] > 3) : ?>
+		 		<div class="navbar-item">
+		 			<form method="post" action=""  autocomplete="off">
+					<button id="sign-button" name="reset_captcha" type="submit" class="button is-warning is-light is-rounded is-outlined is-small">Я робот</button>
+					</form>
+				</div> 
+			<?php endif; ?>
+			<div class="navbar-item">
 				<a id="sign-button" class="button is-link is-rounded is-small" href="reg_case.php">Sign up</a>
 			</div> 
 	</div>
@@ -102,8 +109,12 @@
 					      	<div class="button " title = "Это тигр">
 							<?php $test = $_SESSION['count']; echo "$test";?>
 							</div>
+
 				    	</span>
+
+
 				</div>
+
 				<form method="post" action=""  autocomplete="off">
 
 	            	<div class="field">

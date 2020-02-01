@@ -120,9 +120,9 @@
 			$user = mysqli_fetch_assoc($run_query);
 			$password = $user['password'];
 			if (mail("$email", "Заявка с сайта", "Пароль:".$password.". E-mail: ".$email ,"From: user8147@urplanner.ru \r\n")) {
-				echo "отправлено";
+				$_SESSION['success_recovery'] = "Проверьте ваш почтовый ящик";
 			} else {
-				echo "Не отправлено";
+				$_SESSION['error_recovery'] = "Такая почта не зарегистрирована";
 			}
 		}
 	}

@@ -45,10 +45,10 @@
   </head>
 
   <body>
-<!-- 32px отступа по бокам -->
-	
+<!-- убрать hero для белого фона на navbar  -->
+	<section class="hero">
 		<!-- ----------------------------------NAVBAR----------------------------------------->
-		<nav class="navbar" role="navigation" aria-label="main navigation">
+		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 				
                 <a class="navbar-item" href="/preview.php">
@@ -122,7 +122,7 @@
 					</div>
 		  
 		</nav>
-
+	</section>
 		<!-- ----------------------------------END NAVBAR----------------------------------------->
     	<div  class="content has-text-centered">
     		<h1 id="first_title" class="title has-text-weight-semibold is-1">

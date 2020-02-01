@@ -108,7 +108,7 @@
     	<!-- --------------------------------END FIRST TITLE------------------------------------ -->
     	<!-- ----------------------------------CALENDAR-------------------------------------- -->
     
-		<div class='calendar ' ng-controller='calendarController as calendar'>
+		<div class='calendar' ng-controller='preview_calendarController as calendar'>
 		<div class='calendar_rotate_background'></div>
 		  <div class="padding_cal">
 		  <div class='calendar_left'>

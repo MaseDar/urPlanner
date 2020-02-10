@@ -2,11 +2,7 @@
 
 	session_start(); // Это функция запоминает уникального пользователя, хранит $_SESSION['id] = '1; и тд.
 
-
-	/*$host = 'localhost'; // адрес сервера 
-	$user = 'root'; // имя пользователя
-	$password = ''; // пароль
-	$database = 'userlog'; // имя базы данных*/
+	// ('localhost', 'user8147_denis', '21gunsoriginal', 'user8147_userlog')
 
 	// Подключаемся к базе $database
 	$db = new mysqli('localhost', 'root', '', 'userlog'); 

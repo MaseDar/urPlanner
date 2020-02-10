@@ -83,11 +83,7 @@
 
 <!-----------------------------------------окно регистрации------------------------------------------------------ -->
 		<div class="columns">
-	    	<div class="column is-4"></div>
-	        <div class="column is-4">
-	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
+	        <div class="column is-6">
 	        	<?php if(!empty($_SESSION['error']) || !empty($_SESSION['error_google'])) : ?>
 					<div class="tile ">
 						<article class="tile  notification is-danger">
@@ -100,61 +96,108 @@
        			 	<?session_destroy();?>
 				<?php endif; ?>
 <!-- ----------------------------------------------------------------------------------------- -->
-			<div class="box">
-				<div class="control has-icons-left has-icons-right">
-				    	
-				     		<p class="title">Вход</p>
-				    	
-				    	<span class="icon is-right has-text-dark">
-					      	<div class="button " title = "Это тигр">
-							<?php $test = $_SESSION['count']; echo "$test";?>
-							</div>
+				<div class="section">
+					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
+					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
+		     		<p class="title has-text-centered">WELCOME BACK!</p>
+		     		<p class="subtitle has-text-centered">Please log back in to access your urPlanner account</p>
+		     		<div class="field is-grouped is-grouped-centered">
+		     			<div class="control">
+		     			<a class="button is-small is-info is-rounded" href="">
+		     				<article class="media">
+		     					<div class="media-left">
+		     						<i class="fab fa-twitter"></i>
+		     					</div>
+		     					<div class="media-content">
+		     						<div class="content">
+		     							<p>Twitter</p>
+		     						</div>
+		     					</div>
+		     				</article>
+		     			</a>
+		     			</div>
+		     			<div class="control">
+		     				<a class="button is-small is-dark is-rounded" href="https://vk.com/audios201877953?section=playlists&z=audio_playlist201877953_79295362">
+		     				<article class="media">
+		     					<div class="media-left">
+		     						<i class="fab fa-vk"></i>
+		     					</div>
+		     					<div class="media-content">
+		     						<div class="content">
+		     							<p>Vtentakle</p>
+		     						</div>
+		     					</div>
+		     				</article>
+		     			</a>
+		     			</div>
+		     			<a class="button is-small is-danger is-rounded" href="https://vk.com/audios201877953?section=playlists&z=audio_playlist201877953_79295362">
+		     				<article class="media">
+		     					<div class="media-left">
+		     						<i class="fab fa-instagram"></i>
+		     					</div>
+		     					<div class="media-content">
+		     						<div class="content">
+		     							<p>Instahram</p>
+		     						</div>
+		     					</div>
+		     				</article>
+		     			</a>
+		     		</div>
+		     		<p>‌‌‍‍‌‌‍‍  &#160;</p>
 
-				    	</span>
+					<form method="post" action=""  autocomplete="off">
 
-
-				</div>
-
-				<form method="post" action=""  autocomplete="off">
-
-	            	<div class="field">
-	            		<div class="control">
-	              			<input name="username" class="input is-success" type="text" placeholder="Никнейм" >
-	           			</div>
-	          		</div>
-		            <div class="field">
-		              	<p class="control has-icons-left">
-		                	<input  name="password" class="input" type="password" placeholder="Password">
-		                		<span class="icon is-small is-left">
-		                  			<i class="fas fa-lock"></i>
-		                		</span>
-		              	</p>
-		            </div>
-					<div class="field is-grouped is-grouped-centered">
-					  	<div class="control">
-					  		<button name="submit" type="submit" class="button  is-light "><b>Войти</b></button>
-					  	</div>
-						</div>
-						<?php if($_SESSION['count']  >  3 ) : ?>
-						<div class="field is-grouped is-grouped-centered">
-							<div class="g-recaptcha" data-sitekey="6LcI1dMUAAAAAIceMuRFrJLxllZqLyG7z7JVR6Kb"></div>
-
-						</div>
-						<?php endif; ?>
-						<div class="field is-grouped is-grouped-centered">
-							<div class="control">
-				              	<p class="subtitle is-6"><a class="has-text-primary" href="recovery_case.php">Забыли пароль?</a></p>
-							</div>
-						</div>
-						<div class="field is-grouped is-grouped-centered">
-							<div class="control">
-				              	<p class="subtitle is-6"><a class="has-text-primary" href="reg_case.php">Зарегистрироваться</a></p>
-			                </div>
+		            	<div class="field">
+		            		<p class="control has-icons-left">
+			                	<input  name="username" class="input is-medium" type="email" placeholder="Enter email">
+			                		<span class="icon is-small is-left">
+			                  			<i class="far fa-envelope"></i>
+			                		</span>
+			              	</p>
+		          		</div>
+			            <div class="field">
+			              	<p class="control has-icons-left">
+			                	<input  name="password" class="input is-medium" type="password" placeholder="Password">
+			                		<span class="icon is-small is-left">
+			                  			<i class="fas fa-lock-open"></i>
+			                		</span>
+			              	</p>
 			            </div>
+			            <p>‌‌‍‍‌‌‍‍  &#160;</p>
+			            <div class="control">
+						  		<button name="submit" type="submit" class="button is-fullwidth is-info"><b>Sign in</b></button>
+						  	</div>
+						<div class="field is-grouped is-grouped-centered">
+						  	
+							</div>
+								<!-- Это каптча не трогать! -->
+								<?php if($_SESSION['count']  >  3 ) : ?>
+								<div class="field is-grouped is-grouped-centered">
+									<div class="g-recaptcha" data-sitekey="6LcI1dMUAAAAAIceMuRFrJLxllZqLyG7z7JVR6Kb"></div>
 
-				</form>
+								</div>
+								<?php endif; ?>
+
+							<p>‌‌‍‍‌‌‍‍  &#160;</p>
+							<div class="columns">
+								<div class="column">
+									<div class="control">
+						              	<p class="subtitle is-6">Not registered? <a class="has-text-primary" href="reg_case.php">Create account</a></p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="control">
+						              	<p class="subtitle is-6 has-text-right"><a class="has-text-primary" href="recovery_case.php">Lost password?</a></p>
+					                </div>
+				                </div>
+				            </div>
+
+					</form>
+				</div>
 			</div>
-		</div>
+			<div class="column is-6">
+				<img src="raketa_log.png">
+			</div>
 <!-- ----------------------------------------------------------------------------------------------- -->
 	</div>	
 </div>

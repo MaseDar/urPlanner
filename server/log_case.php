@@ -205,9 +205,9 @@
 			<div class="test1 column">
 				<img src="Rock.png">
 			</div>
-			<div class="test2 column">
+			<!-- <div class="test2 column">
 				<img src="Reg.png">
-			</div>
+			</div> -->
 			
 
 <!-- ----------------------------------------------------------------------------------------------- -->

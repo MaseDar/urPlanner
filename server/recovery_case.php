@@ -69,14 +69,14 @@
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 	        	<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-	        	<?php if(!empty$_SESSION['success_recovery'])) : ?>
+	        	<?php if(!empty($_SESSION['success_recovery'])) : ?>
 					<div class="tile ">
 						<article class="tile  notification is-success">
 							<p class="subtitle is-6"><?php echo $_SESSION['success_recovery']; unset($_SESSION['success_recovery']); ?></p>
-						</article>
+						</article>	
 					</div>
 				<?php endif; ?>
-				<?php if(!empty$_SESSION['error_recovery'])) : ?>
+				<?php if(!empty($_SESSION['error_recovery'])) : ?>
 					<div class="tile ">
 						<article class="tile  notification is-danger">
 							<p class="subtitle is-6"><?php echo $_SESSION['error_recovery']; unset($_SESSION['error_recovery']); ?></p>

@@ -23,8 +23,7 @@
     <!-- Подключаем bulma -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link rel="stylesheet" href="css/mystyles.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="\css/mystyles.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    <!--  -->
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
@@ -33,7 +32,7 @@
   <body>
 <!-- 32px отступа по бокам -->
 		<!-- ----------------------------------NAVBAR----------------------------------------->
-		<nav class="navbar" role="navigation" aria-label="main navigation">
+		<nav class="navbar " role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
                 <a class="navbar-item" href="/preview.php">
                   <img src="https://avatars.mds.yandex.net/get-pdb/2979185/79c8ab7d-99e2-4fed-8bd1-0a77af904cf0/s1200" width="112" height="28">
@@ -96,7 +95,7 @@
        			 	<?session_destroy();?>
 				<?php endif; ?>
 <!-- ----------------------------------------------------------------------------------------- -->
-				<div class="section">
+				<div class="section ">
 					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 		     		<p class="title has-text-centered">WELCOME BACK!</p>
@@ -123,13 +122,14 @@
 		     						<i class="fab fa-vk"></i>
 		     					</div>
 		     					<div class="media-content">
-		     						<div class="content">
+		     						<div class=" content">
 		     							<p>Vtentakle</p>
 		     						</div>
 		     					</div>
 		     				</article>
 		     			</a>
 		     			</div>
+		     			<div class="control">
 		     			<a class="button is-small is-danger is-rounded" href="https://vk.com/audios201877953?section=playlists&z=audio_playlist201877953_79295362">
 		     				<article class="media">
 		     					<div class="media-left">
@@ -142,6 +142,7 @@
 		     					</div>
 		     				</article>
 		     			</a>
+		     			</div>
 		     		</div>
 		     		<p>‌‌‍‍‌‌‍‍  &#160;</p>
 
@@ -182,10 +183,15 @@
 							<div class="columns">
 								<div class="column">
 									<div class="control">
-						              	<p class="subtitle is-6">Not registered? <a class="has-text-primary" href="reg_case.php">Create account</a></p>
+										<a id="notReg" class="has-text-primary">Create account</a>
+						              	<p  class="subtitle is-6">Not registered? </p>
 									</div>
 								</div>
+
+
+
 								<div class="column">
+
 									<div class="control">
 						              	<p class="subtitle is-6 has-text-right"><a class="has-text-primary" href="recovery_case.php">Lost password?</a></p>
 					                </div>
@@ -195,9 +201,15 @@
 					</form>
 				</div>
 			</div>
-			<div class="column is-6">
-				<img src="raketa_log.png">
+
+			<div class="test1 column">
+				<img src="Rock.png">
 			</div>
+			<!-- <div class="test2 column">
+				<img src="Reg.png">
+			</div> -->
+			
+
 <!-- ----------------------------------------------------------------------------------------------- -->
 	</div>	
 </div>
@@ -206,6 +218,6 @@
  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="\js/animation.js"></script>
+    <script src="\js/log.js"></script>
   </body>
 </html>

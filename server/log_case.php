@@ -100,65 +100,21 @@
 					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 		     		<p class="title has-text-centered">WELCOME BACK!</p>
 		     		<p class="subtitle has-text-centered">Please log back in to access your urPlanner account</p>
-		     		<div class="field is-grouped is-grouped-centered">
-		     			<div class="control">
-		     			<a class="button is-small is-info is-rounded" href="">
-		     				<article class="media">
-		     					<div class="media-left">
-		     						<i class="fab fa-twitter"></i>
-		     					</div>
-		     					<div class="media-content">
-		     						<div class="content">
-		     							<p>Twitter</p>
-		     						</div>
-		     					</div>
-		     				</article>
-		     			</a>
-		     			</div>
-		     			<div class="control">
-		     				<a class="button is-small is-dark is-rounded" href="https://vk.com/audios201877953?section=playlists&z=audio_playlist201877953_79295362">
-		     				<article class="media">
-		     					<div class="media-left">
-		     						<i class="fab fa-vk"></i>
-		     					</div>
-		     					<div class="media-content">
-		     						<div class=" content">
-		     							<p>Vtentakle</p>
-		     						</div>
-		     					</div>
-		     				</article>
-		     			</a>
-		     			</div>
-		     			<div class="control">
-		     			<a class="button is-small is-danger is-rounded" href="https://vk.com/audios201877953?section=playlists&z=audio_playlist201877953_79295362">
-		     				<article class="media">
-		     					<div class="media-left">
-		     						<i class="fab fa-instagram"></i>
-		     					</div>
-		     					<div class="media-content">
-		     						<div class="content">
-		     							<p>Instahram</p>
-		     						</div>
-		     					</div>
-		     				</article>
-		     			</a>
-		     			</div>
-		     		</div>
-		     		<p>‌‌‍‍‌‌‍‍  &#160;</p>
+		     		
 
 					<form method="post" action=""  autocomplete="off">
 
 		            	<div class="field">
 		            		<p class="control has-icons-left">
-			                	<input  name="username" class="input is-medium" type="email" placeholder="Enter email">
+			                	<input  name="email" class="input is-large" type="email" placeholder="Enter Email">
 			                		<span class="icon is-small is-left">
-			                  			<i class="far fa-envelope"></i>
+			                  			<i class="fas fa-envelope"></i>
 			                		</span>
 			              	</p>
 		          		</div>
 			            <div class="field">
 			              	<p class="control has-icons-left">
-			                	<input  name="password" class="input is-medium" type="password" placeholder="Password">
+			                	<input  name="password" class="input is-large" type="password" placeholder="Password">
 			                		<span class="icon is-small is-left">
 			                  			<i class="fas fa-lock-open"></i>
 			                		</span>
@@ -166,7 +122,7 @@
 			            </div>
 			            <p>‌‌‍‍‌‌‍‍  &#160;</p>
 			            <div class="control">
-						  		<button name="submit" type="submit" class="button is-fullwidth is-info"><b>Sign in</b></button>
+						  		<button name="submit" type="submit" class="button is-medium is-fullwidth is-info"><b>Sign in</b></button>
 						  	</div>
 						<div class="field is-grouped is-grouped-centered">
 						  	

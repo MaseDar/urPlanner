@@ -25,7 +25,7 @@
 		header('location: log_case.php');
 	}
 
-	//Recaptcha для логина
+	//Recaptcha для логина, если номер сессии больше 3
     if($_SESSION['count'] > 3)
     {
 	    if (isset($_POST['g-recaptcha-response'])) {
@@ -78,12 +78,12 @@
 		}
     } else {
     	if (isset($_POST['submit'])) {
-			$username = $_POST['username'];
+			$email = $_POST['email'];
 			$password = $_POST['password'];
 
 			//Прибавляем к номеру текущей сессии +1
    			$_SESSION['count']++;
-			$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
+			$query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'  ";
 			$run = mysqli_query($db, $query);
 
 			if ($run) {
@@ -91,6 +91,7 @@
 				if (mysqli_num_rows($run) > 0) {
 					//Преобразую в массив и его записываю в переменную
 					$new_user = mysqli_fetch_assoc($run);
+					$_SESSION['email'] = $new_email['email'];
 					$_SESSION['username'] = $new_user['username'];
 					$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
 					header('location: \main_page.php');
@@ -133,11 +134,7 @@
 		  $username = trim($username);
 
 		//Сравниваю пароли и никнейм
-		if ($password !== $passconf || $password == "") {
-			$_SESSION['error'] = "Пароли не совпали";
-			header('location: reg_case.php');
-			exit();
-		} else if ($username == "" || strlen($username) <= 5) {
+		if ($username == "" || strlen($username) <= 5) {
 			$_SESSION['error'] = "Слишком короткий логин";
 			header('location: reg_case.php');
 			exit();

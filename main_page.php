@@ -57,6 +57,7 @@
                     </span>
                 </span>
             </a> -->
+
             <a class="" role="navigation" aria-label="profile navigation">
             	<div class="profile-burger">
             		
@@ -70,6 +71,17 @@
     
  
 	</nav>
+
+  <div class="section">
+    <?php if (isset($_SESSION['username'])) : ?> 
+                    <form  action="" method="post" >
+                          <button  name="submit_logout" type="submit" id="logoutbtn" class="button  is-large is-rounded" >
+                            <icon class="icon is-large">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </icon>
+                          </button>
+                  <?php endif; ?>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main_page.js"></script>
   </body>

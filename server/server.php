@@ -97,6 +97,7 @@
 					header('location: \main_page.php');
 					exit();
 				} else { 
+				    $_SESSION['error'] = 'Неправильная почта/логин';
 					header('location: log_case.php'); 
 					exit(); 
 				}
@@ -135,11 +136,11 @@
 
 		//Сравниваю пароли и никнейм
 		if ($username == "" || strlen($username) <= 5) {
-			$_SESSION['error'] = "Слишком короткий логин";
+			$_SESSION['error_log'] = "Слишком короткий логин";
 			header('location: reg_case.php');
-			exit();
+			exit;
 		} else if (strlen($password) <= 5) {
-			$_SESSION['error'] = "Пароль должен содержать минимум 6 символов";
+			$_SESSION['error_pass'] = "Пароль должен содержать минимум 6 символов";
 			header('location: reg_case.php');
 			exit();
 		}

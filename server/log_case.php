@@ -97,12 +97,16 @@
 					      	<span class="tag is-warning">
 							<?php $test = $_SESSION['count']; 
 							switch ($test) {
+							    case '0': echo "До рекаптчи 4 попытки";
+									break;
 								case '1': echo "До рекаптчи 3 попытки";
 									break;
 								case '2': echo "До рекаптчи 2 попытки";
 									break;
 								case '3': echo "До рекаптчи 1 попытки";
 									break;
+								default:
+                                echo "Мы должны убедиться что вы не робот";
 							}
 							?>
 							<button class="delete is-small"></button>
@@ -116,7 +120,6 @@
 							<?php endif; ?>
 				    	</div>
 					</div>
-					
 					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 		     		<p class="title has-text-centered">WELCOME BACK!</p>		
 		     		<p class="subtitle has-text-centered">Please log back in to access urPlanner account</p>

@@ -46,9 +46,9 @@
 
 
  
-	</nav>
 
-  <div class="section">
+
+ <!--  <div class="section">
     <?php if (isset($_SESSION['username'])) : ?> 
         <form  action="" method="post" >
               <button  name="submit_logout" type="submit" id="logoutbtn" class="button is-rounded" >
@@ -57,7 +57,61 @@
                 </icon>
               </button>
       <?php endif; ?>
+  </div> -->
+<div >
+  <div class="columns">
+    <div class="column is-3  is-home-left-column is-vertical has-background-info">
+      
+    </div>
+
+        <div class="column is-9  has-background-">
+          <nav class="panel">
+            <div class="panel-block">
+              <p class="panel-tabs">
+                <div class="navbar-item has-dropdown is-hoverable">
+                   <a class="navbar-item">
+                      Все категории
+                    </a>
+                    <div class="navbar-dropdown ">
+                      <a class="navbar-item" href="https://urplanner.masedar.repl.co/">
+                        Работа
+                      </a>
+                      <a class="navbar-item" href="https://urplanner.masedar.repl.co/">
+                        Учеба
+                      </a>
+                  </div>
+                </div>
+
+              </p>
+              <p class="control has-icons-right">
+                <input class="input is-rounded" type="text" placeholder="Поиск здесь...">
+                <span class="icon is-right">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </span>
+              </p>
+              <span class="icon is-large">
+                <a href="https://vk.com/feed"><span class="far fa-bell">
+                </span></a>
+              </span>
+              <span class="icon is-large">
+                <a href="https://vk.com/feed"><span class="fa-stack fa-lg">
+                  <i class="fas fa-camera fa-stack-1x"></i>
+                  <i class="fas fa-ban fa-stack-2x has-text-danger"></i>
+                </span></a>
+              </span>
+              <span class="icon is-large">
+                <a href="https://vk.com/feed"><span class="fas fa-ellipsis-v">
+                </span></a>
+              </span>
+              
+            </div>
+
+          </nav>
+
+        </div>
+
   </div>
+</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main_page.js"></script>
   </body>

@@ -82,6 +82,8 @@
                           </button>
                   <?php endif; ?>
   </div>
+
+  <a href="server/profile_case.php">Перейти в профиль</a>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main_page.js"></script>
   </body>

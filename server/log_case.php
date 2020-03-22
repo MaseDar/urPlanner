@@ -116,6 +116,7 @@
 							<?php endif; ?>
 				    	</div>
 					</div>
+					
 					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
 		     		<p class="title has-text-centered">WELCOME BACK!</p>		
 		     		<p class="subtitle has-text-centered">Please log back in to access urPlanner account</p>

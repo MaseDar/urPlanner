@@ -83,13 +83,7 @@
 <!-----------------------------------------окно регистрации------------------------------------------------------ -->
 		<div class="columns">
 	        <div class="column is-6">
-	        	<?php if(!empty($_SESSION['error']) || !empty($_SESSION['error_google'])) : ?>
-					<div class="tile ">
-						<article class="tile  notification is-danger">
-							<p class="subtitle is-6"><?php echo $_SESSION['error']; unset($_SESSION['error']); echo $_SESSION['error_google']; unset($_SESSION['error_google']); ?></p>
-						</article>
-					</div>
-				<?php endif; ?>
+	        	
 				<?php if(isset($_SESSION['success'])) : ?>
 				  <!--   <script type="text/javascript">alert("Все, пора заканчивать...");</script> -->
        			 	<?session_destroy();?>
@@ -97,10 +91,34 @@
 <!-- ----------------------------------------------------------------------------------------- -->
 				<div class="section ">
 					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
+					<!-- Кейс с уведомлениями и ошибками -->
+		     		<div class="control">
+				    	<div class="tags">
+					      	<span class="tag is-warning">
+							<?php $test = $_SESSION['count']; 
+							switch ($test) {
+								case '1': echo "До рекаптчи 3 попытки";
+									break;
+								case '2': echo "До рекаптчи 2 попытки";
+									break;
+								case '3': echo "До рекаптчи 1 попытки";
+									break;
+							}
+							?>
+							<button class="delete is-small"></button>
+							</span>
+
+							<?php if(!empty($_SESSION['error']) || !empty($_SESSION['error_google'])) : ?>
+								<span class="tag is-danger">
+									<?php echo $_SESSION['error']; unset($_SESSION['error']); echo $_SESSION['error_google']; unset($_SESSION['error_google']); ?>
+									<button class="delete is-small"></button>
+								</span>
+							<?php endif; ?>
+				    	</div>
+					</div>
 					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
-		     		<p class="title has-text-centered">WELCOME BACK!</p>
-		     		<p class="subtitle has-text-centered">Please log back in to access your urPlanner account</p>
-		     		
+		     		<p class="title has-text-centered">WELCOME BACK!</p>		
+		     		<p class="subtitle has-text-centered">Please log back in to access urPlanner account</p>
 
 					<form method="post" action=""  autocomplete="off">
 
@@ -120,6 +138,7 @@
 			                		</span>
 			              	</p>
 			            </div>
+
 			            <p>‌‌‍‍‌‌‍‍  &#160;</p>
 			            <div class="control">
 						  		<button name="submit" type="submit" class="button is-medium is-fullwidth is-info"><b>Sign in</b></button>
@@ -139,9 +158,10 @@
 							<div class="columns">
 								<div class="column">
 									<div class="control">
-										<a id="notReg" class="has-text-primary">Create account</a>
+										<a id="notReg" href="reg_case.php" class="has-text-primary">Create account</a>
 						              	<p  class="subtitle is-6">Not registered? </p>
 									</div>
+
 								</div>
 
 

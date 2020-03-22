@@ -47,10 +47,10 @@
 			    	unset($_SESSION['count']);
 			    	// Логиню пользователя
 			        if (isset($_POST['submit'])) {
-						$username = $_POST['username'];
+						$email = $_POST['email'];
 						$password = $_POST['password'];
 
-						$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
+						$query = "SELECT * FROM users WHERE email = '$email' AND password = '$password' ";
 						$run = mysqli_query($db, $query);
 
 						if ($run) {
@@ -58,7 +58,7 @@
 							if (mysqli_num_rows($run) > 0) {
 								//Преобразую в массив и его записываю в переменную
 								$new_user = mysqli_fetch_assoc($run);
-								$_SESSION['username'] = $new_user['username'];
+								$_SESSION['email'] = $new_user['email'];
 								$_SESSION['success'] = '<div>Все окей! Вы вошли</div>';
 								header('location: \main_page.php');
 								exit();
@@ -129,7 +129,7 @@
 		   $email = $_POST['email'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		$passconf = $_POST['passconf'];
+		//$passconf = $_POST['passconf'];
 		     $email = trim($email);
 		  $username = trim($username);
 

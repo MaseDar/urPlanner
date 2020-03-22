@@ -107,13 +107,13 @@
 
 	        <div class="column is-6">
 	        	
-	        	<?php if(!empty($_SESSION['error'])) : ?>
+	        	<!-- <?php if(!empty($_SESSION['error'])) : ?>
 					<div class="tile ">
 						<article class="tile  notification is-danger">
 							<p class="subtitle is-6"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
 						</article>
 					</div>
-				<?php endif; ?>
+				<?php endif; ?> -->
 				
 
 			<!-- <div class="has-background-dark"> -->
@@ -121,8 +121,30 @@
 			  	<div class="section">
 					<form method="post" action="" name="frmRegistration" autocomplete="off">
 					  	<div class="field">
-					  	
-							<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
+							<!-- Кейс с уведомлениями и ошибками -->
+				     		<div class="control">
+						    	<div class="tags">
+							      	<span class="tag is-warning">
+									<?php $test = $_SESSION['count']; 
+									switch ($test) {
+										case '1': echo "До рекаптчи 3 попытки";
+											break;
+										case '2': echo "До рекаптчи 2 попытки";
+											break;
+										case '3': echo "До рекаптчи 1 попытки";
+											break;
+									}
+									?>
+									<button class="delete is-small"></button>
+									</span>
+									<?php if(!empty($_SESSION['error'])) : ?>
+									<span class="tag is-danger">
+										<?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+										<button class="delete is-small"></button>
+									</span>
+								<?php endif; ?>
+						    	</div>
+							</div>
 				     		<p class="title has-text-centered">JOIN URPLANNER</p>
 				     		<p class="subtitle has-text-centered">Take your beautiful notes and keep statistics</p>
 						  	
@@ -172,7 +194,13 @@
 		     				</article>
 		     			</a>
 		     			</div>
+
+
 		     		</div>
+		     		<div class="has-text-centered">
+		     		<?php echo '<a href="' . $url . '">Войти через ВКонтакте</a> (Тестируется)'; ?>
+		     		</div>
+
 		     		<p>‌‌‍‍‌‌‍‍  &#160;</p>
 						<div class="field">
 						  	<div class="control has-icons-left has-icons-right">
@@ -217,7 +245,7 @@
 						<p>‌‌‍‍‌‌‍‍  &#160;</p>
 
 					  	<div class="control ">
-					  		<button name="register-user" type="submit" class="button is-medium is-fullwidth is-info"><b>Create account</b></button>
+					  		<button  name="register-user" type="submit" class="button is-medium is-fullwidth is-info"><b>Create account</b></button>
 					  	</div>
 					  	<p>‌‌‍‍‌‌‍‍  &#160;</p>
 						<div class="field is-grouped is-grouped-right">

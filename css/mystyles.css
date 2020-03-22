@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=cyrillic-ext");
-
-
-.clcolor{
-  background: #000000;
-}
-
 #first_title {
   margin-top: 5%;
   position: relative;
@@ -14,6 +8,13 @@
 #first_subtitle {
   position: relative;
   z-index: 5; }
+
+.a300 {
+  opacity: 1; }
+.a200 {
+  opacity: 1; }
+.a100 {
+  opacity: 1; }
 
 .test1 {
   position: relative;

@@ -15,6 +15,7 @@ $('.dates').one('click', function(){
 })
 
 
+
 // // на мобилках = бургер
 $(document).ready(function() {
   
@@ -31,6 +32,13 @@ $(document).ready(function() {
 $("#sign-button").click(function(){
  $("#sign-button").toggleClass("is-loading");
 })
+
+$(document).ready(function(){
+$("#lets_start").click(function(){
+$("#two").attr('style', 'display: block');
+$("#one").attr('style', 'display: none');
+});
+});
 
 $("#log-button").click(function(){
  $("#log-button").toggleClass("is-warning is-loading");

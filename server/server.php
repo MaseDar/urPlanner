@@ -194,7 +194,7 @@
 							} else {
 							   echo "Ошибка создания таблицы: " . $conn->error;
 							}
-							header('location: \main_page.php');
+							header('location: \registration_intro/reg_case_1.php');
 							exit();
 					}
 				}

@@ -214,7 +214,7 @@
 						<p>‌‌‍‍‌‌‍‍  &#160;</p>
 
 					  	<div class="control ">
-					  		<button  name="register-user" type="submit" class="button is-medium is-fullwidth is-info"><b>Create account</b></button>
+					  		<button  name="register-user" type="submit" class="button is-medium is-fullwidth is-info"><b>Let's start</b></button>
 					  	</div>
 					  	<p>‌‌‍‍‌‌‍‍  &#160;</p>
 						<div class="field is-grouped is-grouped-right">

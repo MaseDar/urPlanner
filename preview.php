@@ -28,11 +28,11 @@
   </head>
   
 
-  <body>
+  <body class="has-navbar-fixed-top">
 	<!-- убрать hero для белого фона на navbar  -->
-	<section class="hero">
+	
 		<!-- ----------------------------------NAVBAR----------------------------------------->
-		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+		<nav class="navbar is-transparent is-hidden-touch is-fixed-top " role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 			
                 <a class="navbar-item" href="/preview.php">
@@ -73,28 +73,28 @@
 							        </a> 
 							    </div>
 			      			</div>
-			      			<div class="navbar-item has-dropdown is-hoverable">
-				      			<a class="navbar-link is-arrowless has-text-grey-light">
-						         	Developers 
+				      			<a class="navbar-item">
+						         	<span>Developers</span> 
 						        </a>
-						        <div class="navbar-dropdown is-boxed">
-						        	<a class="navbar-item"  href="https://vk.com/masedar">MaseDar</a>
-						        	<a class="navbar-item" href="https://vk.com/mujjum">Mujjum</a>
-						        </div>
-								
+							    <a class="navbar-item" onclick="location.href='server/log_case.php'">
+									<span>Login</span>
+								</a>
+							<div class="navbar-item"><span class="has-text-grey-light">|</span></div>
+							<div class="navbar-item">
+								<div id="log-button" class="button is-rounded is-small" onclick="location.href='server/reg_case.php'">
+									<span class="icon">
+								      <i class="fas fa-magic"></i>
+								    </span>
+								    <span>Create your free note</span>
+								</div>
 							</div>
-							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->
-						
-						<div class="navbar-item ">
-							<div class="buttons">
-								<a id="sign-button" class="button is-link is-small is-rounded" href="server/reg_case.php"><b>Sign in</b></a>
-								<a id="log-button" class="button  is-small is-rounded" href="server/log_case.php">Log in</a>
+							<div class="navbar-item"><span class="has-text-grey-light"> &#160;</span></div>	
 							</div>
 						</div>
 					</div>
 		  
 		</nav>
-	</section>
+	
 		<!-- ----------------------------------END NAVBAR----------------------------------------->
     	<!-- -----------------------------------FIRST TITLE------------------------------------ -->
     	<div  class="content has-text-centered">

@@ -57,45 +57,17 @@
       <div class="navbar-menu">
 					<div class="navbar-start">		
 					</div>
-			
-
 						<div class="navbar-end">
-
-						
-					       	<div class="navbar-item has-dropdown is-hoverable">
-					          
-						       <a class="navbar-link is-arrowless has-text-grey-light">
-						          v0.2 The Golden Age
-						        </a>
-						        <div class="navbar-dropdown is-boxed">
-							        <a class="navbar-item" href="https://urplanner.masedar.repl.co/">
-								        v0.0.1
-							        </a>
-							        <a class="navbar-item" href="/version_romeo/index.php">
-								        v0.1 Romeo
-							        </a> 
-							        <a class="navbar-item" href="/version_romeo/index.php">
-								        v0.1.1 Balenciaga
-							        </a> 
-							    </div>
-			      			</div>
-			      			<div class="navbar-item has-dropdown is-hoverable">
-				      			<a class="navbar-link is-arrowless has-text-grey-light">
-						         	Developers 
-						        </a>
-						        <div class="navbar-dropdown is-boxed">
-						        	<a class="navbar-item"  href="https://vk.com/masedar">MaseDar</a>
-						        	<a class="navbar-item" href="https://vk.com/mujjum">Mujjum</a>
-						        </div>
-								
-							</div>
-							<!-- Стоит dropdown из-за расстояния блоков. Если убрать has-dropdown, то между developers и profile будет расстояние -->
-						<div class="navbar-item has-dropdown is-hoverable">
-							
 						</div>
-						 <div class="navbar-item">
-							<a id="sign-button" class="button is-link is-rounded is-small" href="log_case.php">Sign in</a>
-						</div> 
+						<div class="navbar-item">
+							<div id="log-button" class="button is-rounded is-small" onclick="location.href='log_case.php'">
+								<span class="icon has-text-info">
+							      <i class="fas fa-magic"></i>
+							    </span>
+							    <span>Log in</span>
+							</div>
+							<div class="navbar-item"><span class="has-text-grey-light"> &#160;</span></div>	
+						</div>
 					</div>
 		</nav>
 	</section>
@@ -106,18 +78,6 @@
 			<div class="column is-6"> <img src="Reg.png"> </div>
 
 	        <div class="column is-6">
-	        	
-	        	<!-- <?php if(!empty($_SESSION['error'])) : ?>
-					<div class="tile ">
-						<article class="tile  notification is-danger">
-							<p class="subtitle is-6"></p>
-						</article>
-					</div>
-				<?php endif; ?> -->
-				
-
-			<!-- <div class="has-background-dark"> -->
-			
 			  	<div class="section">
 					<form method="post" action="" name="frmRegistration" autocomplete="off">
 					  	<div class="field">
@@ -258,11 +218,18 @@
 					  	</div>
 					  	<p>‌‌‍‍‌‌‍‍  &#160;</p>
 						<div class="field is-grouped is-grouped-right">
-						  	<div class="control">
-						  		<style type="text/css"></style>
-						  			<p class="subtitle is-6"><a class="has-text-primary" href="log_case.php">Зарегистрированы?</a></p>
-						  	</div>
+						  	<a class="has-text-primary" href="log_case.php">Зарегистрированы?</a>
 						</div>
+						
+						<div class="field is-grouped is-grouped-centered">
+							<hr>
+							<p>‌‌‍‍‌‌‍‍  &#160;</p>
+							<p>
+					            <a class="has-text-grey" href="#">Terms</a> &nbsp;·&nbsp;
+					            <a class="has-text-grey" href="#">Privacy</a> &nbsp;·&nbsp;
+					            <a class="has-text-grey" href="#">Cookies</a>
+					         </p>
+				     	</div>
 					</form>	
 				</section>		
 			</div>

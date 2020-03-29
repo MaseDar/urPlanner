@@ -217,7 +217,7 @@
 					  		<button  name="register-user" type="submit" class="button is-medium is-fullwidth is-info"><b>Let's start</b></button>
 					  	</div>
 					  	<p>‌‌‍‍‌‌‍‍  &#160;</p>
-						<div class="field is-grouped is-grouped-right">
+						<div class="field is-grouped is-grouped-centered">
 						  	<a class="has-text-primary" href="log_case.php">Зарегистрированы?</a>
 						</div>
 						

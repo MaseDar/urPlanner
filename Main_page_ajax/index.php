@@ -3,7 +3,7 @@
 //index.php
 
 include('database_connection.php');
-
+//$user_id = 1;
 $query = "
  SELECT * FROM task_list 
  WHERE user_id = '".$_SESSION["user_id"]."' 
@@ -67,7 +67,7 @@ $result = $statement->fetchAll();
        </form>
        <br />
        <div class="list-group">
-       <?php
+       <!-- <?php
        foreach($result as $row)
        {
         $style = '';
@@ -77,7 +77,32 @@ $result = $statement->fetchAll();
         }
         echo '<a href="#" style="'.$style.'" class="list-group-item" id="list-group-item-'.$row["task_list_id"].'" data-id="'.$row["task_list_id"].'">'.$row["task_details"].' <span class="badge" data-id="'.$row["task_list_id"].'">X</span></a>';
        }
-       ?>
+       ?> -->
+
+       <div id="comments">
+          <?php 
+
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "testing";
+
+          $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+            $sql = "SELECT * FROM task_list ORDER BY id_task DESC";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)) {
+                echo "<p>";
+                $task_details = $row['task_details'];
+                echo "<b>$task_details</b>";
+                
+              }
+            } else {
+              echo "There are no comments!";
+            }
+          ?>
+        </div>
        </div>
       </div>
      </div>

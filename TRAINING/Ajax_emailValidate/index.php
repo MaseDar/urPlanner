@@ -34,7 +34,7 @@
          <div class="column is-4">
             <form action="mail.php" method="POST">
                <input class="input" id="mail-name" type="text" name="name" placeholder="Full name">
-               <br>
+               <br>P
                <input class="input" id="mail-email" type="text" name="email" placeholder="Email">
                <br>
                <select id="mail-gender" name="gender">

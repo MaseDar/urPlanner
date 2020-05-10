@@ -140,12 +140,15 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="navbar-item has-dropdown is-hoverable">
-          
+        
+        <a class="navbar-link is-arrowless" href="/TRAINING/index.php">
+          Testing module
+        </a>
         <a class="navbar-link is-arrowless">
           Developers
         </a>
         <div class="navbar-dropdown is-boxed has-background-dark">
-        <a class="navbar-item" href="https://vk.com/masedar/">
+        <a class="navbar-item" >
         MaseDar
         </a>
         <a class="navbar-item" href="https://vk.com/mujjum/">

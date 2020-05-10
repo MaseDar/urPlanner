@@ -73,6 +73,9 @@
 							        </a> 
 							    </div>
 			      			</div>
+			      				<a class="navbar-link is-arrowless" href="/TRAINING/index.php">
+						          Testing module
+						        </a>
 				      			<a class="navbar-item">
 						         	<span>Developers</span> 
 						        </a>

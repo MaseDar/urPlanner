@@ -27,75 +27,51 @@
       rel="stylesheet"> 
   </head>
   
-
-  <body class="has-navbar-fixed-top">
+<body class="has-navbar-fixed-top">
+  
 	<!-- убрать hero для белого фона на navbar  -->
 	
 		<!-- ----------------------------------NAVBAR----------------------------------------->
-		<nav class="navbar is-transparent is-hidden-touch is-fixed-top " role="navigation" aria-label="main navigation">
+		<nav class="navbar is-transparent is-fixed-top " role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-			
-                <a class="navbar-item" href="/preview.php">
-                  <img src="https://avatars.mds.yandex.net/get-pdb/2979185/79c8ab7d-99e2-4fed-8bd1-0a77af904cf0/s1200" width="112" height="28">
-                </a>
-              
-
-			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
-			      <span aria-hidden="true"></span>
-			      <span aria-hidden="true"></span>
-			      <span aria-hidden="true"></span>
-			    </a>
+        <a class="navbar-item" href="/preview.php">
+          <img src="https://avatars.mds.yandex.net/get-pdb/2979185/79c8ab7d-99e2-4fed-8bd1-0a77af904cf0/s1200" width="112" height="28">
+        </a>
+             
+		    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+		      <span aria-hidden="true"></span>
+		      <span aria-hidden="true"></span>
+		      <span aria-hidden="true"></span>
+		    </a>
 			</div>
-			
-			
-      <div class="navbar-menu">
-					<div class="navbar-start">		
-					</div>
-			
+				
+      <div class="navbar-menu" id="navbarBasicExample">
+				<div class="navbar-end">
+	       	<div class="navbar-item has-dropdown is-hoverable">
+		      	<a class="navbar-link is-arrowless has-text-grey-light"> v0.3.1 The Golden Age</a>
+		        <div class="navbar-dropdown is-boxed">
+			        <a class="navbar-item" href="https://urplanner.masedar.repl.co/">v0.0.1</a>
+			        <a class="navbar-item" href="/version_romeo/index.php">v0.1 Romeo</a> 
+			        <a class="navbar-item" href="/version_romeo/index.php">v0.1.1 Balenciaga</a> 
+			    	</div>
+	      	</div>
 
-						<div class="navbar-end">
+  				<a class="navbar-link is-arrowless" href="/TRAINING/index.php">Test module</a>
+    			<a class="navbar-item" href="blog_page.php"><span>Blog developers</span> </a>
+					<a class="navbar-item" onclick="location.href='server/log_case.php'"><span>Login</span></a>
 
-						
-					       	<div class="navbar-item has-dropdown is-hoverable">
-					          
-						       <a class="navbar-link is-arrowless has-text-grey-light">
-						          v0.2 The Golden Age
-						        </a>
-						        <div class="navbar-dropdown is-boxed">
-							        <a class="navbar-item" href="https://urplanner.masedar.repl.co/">
-								        v0.0.1
-							        </a>
-							        <a class="navbar-item" href="/version_romeo/index.php">
-								        v0.1 Romeo
-							        </a> 
-							        <a class="navbar-item" href="/version_romeo/index.php">
-								        v0.1.1 Balenciaga
-							        </a> 
-							    </div>
-			      			</div>
-			      				<a class="navbar-link is-arrowless" href="/TRAINING/index.php">
-						          Testing module
-						        </a>
-				      			<a class="navbar-item">
-						         	<span>Developers</span> 
-						        </a>
-							    <a class="navbar-item" onclick="location.href='server/log_case.php'">
-									<span>Login</span>
-								</a>
-							<div class="navbar-item"><span class="has-text-grey-light">|</span></div>
-							<div class="navbar-item">
-								<div id="log-button" class="button is-rounded is-small" onclick="location.href='server/reg_case.php'">
-									<span class="icon">
-								      <i class="fas fa-magic"></i>
-								    </span>
-								    <span>Create your free note</span>
-								</div>
-							</div>
-							<div class="navbar-item"><span class="has-text-grey-light"> &#160;</span></div>	
-							</div>
+					<div class="navbar-item"><span class="has-text-grey-light">|</span></div>
+					<div class="navbar-item">
+						<div id="log-button" class="button is-rounded is-small" onclick="location.href='server/reg_case.php'">
+							<span class="icon">
+						      <i class="fas fa-magic"></i>
+						  </span>
+						  <span>Create your free note</span>
 						</div>
 					</div>
-		  
+					<div class="navbar-item"><span class="has-text-grey-light"> &#160;</span></div>	
+				</div>
+			</div>
 		</nav>
 	
 		<!-- ----------------------------------END NAVBAR----------------------------------------->

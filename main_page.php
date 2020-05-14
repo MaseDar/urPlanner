@@ -1,4 +1,9 @@
-<?php session_start(); 
+
+
+<?php 
+
+include 'server/db_connections.php';
+
 	if (isset($_POST['submit_logout'])) {
 	    $_SESSION['username']  = NULL;
 	    $_SESSION['firstnam'] = NULL;
@@ -10,47 +15,34 @@
     	header('location: preview.php');
     	exit();
   	} else {
-   	 	$username_base = $_SESSION['username']; // присвоиваем переменной никнейм пользователя в сессии*/
+   	 	$username_base = $_SESSION['username']; // присвоиваем переменной никнейм пользователя в сессии
  	}
 
- 	$db = new mysqli('localhost', 'root', '', 'bigpopa');
 
-  if (mysqli_connect_errno()) {
-    printf("Соединение не установлено", mysqli_connect_error());
-    exit();
-  } 
-  $db->set_charset('utf8');
 
     //Слушатель кнопки добавить задачу
 
-  if (isset($_POST['submit'])) {
+ if (isset($_POST['submit_task'])) {
     $task = $_POST['task'];
     if ($task != "") {
       $query = "INSERT INTO `$username_base` (`task`) VALUES ('$task');";
       $run_query = mysqli_query($db, $query);
+
     }
     
   }
   
     //Удаление задачи из списка
 
+
   if (isset($_GET['delete'])) {
    $delete = $_GET['delete'];
-   $query = "DELETE FROM `$username_base` WHERE id = '$delete' ";
-   $run = mysqli_query($db, $query);
-    if (!$run) {
-    echo "alert('delete query failed')";
-     }
+   echo "$delete";
+   mysqli_query($db, "DELETE FROM `$username_base` WHERE id = '$delete' ");
+   header('location: main_page.php');
   }
 
-  if (isset($_POST['submit_logout'])) {
-    $_SESSION['username']  = NULL;
-    $_SESSION['firstname'] = NULL;
-    $_SESSION['email']     = NULL;
-
-  header('location: preview.php');
-
-  }
+  
 
 ?>
 
@@ -81,112 +73,71 @@
 
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/mystyles.css">
+
+    <style>
+      body { background: 
+              url(https://images.squarespace-cdn.com/content/5a20387690bccee5e702f9c7/1542824914477-EC3M6PUCOIT02Z1W05NL/khai-sze-ong-308080-unsplash.jpg?format=2500w&content-type=image%2Fjpeg) no-repeat,
+              url(https://storge.pic2.me/cm/1920x1080/624/fleohweb4mw6.jpg); 
+
+              }
+      table {
+        margin: -5% 0 0 0;
+      }
+    </style>
   </head>
 
   <body>
    	
       
   <!--Чтобы убрать видимость section написать hero  -->
-<section class="is-dark">
-    
-
-<nav class="navbar is-fixed-top is-dark is-bold " role="navigation" aria-label="main navigation">
-  
-  <div class="navbar-brand">
-        <a class="navbar-item" href="/index.php">
-         <img src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="112" height="28">
+<section class="is-link">
+  <nav class="navbar is-transparent is-hidden-touch is-fixed-top " role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/index.php">
+        <img src="https://avatars.mds.yandex.net/get-pdb/2836759/bf0e065f-bc52-4586-98bc-278b708e94ca/s1200" width="112" height="28">
         <img>
-        </a>
-        
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div  class="navbar-menu has-background-dark has-text-white">
-    <div class="navbar-start">
-    
-      <a class="navbar-item has-text-white" href="/planer2.php"> 
-          Profile
+      </a> 
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item">
-        <div class="navbar-item has-dropdown is-hoverable">
-          
-        <a class="navbar-link is-arrowless">
-          Versions
-        </a>
-        <div class="navbar-dropdown is-boxed has-background-dark">
-        <a class="navbar-item" href="https://urplanner.masedar.repl.co/">
-        v1.0
-        </a>
-        <a class="navbar-item" href="/version_romeo/index.php">
-        v1.1 Romeo
-        </a>
-        
-
-        </a>
-        </div>
-        
-      </div>
-     </div>
-
     </div>
-    <a class="navbar-item has-background-dark" x>
-    <p class="subtitle is-6  has-text-light" >v1.2 Balenciaga</p>    
-    </a>
-    <div class="navbar-end">
-      <div class="navbar-item">
+
+    <div  class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="server/profile_case.php"><span>Profile</span></a>
+      </div>  
+      <div class="navbar-item "><span>To-Do (В разработке)</span></div>
+      <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-        
-        <a class="navbar-link is-arrowless" href="/TRAINING/index.php">
-          Testing module
-        </a>
-        <a class="navbar-link is-arrowless">
-          Developers
-        </a>
-        <div class="navbar-dropdown is-boxed has-background-dark">
-        <a class="navbar-item" >
-        MaseDar
-        </a>
-        <a class="navbar-item" href="https://vk.com/mujjum/">
-        Mujjum
-        </a>
+          <a class="navbar-link is-arrowless" href="server/profile_case.php">Versions</a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="https://urplanner.masedar.repl.co/">v0.0.1</a>
+              <a class="navbar-item" href="/version_romeo/index.php">v0.1 Romeo</a> 
+              <a class="navbar-item" href="/version_romeo/index.php">v0.1.1 Balenciaga</a> 
+            </div>
         </div>
-        </div>
-           <div class="buttons" >
-            <?php if (!isset($_SESSION['username'])) : ?>
-          <a class="button is-primary" href="/register.php">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light" href="/login.php">
-            Log in
-          </a>
-          <?php endif; ?>
+        <div class="navbar-item">
           <?php if (isset($_SESSION['username'])) : ?> 
-            <?php if(isset($_SESSION['success'])) : ?>
-        <!-- <script type="text/javascript">alert("Все ты авторизован, ты лох!");</script>  -->
-        <?php endif; ?>
-        <form  action="/" method="post" >
-                <button  name="submit_logout" type="submit" id="logoutbtn" class="button is-light" >
-                  Logout
-                </button>
-              <?php endif; ?>
-          </form>
-        </div>  
-     </div>
-      
-  </div>
-
-</nav>
-
+            <form  action="" method="post" >
+              <button  name="submit_logout" type="submit" id="logoutbtn" class="button is-white" >
+                <span class="icon is-large">
+                  <i class="fas fa-sign-out-alt"></i>
+                </span>
+                <span>Logout</span>
+              </button>
+            </form>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>  
+  </nav>
 </section>
 
 
 
-<section class="hero is-medium ">
+<section class="hero is-medium">
 
   <div class="hero-body">
     
@@ -197,14 +148,14 @@
     <div class="container" >
     <?php endif ?>
     
-    <div class="columns">
+    <div  style="margin-top: -3%; "class="columns">
 
 
-      <div class="column is-6 ">
+      <div class="column is-4 ">
         <div class="box-shadow is-parent">
         <div class="tile">
           
-            <article class="tile is-child notification is-dark">
+            <article class="tile is-child notification">
               <?php
                     $d = getdate();
                     foreach ( $d as $key => $val );
@@ -212,21 +163,21 @@
  
                     
                   ?>
-              <p class="title"><?php echo date( "F" ); ?></p>
-              <p class="subtitle"><?php echo "$d[weekday]"; echo date( " j" ); ?></p>
+              <p class="title has-text-black"><?php echo date( "F" ); ?></p>
+              <p class="subtitle has-text-black"><?php echo "$d[weekday]"; echo date( " j" ); ?></p>
 
-              <div class="content">
-                <table class="table has-background-dark has-text-white">
+              <div class="content ">
+                <table class="table has-background-light has-text-black">
             <thead>
               <tr>
                 
-                <th><h5 class="week_day "><?php if ($date_week == "Monday") echo "M"; else echo "m";?></h5></th>
-                <th><h5 class="week_day "><?php if ($date_week == "Tuesday") echo "T"; else echo "t"; ?></h5></th>
-                <th><h5 class="week_day "><?php if ($date_week == "Wednesday") echo "W"; else echo "w";?></h5></th>
-                <th><h5 class="week_day "><?php if ($date_week == "Thursday") echo "T"; else echo "t";?></h5></th>
-                <th><h5 class="week_day "><?php if ($date_week == "Friday") echo "F"; else echo "f";?></h5></th>
-                <th><h5 class="week_day "><?php if ($date_week == "Saturday") echo "S"; else echo "s";?></h5></th>
-                <th><h5 class="week_day "><?php if ($date_week == "Sunday") echo "S"; else echo "s";?></h5></th>
+                <th><h5 class="week_day  has-text-centered"><?php if ($date_week == "Monday") echo "<i class='has-text-success fas fa-caret-down'></i><br>M"; else echo "<i class='has-text-light fas fa-caret-down'></i><br>M";?></h5></th>
+                <th><h5 class="week_day  has-text-centered"><?php if ($date_week == "Tuesday") echo "<i class='has-text-success fas fa-caret-down'></i><br>T"; else echo "<i class='has-text-light fas fa-caret-down'></i><br>T"; ?></h5></th>
+                <th><h5 class="week_day  has-text-centered"><?php if ($date_week == "Wednesday") echo "<i class='has-text-success fas fa-caret-down'></i><br>W"; else echo "<i class='has-text-light fas fa-caret-down'></i><br>W";?></h5></th>
+                <th><h5 class="week_day  has-text-centered"><?php if ($date_week == "Thursday") echo "<i class='has-text-success fas fa-caret-down'></i><br>T"; else echo "<i class='has-text-light fas fa-caret-down'></i><br>T";?></h5></th>
+                <th><h5 class="week_day  has-text-centered"><?php if ($date_week == "Friday") echo "<i class='has-text-success fas fa-caret-down'></i><br>F"; else echo "<i class='has-text-light fas fa-caret-down'></i><br>F";?></h5></th>
+                <th><h5 class="week_day  has-text-centered"><?php if ($date_week == "Saturday") echo "<i class='has-text-success fas fa-caret-down'></i><br>S"; else echo "<i class='has-text-light fas fa-caret-down'></i><br>S";?></h5></th>
+                <th><h5 class="week_day  has-text-centered"><?php if ($date_week == "Sunday") echo "<i class='has-text-success fas fa-caret-down'></i><br>S"; else echo "<i class='has-text-light fas fa-caret-down'></i><br>S";?></h5></th>
               </tr>
             </thead>
             <tbody>
@@ -235,49 +186,49 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
                 <td class="has-text-centered">1</td>
-              </tr>
-              <tr>
                 <td class="has-text-centered">2</td>
                 <td class="has-text-centered">3</td>
+              </tr>
+              <tr>
                 <td class="has-text-centered">4</td>
                 <td class="has-text-centered">5</td>
                 <td class="has-text-centered">6</td>
                 <td class="has-text-centered">7</td>
                 <td class="has-text-centered">8</td>
-              </tr>
-              <tr>
                 <td class="has-text-centered">9</td>
                 <td class="has-text-centered">10</td>
+              </tr>
+              <tr>
                 <td class="has-text-centered">11</td>
                 <td class="has-text-centered">12</td>
                 <td class="has-text-centered">13</td>
                 <td class="has-text-centered">14</td>
                 <td class="has-text-centered">15</td>
-              </tr>
-              <tr>
                 <td class="has-text-centered">16</td>
                 <td class="has-text-centered">17</td>
+              </tr>
+              <tr>
                 <td class="has-text-centered">18</td>
                 <td class="has-text-centered">19</td>
                 <td class="has-text-centered">20</td>
                 <td class="has-text-centered">21</td>
                 <td class="has-text-centered">22</td>
-              </tr>
-              <tr>
                 <td class="has-text-centered">23</td>
                 <td class="has-text-centered">24</td>
+              </tr>
+              <tr>
                 <td class="has-text-centered">25</td>
                 <td class="has-text-centered">26</td>
                 <td class="has-text-centered">27</td>
                 <td class="has-text-centered">28</td>
                 <td class="has-text-centered">29</td>
-              </tr>
-              <tr>
                 <td class="has-text-centered">30</td>
                 <td class="has-text-centered">31</td>
+              </tr>
+              <tr>
+                <td class="has-text-centered"></td>
+                <td class="has-text-centered"></td>
                 
                 
               </tr>
@@ -289,46 +240,77 @@
         </article>
       
       </div>
+
+      
     </div>
+    
     
 
       
 
     </div>
 <!-- <div id="result"></div> -->
-
-    
-      
-
     <div class="column">
-      <div class="tile is-parent ">
-          <article class="tile is-child notification is-dark">
-
-            
+      <div class="tile">
+          <article class="tile is-child notification is-light">
               <?php if (isset($_SESSION['username'])) : ?> 
-                <p class="title is-5">Ваш список <?php echo $_SESSION['username'];  ?></p>
+                <p class="title is-5 has-text-black">Ваш список <?php echo $_SESSION['username'];  ?></p>
               <?php endif; ?>
-            <p class="subtitle"></p>
-            <div class="content">
-              
-            </div>
+            
+            <form method="POST" name="submit_task" id="to_do_form">
+              <div class="field is-grouped">
+                <input class="input" type="text" name="task" id="task_name" placeholder="Добавь задачу">
+                  <p>‌‌‍‍‌‌‍‍  &#160;</p>   
+                <button class="button" type="submit" id="submit" name="submit_task">Добавить</button>
+              </div>
+            </form>
           </article>
+
       </div>
+
+                <?php 
+
+                    $run_task = mysqli_query($db, "SELECT * FROM $username_base ORDER BY id DESC");
+                    while ($row = mysqli_fetch_array($run_task)) {
+                      $id = $row['id'];
+                      $task1 = $row['task'];
+                      $name = "<i style='color:#999; '>Denis</i>";
+                      $time = $row['time'];
+                    
+                    ?>
                   
+                    <div id="tasksjs">
+                      <div  class="tile is-parent ">
+                          <article class="tile is-child notification is-light ">
+                            <div class="content">
+                              <div class="columns is-mobile">
+                                <div class="column ">
+                                  <p class="subtitle is-5"><?php echo $task1;  ?></p>
+                                </div>
+                                <div class="column is-1 ">
+                                  <div class="field is-grouped">
+                                 
+                                  <td class="delete"><a href="main_page.php?delete=<?php echo $id; ?>"> <i class="fas fa-times has-text-danger"></i></a></td>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </article>
+                      </div>
+                    </div>
+                      
+                      
 
-  <div class="section">
-    <?php if (isset($_SESSION['username'])) : ?> 
-        <form  action="" method="post" >
-              <button  name="submit_logout" type="submit" id="logoutbtn" class="button  is-large is-rounded" >
-                <icon class="icon is-large">
-                    <i class="fas fa-sign-out-alt"></i>
-                </icon>
-              </button>
-      <?php endif; ?>
-  </div>
 
-  <a href="server/profile_case.php">Перейти в профиль</a>
+                     
+                   
+                   
+                    <?php } 
+
+                      $db->close();
+                    ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main_page.js"></script>
   </body>
 </html>
+

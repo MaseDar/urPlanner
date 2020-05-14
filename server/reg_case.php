@@ -31,8 +31,19 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    <!--  -->
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500" rel="stylesheet" type="text/css">
-  
-
+  <style>
+  	span {position: relative; z-index: 2; cursor: pointer;}
+  </style>
+  <script>
+  	function myFunction() {
+		var x = document.getElementById("letsStart");
+		  if (x.type === "password") {
+		    x.type = "text";
+		  } else {
+		    x.type = "password";
+		  }
+	}
+  </script>
   </head>
   
   <body>
@@ -75,10 +86,10 @@
 		<div class='calendar_rotate_background'></div>
 		<div class="columns">
 	    
-			<div class="column is-6"> <img src="Reg.png"> </div>
+			<div class="column is-6 is-hidden-mobile"> <img src="Reg.png"> </div>
 
 	        <div class="column is-6">
-			  	<div class="section">
+			  	<div style="margin-top: -10%;" class="section">
 					<form method="post" action="" name="frmRegistration" autocomplete="off">
 					  	<div class="field">
 							<!-- Кейс с уведомлениями и ошибками -->
@@ -195,16 +206,19 @@
 							
 						<div class="field">
 							<div class="control has-icons-left has-icons-right">
-								    <input  name="password" class="input is-large" type="password" placeholder="Password">
-								    <span class="icon is-small is-left">
-						     	 		<i class="fas fa-lock"></i>
-						    		</span>
-						    		<span class="icon is-small is-right has-text-danger">
-						    	  		<i class="fas fa-eye"></i>
-						   			</span>
-						    		
+							    <input  id="letsStart" name="password" class="input is-large" type="password" placeholder="Password">
+							    <span class="icon is-small is-left">
+					     	 		<i class="fas fa-lock"></i>
+					    		</span>
+				   				<div class="field has-text-right">
+					   				<span onclick="myFunction()" class=" is-small is-right has-text-danger" >
+					    	  			<i   class="fas fa-eye"></i>
+					    	  		Show Password
+					   				</span>
+				   				</div>
 							</div>
 						</div>
+
 
 						<!-- <div class="field">
 							<div class="control">
@@ -213,8 +227,8 @@
 						</div> -->
 						<p>‌‌‍‍‌‌‍‍  &#160;</p>
 
-					  	<div class="control ">
-					  		<button  name="register-user" type="submit" class="button is-medium is-fullwidth is-info"><b>Let's start</b></button>
+					  	<div class="control">
+					  		<button  name="register-user" type="submit" class="button is-medium is-fullwidth is-info" ><b>Let's start</b></button>
 					  	</div>
 					  	<p>‌‌‍‍‌‌‍‍  &#160;</p>
 						<div class="field is-grouped is-grouped-centered">

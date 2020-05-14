@@ -1,4 +1,6 @@
 <?php session_start(); 
+include '../registration_intro/file-handler.php';
+
 	if (isset($_POST['submit_logout'])) {
 	    $_SESSION['username']  = NULL;
 	    $_SESSION['firstname'] = NULL;
@@ -12,6 +14,8 @@
   	} else {
    	 	$username_base = $_SESSION['username']; // присвоиваем переменной никнейм пользователя в сессии*/
  	}
+
+  //$name = "9839d52eca63e72484c8853509013a3c.jpg" //картинка для профиля
 
 ?>
 
@@ -99,6 +103,12 @@
                   <i class="fas fa-ban fa-stack-2x has-text-danger"></i>
                 </span></a>
               </span>
+                              <span>
+                                <figure class="image is-48x48">
+                                  <img class="is-rounded" src="\registration_intro/pics/<?php echo $name ?>"> 
+                                </figure>
+                                </span>
+
               <span class="icon is-large">
                 <a href="https://vk.com/feed"><span class="fas fa-ellipsis-v">
                 </span></a>

@@ -7,14 +7,16 @@
 	// Подключаемся к базе $database
 	$db = new mysqli('localhost', 'root', '', 'userlog'); 
 
-		// Получаем ошибку при неподключении 
 		if (mysqli_connect_errno()) { 
 			printf("Соединение не установлено", mysqli_connect_error()); 
 			exit();
 		} 
 
-	// Ставим кодировку в utf
 	$db->set_charset('utf8'); 	
+
+
+
+
 
 	//Присваем новой сессии 0 значение
 	if(!isset($_SESSION['count']))  $_SESSION['count']  =  0;

@@ -1,7 +1,8 @@
 <?php 
 
 	include "../server/server.php"; 
-	
+  include "file-handler.php"; 
+	$username_base = $_SESSION['username'];  
 ?>
 
 <!DOCTYPE html>
@@ -44,13 +45,13 @@
         <div class="column">
         	<div class="field is-grouped is-grouped-centered">
           <figure class="image is-96x96">
-            <img src="https://sun9-58.userapi.com/JA7W04TjXioqoF7fFlexxTrowdGcRcJnzwWPXQ/7UaZyjsVykg.jpg">
+            <img src="https://www.pngkey.com/png/full/51-512118_message-icon-message-icon-png-black.png">
           </figure>
           </div>
         </div>
         <br>
         <div class="column">
-          <p class="title is-2 has-text-centered">Hi, mujlax <span>👋</span></p>
+          <p class="title is-2 has-text-centered">Hi, <?php echo "$username_base"; ?> <span>👋</span></p>
         </div>
         <div class="column">
           <p class="title is-2 has-text-centered">Welcome to urPlanner</p>
@@ -91,7 +92,12 @@
               </div>
               <div class="column">
                 <p class="title is-2">Custom</p>
-                <p class="subtitle is-4 has-text-grey">bruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <br><br>bruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhbruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <br><br>bruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhbruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+                <p class="subtitle is-4 has-text-grey">И так как сторожевые отряды задержались в степи, князь великий вторую заставу
+послал: Клементия Полянина, Ивана Святославича Свесланина, Григория Судакова и
+других с ними, - приказав им скорее возвращаться. <br><br>Степные реки, текущие со склонов Алтая, Тарбагатая. Тянь-Шаня и Памира,
+становятся многоводными. Балхаш и Аральское море наполняются водой и
+увеличиваются в размерах. <br><br>Но самым главным пороком этого метода является те, что исследование предмета
+подменяется изучением текстов, упоминающих о нем.</p>
               </div>
             </div>
           </div>
@@ -109,7 +115,7 @@
 
         <div class="column has-text-centered">
           <a id="three-box" class="button button-special box-shadow-lift is-rounded is-medium">
-            <span>Are you done, mujlaxx? Now let's...</span>
+            <span>Are you done, <?php echo "$username_base"; ?> Now let's...</span>
             <span class="icon has-text-link">
               <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
             </span>
@@ -124,17 +130,81 @@
         
         <div class="column is-4 is-offset-4">
           <figure class="image is-square">
-            <img style="border-radius: 4px" src="https://sun9-27.userapi.com/b9HqAWHccHOjIgVbuDEo02j3O-ZLWQrskBlzFg/qC4ud4yAA1Y.jpg">
+            <img style="border-radius: 4px" src="https://www.clipartmax.com/png/full/140-1406570_image-result-for-confetti-emoji-party-emoji-svg.png">
           </figure>
         </div>
         <div class="column">
-          <p class="title has-text-centered">Get this party started! 🎉</p>
+          <p class="title has-text-centered">Get this party started!</p>
           <p class="subtitle has-text-centered">it'll take less than 1 min to setup.</p>
         </div>
         <div class="column has-text-centered">
-          <a href="/main_page.php" class="button button-special box-shadow-lift is-rounded is-medium">
+          <a id="four_button" class="button button-special box-shadow-lift is-rounded is-medium">
             <span>Get Started</span>
           </a>
+        </div>
+        <a class="has-text-left has-text-dark">← back</a>
+      </div>
+
+      <div id="four" style="display: none;">
+        
+        <div class="column is-4 is-offset-4">
+          <div class="field is-grouped is-grouped-centered">
+            <figure class="image is-128x128">
+              <img class="is-rounded" alt="user-profile-photo" src="https://oneprofile-team-assets.s3-us-west-1.amazonaws.com/web-assets/profile-placeholder.jpg">
+            </figure>
+          </div>
+        </div>
+        <div class="column">
+          <p class="subtitle has-text-centered">Let's customize your avatar</p>
+        </div>
+        <div class="field is-grouped is-grouped-centered">
+          <form action="file-handler.php" method="post" enctype="multipart/form-data">
+            <div class="file is-boxed">
+              <label class="file-label">
+                <input class="file-input" type="file" name="upload">
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Choose a file…
+                  </span>
+                </span>
+              </label>
+            </div>
+            <button>Загрузить</button>
+          </form>
+        </div>
+        <div class="column has-text-centered">
+          <a href="reg_case_2.php" class="button button-special box-shadow-lift is-rounded is-medium">
+            <span>Skip</span>
+          </a>
+        </div>
+        <a class="has-text-left has-text-dark">← back</a>
+      </div>
+
+      <div id="five" style="display: none;">
+        
+        <div class="column is-4 is-offset-4">
+          <figure class="image is-square">
+            <img class="is-rounded" alt="user-profile-photo" src="https://oneprofile-team-assets.s3-us-west-1.amazonaws.com/web-assets/profile-placeholder.jpg">
+          </figure>
+        </div>
+        <div class="column">
+          <p class="subtitle has-text-centered">About yourself</p>
+        </div>
+        <div class="column has-text-centered">
+        <form action=""  method="post">
+          <div class="control">
+            <input class="input" type="text" placeholder="Some words about yourself">
+            <input class="input" type="text" placeholder="Where are you?">
+            <button id="five_button" name="info_user" type="submit" class="button button-special box-shadow-lift is-rounded is-medium">
+            <span>Next</span>
+          </button>
+          </div>
+        </form>
+        
+          
         </div>
         <a class="has-text-left has-text-dark">← back</a>
       </div>

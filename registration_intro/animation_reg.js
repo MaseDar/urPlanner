@@ -13,5 +13,20 @@ $("#three").attr('style', 'display: block');
 });
 });
 
+$(document).ready(function(){
+$("#four_button").click(function(){
+$("#three").attr('style', 'display: none');
+$("#four").attr('style', 'display: block');
+});
+});
+
+$(document).ready(function(){
+$("#five_button").click(function(){
+$("#four").attr('style', 'display: none');
+$("#five").attr('style', 'display: block');
+});
+});
+
+
 
 

@@ -36,6 +36,15 @@ $("#log-button").click(function(){
  $("#log-button").toggleClass("is-warning is-loading");
 })
 
+//блог тест
+/*$("#News1").click(function(){
+$("#News1-modal").toggleClass("is-active");
+})
+*/
+$("#News1").click(function(){
+$("#News1").toggleClass("is-loading");
+})
+
 
 // calendar
 var chid,chdataid;

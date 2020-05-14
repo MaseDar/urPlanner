@@ -1,25 +1,6 @@
 <?php 
 
-if (isset($_POST['submit'])) {
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$gender = $_POST['gender'];
-	$message = $_POST['message'];
-
-	$errorEmpty = false;
-	$errorEmail = false;
-
-	if (empty($name) || empty($email) || epmty($message)) {
-		echo "<p class='subtitle is-danger'>Заполни ало</p>";
-		$errorEmpty = true;
-	} 
-	elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		echo "<p class='subtitle is-danger'>Ты чо китаец? Почини почту?</p>";
-		$errorEmail = true;
-	} 
-	else {
-		echo "<p class='subtitle is-success'>Good</p>";
-	}
+if (isset($_POST['submit'])) 
 
 }
 

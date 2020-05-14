@@ -102,12 +102,18 @@
 							<button class="delete is-small"></button>
 							</span>
 
-							<?php if(!empty($_SESSION['error']) || !empty($_SESSION['error_google'])) : ?>
-								<span class="tag is-danger">
-									<?php echo $_SESSION['error']; unset($_SESSION['error']); echo $_SESSION['error_google']; unset($_SESSION['error_google']); ?>
-									<button class="delete is-small"></button>
-								</span>
-							<?php endif; ?>
+								<?php if (!empty($_SESSION['error']) ) : ?>
+									<span class="tag is-danger">
+										<?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+									</span>	
+								<?php endif; ?>
+								<?php if (!empty($_SESSION['error_google']) ) : ?>
+									<span class="tag is-danger">
+										<?php echo $_SESSION['error_google']; unset($_SESSION['error_google']); ?>
+									</span>	
+								<?php endif; ?>
+
+							
 				    	</div>
 					</div>
 					<p class="subtitle">‌‌‍‍‌‌‍‍  &#160;</p>
@@ -172,7 +178,7 @@
 				</div>
 			</div>
 
-			<div class="test1 column">
+			<div style="margin-top: -10%;" class="column is-hidden-mobile">
 				<img src="Rock.png">
 			</div>
 			<!-- <div class="test2 column">

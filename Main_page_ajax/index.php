@@ -75,7 +75,7 @@ $result = $statement->fetchAll();
         {
          $style = 'text-decoration: line-through';
         }
-        echo '<a href="#" style="'.$style.'" class="list-group-item" id="list-group-item-'.$row["task_list_id"].'" data-id="'.$row["task_list_id"].'">'.$row["task_details"].' <span class="badge" data-id="'.$row["task_list_id"].'">X</span></a>';
+        //echo '<a href="#" style="'.$style.'" class="list-group-item" id="list-group-item-'.$row["task_list_id"].'" data-id="'.$row["task_list_id"].'">'.$row["task_details"].' <span class="badge" data-id="'.$row["task_list_id"].'">X</span></a>';
        }
        ?> -->
 
@@ -131,8 +131,8 @@ $result = $statement->fetchAll();
      data:$(this).serialize(),
      success:function(data)
      {
-      $('#submit').attr('disabled', false);
-      $('#to_do_form')[0].reset();
+      //$('#submit').attr('disabled', false);
+      //$('#to_do_form')[0].reset();
       $('.list-group').prepend(data);
      }
     })

@@ -83,6 +83,25 @@ include 'server/db_connections.php';
       table {
         margin: -5% 0 0 0;
       }
+
+      #navbar_left {
+          height: 100%; /* Full-height: remove this if you want "auto" height */
+          width: 80px; /* Set the width of the sidebar */
+          position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+          z-index: 10; /* Stay on top */
+          
+          overflow-x: hidden; /* Disable horizontal scroll */
+          padding-top: 20px;
+      }
+
+      nav {
+        z-index: 1;
+        position: relative;
+      }
+
+      section {
+        padding-left: 180px;
+      }
     </style>
   </head>
 
@@ -90,7 +109,11 @@ include 'server/db_connections.php';
    	
       
   <!--Чтобы убрать видимость section написать hero  -->
+<nav id="navbar_left" class="navbar" role="navigation">
 <section class="is-link">
+
+  
+</nav>
   <nav class="navbar is-transparent is-hidden-touch is-fixed-top " role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="/index.php">
@@ -134,6 +157,7 @@ include 'server/db_connections.php';
     </div>  
   </nav>
 </section>
+
 
 
 

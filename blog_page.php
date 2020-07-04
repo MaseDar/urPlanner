@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- ------------------  ------------------ -->
     <!------------- Подключаем bulma ------------>
-  
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
@@ -49,15 +49,15 @@
     
 
     <div class="section">
-      <div class="field is-grouped">
+      <section class="field is-grouped">
          <a class="button is-light is-inverted " href="\preview.php"><</a>
          <p>‌‌‍‍‌‌‍‍  &#160;</p>
          <p class="title"><b>Блог и обновления</b></p>
-      </div>
-      <section class="section is-blog">
+      </section>
+      <section class="section">
         <div class="container">
           <div class="columns is-centered">
-            <div class="column is-10-fullhd is-12">
+            <div class="column is-12">
               <div class="section-header">
                 <div class="header is-spaced">
                   <p class="title ">Latest news</p>

@@ -89,7 +89,7 @@
 			<div class="column is-6 is-hidden-mobile"> <img src="Reg.png"> </div>
 
 	        <div class="column is-6">
-			  	<div style="margin-top: -10%;" class="section">
+			  	<div style="margin-top:;" class="section">
 					<form method="post" action="" name="frmRegistration" autocomplete="off">
 					  	<div class="field">
 							<!-- Кейс с уведомлениями и ошибками -->

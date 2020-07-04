@@ -12,7 +12,8 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <!-- ------------------  ------------------ -->
-    <!-- Подключаем bulma -->
+    <!-- Подключаем bulma и оптимизацию под мобилки -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- -----------ANGULARJS--------------------------- -->
@@ -88,27 +89,27 @@
     	<!-- ----------------------------------CALENDAR-------------------------------------- -->
     
 		<div class='calendar' ng-controller='preview_calendarController as calendar'>
-		<div class='calendar_rotate_background'></div>
-		  <div class="padding_cal">
-		  <div class='calendar_left'>
-		    <div class='cal_header'>
-		      <i class='material-icons' ng-click='calendar.prev()'>navigate_before</i>
-		      <!-- можно вписать class="is-size-4, но будет не ровно" -->
-		      <h1 >{{calendar.month}}</h1>
-		      <i class='material-icons' ng-click='calendar.next()'>navigate_next</i>
-		    </div>
-		    <div class='days'>
-		      <div class='day_item'><p class="has-text-weight-light">ПН</p></div>
-		      <div class='day_item'><p class="has-text-weight-light">ВТ</p></div>
-		      <div class='day_item'><p class="has-text-weight-light">СР</p></div>
-		      <div class='day_item'><p class="has-text-weight-light">ЧТ</p></div>
-		      <div class='day_item'><p class="has-text-weight-light">ПТ</p></div>
-		      <div class='day_item'><p class="has-text-weight-light">СБ</p></div>
-		      <div class='day_item'><p class="has-text-weight-light">ВС</p></div>
-		    </div>
-		    <div class='dates'></div>
-		  </div>
-		  </div>
+			<div class='calendar_rotate_background'></div>
+			  <div class="padding_cal">
+				  <div class='calendar_left'>
+				    <div class='cal_header'>
+				      <i class='material-icons' ng-click='calendar.prev()'>navigate_before</i>
+				      <!-- можно вписать class="is-size-4, но будет не ровно" -->
+				      <h1 >{{calendar.month}}</h1>
+				      <i class='material-icons' ng-click='calendar.next()'>navigate_next</i>
+				    </div>
+				    <div class='days'>
+				      <div class='day_item'><p class="has-text-weight-light">ПН</p></div>
+				      <div class='day_item'><p class="has-text-weight-light">ВТ</p></div>
+				      <div class='day_item'><p class="has-text-weight-light">СР</p></div>
+				      <div class='day_item'><p class="has-text-weight-light">ЧТ</p></div>
+				      <div class='day_item'><p class="has-text-weight-light">ПТ</p></div>
+				      <div class='day_item'><p class="has-text-weight-light">СБ</p></div>
+				      <div class='day_item'><p class="has-text-weight-light">ВС</p></div>
+				    </div>
+				    <div class='dates'></div>
+				  </div>
+			  </div>
 		  <div class='calendar_right'>
 
 		    <div class='list2'>
